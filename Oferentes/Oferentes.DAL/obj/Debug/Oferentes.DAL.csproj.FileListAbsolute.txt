@@ -1,0 +1,9 @@
+C:\Users\HP\Desktop\Proyecto Oferentes Agro Rural\Proyecto\Oferentes\Oferentes.DAL\bin\Debug\Oferentes.DAL.dll
+C:\Users\HP\Desktop\Proyecto Oferentes Agro Rural\Proyecto\Oferentes\Oferentes.DAL\bin\Debug\Oferentes.DAL.pdb
+C:\Users\HP\Desktop\Proyecto Oferentes Agro Rural\Proyecto\Oferentes\Oferentes.DAL\obj\Debug\Oferentes.DAL.dll
+C:\Users\HP\Desktop\Proyecto Oferentes Agro Rural\Proyecto\Oferentes\Oferentes.DAL\obj\Debug\Oferentes.DAL.pdb
+E:\Oferentes Agrorural\Oferentes\Oferentes.DAL\bin\Debug\Oferentes.DAL.dll
+E:\Oferentes Agrorural\Oferentes\Oferentes.DAL\bin\Debug\Oferentes.DAL.pdb
+E:\Oferentes Agrorural\Oferentes\Oferentes.DAL\obj\Debug\Oferentes.DAL.csprojResolveAssemblyReference.cache
+E:\Oferentes Agrorural\Oferentes\Oferentes.DAL\obj\Debug\Oferentes.DAL.dll
+E:\Oferentes Agrorural\Oferentes\Oferentes.DAL\obj\Debug\Oferentes.DAL.pdb
