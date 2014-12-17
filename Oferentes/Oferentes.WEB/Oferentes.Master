@@ -8,12 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <%--<link rel="icon" href="../../favicon.ico">--%>
+    <link runat="server" rel="icon" href="~/dist/ico/favicon.png">
     <title>Sistema de Oferentes</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="dist/css/offcanvas.css" rel="stylesheet" type="text/css" />
+    <link runat="server" href="~/dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="Scripts/Bloqueo.js"></script>
 
@@ -28,47 +27,54 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header>
-            <nav class="navbar navbar-default" role="navigation">
+        <header class="allHeader">
+            <div class="superHeader section">
                 <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Project name</a>
+                    <div class="col-sm-2">
+                        <h1>
+                            <asp:HyperLink NavigateUrl="~/Inicio.aspx" ID="HyperLink2" CssClass="logo" runat="server"><span>PSSA</span></asp:HyperLink></h1>
                     </div>
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.nav-collapse -->
                 </div>
-                <!-- /.container -->
-            </nav>
-            <!-- /.navbar -->
+            </div>
         </header>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <asp:HyperLink ID="HyperLink1" CssClass="navbar-brand visible-xs" runat="server">Sistema de Oferentes</asp:HyperLink>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <asp:Menu ID="mnPrincipal" runat="server" EnableViewState="false" IncludeStyleBlock="False"
+                        Orientation="horizontal" EnableTheming="False" ViewStateMode="Disabled" ItemWrap="True"
+                        StaticMenuStyle-CssClass="main-nav nav navbar-nav" SkipLinkText="" StaticSelectedStyle-CssClass="active"
+                        DynamicMenuStyle-CssClass="dropdown-menu" PathSeparator="|" OnMenuItemClick="mnPrincipal_MenuItemClick" RenderingMode="List">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Inicio.aspx" Text="Inicio" Value="Inicio"></asp:MenuItem>
+                            <asp:MenuItem Text="Administrador" Value="Administrador">
+                                <asp:MenuItem Text="Registrar" Value="Registrar" NavigateUrl="~/Admin/Registrar.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Mantenimiento" Value="Mantenimiento" NavigateUrl="~/Admin/Mantener.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Usuario" Value="Usuario">
+                                <asp:MenuItem Text="Reportes" Value="Reportes" NavigateUrl="~/Usuario/Consultar.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </div>
+                <!-- /.nav-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- /.navbar -->
+
         <div class="container">
             <div class="row row-offcanvas row-offcanvas-left">
                 <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
                     <div class="list-group">
-                        <asp:Menu ID="mnPrincipal" runat="server" Orientation="Vertical" PathSeparator="|" OnMenuItemClick="mnPrincipal_MenuItemClick" StaticSubMenuIndent="16px">
-                            <Items>
-                                <asp:MenuItem NavigateUrl="~/Inicio.aspx" Text="Inicio" Value="Inicio"></asp:MenuItem>
-                                <asp:MenuItem Text="Administrador" Value="Administrador">
-                                    <asp:MenuItem Text="Registrar" Value="Registrar" NavigateUrl="~/Admin/Registrar.aspx"></asp:MenuItem>
-                                    <asp:MenuItem Text="Mantenimiento" Value="Mantenimiento" NavigateUrl="~/Admin/Mantener.aspx"></asp:MenuItem>
-                                </asp:MenuItem>
-                                <asp:MenuItem Text="Usuario" Value="Usuario">
-                                    <asp:MenuItem Text="Reportes" Value="Reportes" NavigateUrl="~/Usuario/Consultar.aspx"></asp:MenuItem>
-                                </asp:MenuItem>
-                            </Items>
-                        </asp:Menu>
                     </div>
                 </div>
                 <!--/.sidebar-offcanvas-->

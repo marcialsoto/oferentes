@@ -117,7 +117,8 @@ module.exports = function (grunt) {
           'js/popover.js',
           'js/scrollspy.js',
           'js/tab.js',
-          'js/affix.js'
+          'js/affix.js',
+          'js/app.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
@@ -342,7 +343,7 @@ module.exports = function (grunt) {
       },
       less: {
         files: 'less/**/*.less',
-        tasks: 'less'
+        tasks: 'less:compileTheme'
       }
     },
 
