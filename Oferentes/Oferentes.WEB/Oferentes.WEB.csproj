@@ -88,6 +88,7 @@
     <Content Include="dist\css\bootstrap-theme.min.css" />
     <Content Include="dist\css\bootstrap.css" />
     <Content Include="dist\css\bootstrap.min.css" />
+    <Content Include="dist\css\offcanvas.css" />
     <Content Include="dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="dist\js\bootstrap.js" />
     <Content Include="dist\js\bootstrap.min.js" />
@@ -535,6 +536,8 @@
     <Content Include="test-infra\s3_cache.py" />
     <Content Include="test-infra\uncached-npm-install.sh" />
     <Content Include="_config.yml" />
+    <Content Include="less\app.less" />
+    <Content Include="less\mixins\appMixins.less" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\Graficos.rdlc" />
