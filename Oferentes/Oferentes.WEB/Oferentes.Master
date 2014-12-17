@@ -72,17 +72,8 @@
         <!-- /.navbar -->
 
         <div class="container">
-            <div class="row row-offcanvas row-offcanvas-left">
-                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-                    <div class="list-group">
-                    </div>
-                </div>
-                <!--/.sidebar-offcanvas-->
-                <div class="col-xs-12 col-sm-9">
-                    <p class="pull-left visible-xs">
-                        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-                    </p>
-
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
