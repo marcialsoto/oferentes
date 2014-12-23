@@ -79,6 +79,59 @@
                 </div>
             </div>
         </div>
+
+        <footer class="content-info section" role="contentinfo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-4">
+                        <section class="widget text-3 widget_text footer-1">
+                            <h3>PSSA</h3>
+                            <div class="textwidget">
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-6">
+                                        Av. Salaverry 1388,
+                                        <br>
+                                        Jesús María, Lima
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6">
+                                        511 .  205 80 30<br>
+                                        <a href="mailto:info@pssa.gob.pe">info@pssa.gob.pe</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <section class="widget text-4 widget_text footer-2">
+                            <h3>Redes Sociales</h3>
+                            <div class="textwidget">
+                                <ul class="list-inline social">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-sm-3 col-xs-3 col-sm-offset-1 col-xs-offset-1">
+                        <section class="widget text-5 widget_text footer-3">
+                         
+                            <div class="textwidget"><a href="http://www.ifad.org/" target="_blank">
+                                <asp:Image ID="Image1" CssClass="img-responsive" runat="server" ImageUrl="~/dist/img/fida-logo.jpg" /></a></div>
+                        </section>
+                    </div>
+                    
+                </div>
+                <div class="row copy">
+                    <div class="col-sm-4 col-xs-4">
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Inicio.aspx">PSSA</asp:HyperLink> <i class="fa fa-copyright"></i>Derechos reservados.
+                    </div>
+                </div>
+            </div>
+        </footer>
     </form>
     <!-- Bootstrap core JavaScript
     ================================================== -->

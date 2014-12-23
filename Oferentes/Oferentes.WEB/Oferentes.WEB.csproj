@@ -534,6 +534,7 @@
     <Content Include="_config.yml" />
     <Content Include="less\app.less" />
     <Content Include="less\mixins\appMixins.less" />
+    <Content Include="less\appVariables.less" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\ActivporOrg.rdlc" />

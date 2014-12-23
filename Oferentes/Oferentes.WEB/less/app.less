@@ -1,4 +1,5 @@
-﻿@import "mixins/appMixins.less";
+﻿@import "appVariables.less";
+@import "mixins/appMixins.less";
 
 //
 // Custom
@@ -58,6 +59,132 @@ footer {
             }
         }
     }
+}
+
+/*
+ * Util
+ * --------------------------------------------------
+ */
+
+.row{
+    &.no-gutter{
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+fieldset {
+    border: 1px solid darken(@orange, 5%);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    legend{
+        font-size: 16px;
+        background-color: darken(@orange, 5%);
+        color: @white;
+        padding: 5px 10px;
+        font-weight: bold;
+        width: auto;
+        margin-left: 15px;
+        .border-radius(2px);
+        border: 3px solid @white;
+    }
+
+    h4{
+        color: darken(@orange, 5%);
+        font-size: 14px;
+        font-weight: bold;
+        margin: 10px 15px 5px;
+    }
+    .form-group {
+        margin-bottom: 5px;
+
+        label {
+            font-size: 12px;
+            cursor: pointer;
+            margin-bottom: 1px;
+        }
+
+        .form-control {
+            .border-radius(2px);
+            font-size: 13px;
+            height: 30px;
+            padding: 5px 10px;
+            .inner-shadow(0, 1px, 1px, 0, 0.05);
+        }
+    }
+
+    .radio, .radio-inline {
+        label {
+            font-weight: normal;
+        }
+    }
+}
+
+.btn-add{
+    .btn-add();
+    .border-radius(2px);
+    background-color: transparent;
+    color: @green;
+    border-color: @green;
+    &:hover{
+        color: darken(@green, 15%);
+        border-color: darken(@green, 15%);
+    }
+    &:before{
+        content: 'Hola';
+    }
+}
+
+.content-info {
+    background-color: @green-light;
+    color: #01260c;
+    font-size: 12px;
+
+    ul.social{
+        li{
+            a{
+                font-size: 18px;
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+
+    .footer-1{
+        h3{
+        text-transform: uppercase;
+       font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: bold;
+        }
+    }
+    
+    .footer-2{
+        h3{
+            font-size: 12px;
+            text-transform: inherit;
+            margin-bottom: 20px;
+        }
+    }
+
+    a {
+        color: #01260c;
+        border-bottom: 1px solid #023f14;
+        text-decoration: none;
+        &:hover{
+          border-bottom: 1px solid transparent;
+        }
+    }
+
+    .copy{
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 1px solid #9db153;
+        font-size: 12px;
+    }
+}
+.section{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 /*
