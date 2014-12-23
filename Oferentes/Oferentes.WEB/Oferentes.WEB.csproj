@@ -327,7 +327,9 @@
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="test-infra\requirements.txt" />
     <Content Include="Usuario\Consultar.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -399,12 +401,6 @@
     <Folder Include="bin\zh-CHT\" />
     <Folder Include="bin\zh-Hans\" />
     <Folder Include="bin\zh-Hant\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Oferentes.BOL\Oferentes.BOL.csproj">
-      <Project>{4BD272D8-DFB7-4563-879B-37235C6E41AA}</Project>
-      <Name>Oferentes.BOL</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="dsDirectorio.xsc">
@@ -540,9 +536,24 @@
     <Content Include="less\mixins\appMixins.less" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reportes\ActivporOrg.rdlc" />
+    <EmbeddedResource Include="Reportes\Estadisticas.rdlc" />
     <EmbeddedResource Include="Reportes\Graficos.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteTalento.rdlc" />
     <EmbeddedResource Include="Reportes\ReportExp.rdlc" />
+    <EmbeddedResource Include="Reportes\TalentoporActiv.rdlc" />
+    <EmbeddedResource Include="Reportes\TalentoporOrg.rdlc" />
+    <EmbeddedResource Include="Reportes\TalentoporRango.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oferentes.BOL\Oferentes.BOL.csproj">
+      <Project>{4bd272d8-dfb7-4563-879b-37235c6e41aa}</Project>
+      <Name>Oferentes.BOL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oferentes.DAL\Oferentes.DAL.csproj">
+      <Project>{f0ab4ce4-c8f1-473b-b949-607bd2768abe}</Project>
+      <Name>Oferentes.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

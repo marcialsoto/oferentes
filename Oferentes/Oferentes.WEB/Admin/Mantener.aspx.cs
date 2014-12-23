@@ -57,6 +57,11 @@ namespace Oferentes.WEB.Admin
 
                 //------------------------------------
 
+                dlIdioma.DataSource = Idioma.listar_idioma();
+                dlIdioma.DataBind();
+
+                //------------------------------------
+
                 dlDepAct.DataSource = Ubigeo.listar_dept();
                 dlDepAct.DataBind();
 
@@ -64,6 +69,18 @@ namespace Oferentes.WEB.Admin
                 dlDepAct_SelectedIndexChanged(null, null);
 
                 dlProvAct_SelectedIndexChanged(null, null);
+
+                //------------------------------------
+
+                dlActiv.DataSource = Actividad.listar_Actividad();
+                dlActiv.DataBind();
+
+                //------------------------------------                              
+
+                dlOrg.DataSource = OrgAtendida.listar_OrgAtendida();
+                dlOrg.DataBind();
+
+                //------------------------------------
 
                 ddlDNI.DataSource = Talento.listar_Talento_combo_mant();
                 ddlDNI.DataBind();
@@ -148,13 +165,41 @@ namespace Oferentes.WEB.Admin
 
         protected void dlNivel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cod_nivel = dlNivel.SelectedValue;
+            try
+            {
+                string nivel = dlNivel.SelectedItem.ToString();
 
-            dlGrado.DataSource = Estudio.listar_grado(cod_nivel);
+                if (nivel == "Ninguno")
+                {
+                    dlGrado.Enabled = false;
 
-            dlGrado.DataBind();
+                    rbEscritura.Enabled = true;
+                    rbLectura.Enabled = true;
+                    rbAmbos.Enabled = true;
+                }
+                else
+                {
+                    dlGrado.Enabled = true;
 
-            dlGrado_SelectedIndexChanged(null, null);
+                    rbEscritura.Enabled = false;
+                    rbLectura.Enabled = false;
+                    rbAmbos.Enabled = false;
+
+                    cod_nivel = dlNivel.SelectedValue;
+
+                    dlGrado.DataSource = Estudio.listar_grado(cod_nivel);
+
+                    dlGrado.DataBind();
+
+                    dlGrado_SelectedIndexChanged(null, null);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
         }
 
         protected void dlGrado_SelectedIndexChanged(object sender, EventArgs e)
@@ -251,13 +296,52 @@ namespace Oferentes.WEB.Admin
 
                 estudio = (ds.Tables[0].Rows[0][13]).ToString();
 
-                dlNivel.SelectedIndex = Convert.ToInt16(estudio.Substring(0, 1)) - 1;
+                if (estudio == "00")
+                {
+                    rbLectura.Enabled = true;
+                    rbEscritura.Enabled = true;
+                    rbAmbos.Enabled = true;
 
-                dlNivel_SelectedIndexChanged(null, null);
+                    switch ((ds.Tables[0].Rows[0][14]).ToString())
+                    {
+                        case "Lectura":
+                            {
+                                rbLectura.Checked = true;
+                                rbEscritura.Checked = false;
+                                rbAmbos.Checked = false;
+                            }; break;
+                        case "Escritura":
+                            {
+                                rbLectura.Checked = false;
+                                rbEscritura.Checked = true;
+                                rbAmbos.Checked = false;
+                            }; break;
+                        case "Ambos":
+                            {
+                                rbLectura.Checked = false;
+                                rbEscritura.Checked = false;
+                                rbAmbos.Checked = true;
+                            }; break;
 
-                dlGrado.SelectedIndex = Convert.ToInt16(estudio.Substring(1, 1)) - 1;
+                    }
+                }
+                else
+                {
+                    rbLectura.Enabled = false;
+                    rbEscritura.Enabled = false;
+                    rbAmbos.Enabled = false;
 
-                estado = (ds.Tables[0].Rows[0][15]).ToString();
+                    dlNivel.SelectedIndex = Convert.ToInt16(estudio.Substring(0, 1));
+
+                    dlNivel_SelectedIndexChanged(null, null);
+
+                    dlGrado.SelectedIndex = Convert.ToInt16(estudio.Substring(1, 1)) - 1;
+                }
+
+
+                dlIdioma.SelectedIndex = Convert.ToInt16(ds.Tables[0].Rows[0][15]) - 1;
+
+                estado = (ds.Tables[0].Rows[0][17]).ToString();
 
                 if (estado == "1")
                 {
@@ -337,10 +421,32 @@ namespace Oferentes.WEB.Admin
                 tal._telefono_fijo = Convert.ToInt32(txtFijo.Text);
                 tal._telefono_celular = Convert.ToInt32(txtCell.Text);
                 tal._correo = txtCorreo.Text;
-                tal._estudio = dlGrado.SelectedValue;
+
+                if (dlNivel.SelectedItem.ToString() == "Ninguno")
+                {
+                    tal._estudio = "00";
+
+                    if (rbLectura.Checked)
+                        tal._lect_esc = rbLectura.Text;
+                    else
+                    {
+                        if (rbEscritura.Checked)
+                            tal._lect_esc = rbEscritura.Text;
+                        else
+                            tal._lect_esc = rbAmbos.Text;
+                    }
+                }
+                else
+                {
+                    tal._estudio = dlGrado.SelectedValue;
+                    tal._lect_esc = "";
+                }
+
+                tal._idioma = Convert.ToInt16(dlIdioma.SelectedValue);
 
                 Talento.actualizar_Talento(tal);
 
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "msg", "alert('Se actualizó el Talento correctamente')", true);
 
                 limpiar_talento();
                 limpiar_experiencia();
@@ -349,6 +455,12 @@ namespace Oferentes.WEB.Admin
                 gdvExp.DataBind();
 
                 ddlDNI_SelectedIndexChanged(null, null);
+
+                //ddlDNI.DataSource = Talento.listar_Talento_combo_mant();
+                //ddlDNI.DataBind();
+
+
+
             }
             catch (Exception ex)
             {
@@ -368,6 +480,8 @@ namespace Oferentes.WEB.Admin
 
                 Talento.eliminar_Talento(tal);
 
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "msg", "alert('Se eliminó el Talento correctamente')", true);
+
                 limpiar_talento();
                 limpiar_experiencia();
 
@@ -375,6 +489,8 @@ namespace Oferentes.WEB.Admin
                 gdvExp.DataBind();
 
                 ddlDNI_SelectedIndexChanged(null, null);
+
+
 
             }
             catch (Exception ex)
@@ -416,45 +532,68 @@ namespace Oferentes.WEB.Admin
 
         protected void gdvExp_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            DataTable dt = Session["datos"] as DataTable;
+            try
+            {
+                DataTable dt = Session["datos"] as DataTable;
 
-            string ubigeo;
-            int fila, num;
+                string ubigeo;
+                int fila, num;
 
-            fila = e.RowIndex;
+                fila = e.RowIndex;
 
-            num = Convert.ToInt32(dt.Rows[fila][0]);
+                num = Convert.ToInt32(dt.Rows[fila][0]);
 
-            txtActiv.Text = (dt.Rows[fila][2]).ToString();
+                //txtActiv.Text = (dt.Rows[fila][2]).ToString();
 
-            txtDuracion.Text = (dt.Rows[fila][3]).ToString();
+                dlActiv.SelectedValue = (dt.Rows[fila][2]).ToString();
 
-            txtCertif.Text = (dt.Rows[fila][4]).ToString();
+                dlRango.SelectedValue = (dt.Rows[fila][4]).ToString();
 
-            ubigeo = (dt.Rows[fila][5]).ToString();
+                txtCertif.Text = (dt.Rows[fila][5]).ToString();
 
-            dlDepAct.SelectedIndex = Convert.ToInt16(ubigeo.Substring(0, 2)) - 1;
+                if (txtCertif.Text == "No cuenta con uno")
+                {
+                    rbCertNo.Checked = true;
+                    rbCertSi.Checked = false;
+                    txtCertif.Enabled = false;
+                }
+                else
+                {
+                    rbCertNo.Checked = false;
+                    rbCertSi.Checked = true;
+                    txtCertif.Enabled = true;
+                }
 
-            dlDepAct_SelectedIndexChanged(null, null);
+                ubigeo = (dt.Rows[fila][6]).ToString();
 
-            dlProvAct.SelectedIndex = Convert.ToInt16(ubigeo.Substring(2, 2)) - 1;
+                dlDepAct.SelectedIndex = Convert.ToInt16(ubigeo.Substring(0, 2)) - 1;
 
-            dlProvAct_SelectedIndexChanged(null, null);
+                dlDepAct_SelectedIndexChanged(null, null);
 
-            dlDistAct.SelectedIndex = Convert.ToInt16(ubigeo.Substring(4, 2)) - 1;
+                dlProvAct.SelectedIndex = Convert.ToInt16(ubigeo.Substring(2, 2)) - 1;
+
+                dlProvAct_SelectedIndexChanged(null, null);
+
+                dlDistAct.SelectedIndex = Convert.ToInt16(ubigeo.Substring(4, 2)) - 1;
 
 
-            txtOrg.Text = (dt.Rows[fila][6]).ToString();
+                dlOrg.SelectedValue = (dt.Rows[fila][7]).ToString();
 
-            txtRefer.Text = (dt.Rows[fila][7]).ToString();
+                txtRefer.Text = (dt.Rows[fila][9]).ToString();
 
-            txtRecon.Text = (dt.Rows[fila][8]).ToString();
+                txtRecon.Text = (dt.Rows[fila][10]).ToString();
 
-            //dt.Rows[fila].Delete();
+                //dt.Rows[fila].Delete();
 
-            //gdvExp.DataSource = dt;
-            //gdvExp.DataBind();
-            Session["num"] = num;
+                //gdvExp.DataSource = dt;
+                //gdvExp.DataBind();
+                Session["num"] = num;
+            }
+            catch (Exception ex)
+            {
+
+            }
+
         }
 
 
@@ -500,12 +639,22 @@ namespace Oferentes.WEB.Admin
             dlGrado_SelectedIndexChanged(null, null);
 
             //----------------------------
+            dlIdioma.DataSource = Idioma.listar_idioma();
+            dlIdioma.DataBind();
+
+            //----------------------------
 
             dlEstCivil.DataSource = Estado_Civil.listar_estcivil();
             dlEstCivil.DataBind();
 
             dlResid.DataSource = Residencia.listar_residencia();
             dlResid.DataBind();
+
+            //------------------------------
+
+            rbEscritura.Checked = false;
+            rbLectura.Checked = true;
+            rbAmbos.Checked = false;
 
             //------------------------------
 
@@ -520,7 +669,10 @@ namespace Oferentes.WEB.Admin
         {
 
             txtActiv.Text = string.Empty;
-            txtDuracion.Text = string.Empty;
+            //txtDuracion.Text = string.Empty;
+
+            dlRango.SelectedIndex = 0;
+
             txtCertif.Text = string.Empty;
 
             dlDepAct.DataSource = Ubigeo.listar_dept();
@@ -529,9 +681,32 @@ namespace Oferentes.WEB.Admin
             dlDepAct_SelectedIndexChanged(null, null);
             dlProvAct_SelectedIndexChanged(null, null);
 
+            dlActiv.DataSource = Actividad.listar_Actividad();
+            dlActiv.DataBind();
+
+            dlActiv.Enabled = true;
+            chbOtraActiv.Checked = false;
+            txtActiv.Enabled = false;
+
+            dlOrg.DataSource = OrgAtendida.listar_OrgAtendida();
+            dlOrg.DataBind();
+
+            dlOrg.Enabled = true;
+            chbOtraOrg.Checked = false;
+            txtOrg.Enabled = false;
+
+            txtActiv.Text = string.Empty;
             txtOrg.Text = string.Empty;
             txtRefer.Text = string.Empty;
             txtRecon.Text = string.Empty;
+
+            rbCertNo.Checked = true;
+            rbCertSi.Checked = false;
+            txtCertif.Enabled = false;
+            txtCertif.Text = "No cuenta con uno";
+
+            chbTodosDist.Checked = false;
+            dlDistAct.Enabled = true;
 
         }
 
@@ -540,24 +715,68 @@ namespace Oferentes.WEB.Admin
             try
             {
                 int num = Convert.ToInt32(Session["num"]);
+                int codActiv, codOrg;
 
                 Experiencia exp = new Experiencia();
+                DataSet ds = new DataSet();
+
+                Actividad act = new Actividad();
+
+                OrgAtendida org = new OrgAtendida();
+
+
 
                 exp._num = num;
                 exp._num_dni = Convert.ToInt32(txtDNI.Text);
-                exp._actividad = txtActiv.Text;
-                exp._duracion = txtDuracion.Text;
+
+
+
+                if (chbOtraActiv.Checked)
+                {
+                    act._nombre = txtActiv.Text;
+
+                    Actividad.insertar_Actividad(act);
+
+                    codActiv = Convert.ToInt16((Actividad.buscar_Actividad_nombre(act)).Tables[0].Rows[0][0]);
+
+                    exp._actividad = codActiv;
+                }
+
+                else
+                    exp._actividad = Convert.ToInt16(dlActiv.SelectedValue);
+
+                exp._duracion = dlRango.SelectedValue;
                 exp._certificado = txtCertif.Text;
                 exp._lugar_activ = dlDistAct.SelectedValue;
-                exp._organizacion_atendida = txtOrg.Text;
+
+                if (chbOtraOrg.Checked)
+                {
+                    org._nombre = txtOrg.Text;
+
+                    OrgAtendida.insertar_OrgAtendida(org);
+
+                    codOrg = Convert.ToInt16((OrgAtendida.buscar_OrgAtendida_nombre(org)).Tables[0].Rows[0][0]);
+
+                    exp._organizacion_atendida = codOrg;
+                }
+                else
+                {
+                    exp._organizacion_atendida = Convert.ToInt16(dlOrg.SelectedValue);
+                }
+
+
                 exp._referente = txtRefer.Text;
                 exp._reconocimientos = txtRecon.Text;
 
                 Experiencia.actualizar_Experiencia(exp);
 
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "msg", "alert('Se actualizó la experiencia correctamente')", true);
+
                 cargarExperiencia();
 
                 limpiar_experiencia();
+
+
             }
             catch (Exception ex)
             {
@@ -570,22 +789,86 @@ namespace Oferentes.WEB.Admin
         {
             try
             {
+                int codActiv, codOrg;
+
                 Experiencia exp = new Experiencia();
+                DataSet ds = new DataSet();
+
+                Actividad act = new Actividad();
+
+                OrgAtendida org = new OrgAtendida();
+
 
                 exp._num_dni = Convert.ToInt32(txtDNI.Text);
-                exp._actividad = txtActiv.Text;
-                exp._duracion = txtDuracion.Text;
+
+
+
+                if (chbOtraActiv.Checked)
+                {
+                    act._nombre = txtActiv.Text;
+
+                    Actividad.insertar_Actividad(act);
+
+                    codActiv = Convert.ToInt16((Actividad.buscar_Actividad_nombre(act)).Tables[0].Rows[0][0]);
+
+                    exp._actividad = codActiv;
+                }
+
+                else
+                    exp._actividad = Convert.ToInt16(dlActiv.SelectedValue);
+
+                exp._duracion = dlRango.SelectedValue;
                 exp._certificado = txtCertif.Text;
                 exp._lugar_activ = dlDistAct.SelectedValue;
-                exp._organizacion_atendida = txtOrg.Text;
+
+                if (chbOtraOrg.Checked)
+                {
+                    org._nombre = txtOrg.Text;
+
+                    OrgAtendida.insertar_OrgAtendida(org);
+
+                    codOrg = Convert.ToInt16((OrgAtendida.buscar_OrgAtendida_nombre(org)).Tables[0].Rows[0][0]);
+
+                    exp._organizacion_atendida = codOrg;
+                }
+                else
+                {
+                    exp._organizacion_atendida = Convert.ToInt16(dlOrg.SelectedValue);
+                }
+
+
                 exp._referente = txtRefer.Text;
                 exp._reconocimientos = txtRecon.Text;
 
                 Experiencia.insertar_Experiencia(exp);
 
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "msg", "alert('Se insertó la experiencia correctamente')", true);
+
                 cargarExperiencia();
 
+
+                //dlActiv.DataSource = Actividad.listar_Actividad();
+                //dlActiv.DataBind();
+
+                //dlActiv.Enabled = true;
+                //chbOtraActiv.Checked = false;
+                //txtActiv.Enabled = false;
+
+                //dlOrg.DataSource = OrgAtendida.listar_OrgAtendida();
+                //dlOrg.DataBind();
+
+                //dlOrg.Enabled = true;
+                //chbOtraOrg.Checked = false;
+                //txtOrg.Enabled = false;
+
+                //txtActiv.Text = string.Empty;
+                //txtOrg.Text = string.Empty;
+                //txtRefer.Text = string.Empty;
+                //txtRecon.Text = string.Empty;
+
                 limpiar_experiencia();
+
+
             }
             catch (Exception ex)
             {
@@ -607,6 +890,8 @@ namespace Oferentes.WEB.Admin
 
                 Experiencia.eliminar_Experiencia(exp);
 
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "msg", "alert('Se eliminó la experiencia correctamente')", true);
+
                 cargarExperiencia();
 
                 limpiar_experiencia();
@@ -617,6 +902,78 @@ namespace Oferentes.WEB.Admin
             }
         }
 
-       
+        protected void chbOtraActiv_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbOtraActiv.Checked)
+            {
+                dlActiv.Enabled = false;
+                txtActiv.Enabled = true;
+            }
+            else
+            {
+                dlActiv.Enabled = true;
+                txtActiv.Enabled = false;
+            }
+        }
+
+        protected void rbLectura_CheckedChanged(object sender, EventArgs e)
+        {
+            rbEscritura.Checked = false;
+            rbLectura.Checked = true;
+            rbAmbos.Checked = false;
+        }
+
+        protected void rbEscritura_CheckedChanged(object sender, EventArgs e)
+        {
+            rbEscritura.Checked = true;
+            rbLectura.Checked = false;
+            rbAmbos.Checked = false;
+        }
+
+        protected void rbAmbos_CheckedChanged(object sender, EventArgs e)
+        {
+            rbEscritura.Checked = false;
+            rbLectura.Checked = false;
+            rbAmbos.Checked = true;
+        }
+
+        protected void rbCertNo_CheckedChanged(object sender, EventArgs e)
+        {
+            rbCertNo.Checked = true;
+            rbCertSi.Checked = false;
+            txtCertif.Enabled = false;
+            txtCertif.Text = "No cuenta con uno";
+        }
+
+        protected void rbCertSi_CheckedChanged(object sender, EventArgs e)
+        {
+            rbCertNo.Checked = false;
+            rbCertSi.Checked = true;
+            txtCertif.Enabled = true;
+            txtCertif.Text = string.Empty;
+        }
+
+        protected void chbTodosDist_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbTodosDist.Checked)
+                dlDistAct.Enabled = false;
+            else
+                dlDistAct.Enabled = true;
+        }
+
+        protected void chbOtraOrg_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbOtraOrg.Checked)
+            {
+                dlOrg.Enabled = false;
+                txtOrg.Enabled = true;
+            }
+            else
+            {
+                dlOrg.Enabled = true;
+                txtOrg.Enabled = false;
+            }
+        }
+
     }
 }

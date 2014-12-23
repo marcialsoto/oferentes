@@ -47,14 +47,24 @@ namespace Oferentes.WEB.Usuario
                 txtActividad.Text = string.Empty;
 
 
-                dlActividad.DataSource = Experiencia.listar_Experiencia_Actividad();
+                dlActividad.DataSource = Actividad.listar_Actividad();
                 dlActividad.DataBind();
+
+                dlOrganizacion.DataSource = OrgAtendida.listar_OrgAtendida();
+                dlOrganizacion.DataBind();
 
                 rvReporteTalento.LocalReport.ReportPath = "Reportes/ReporteTalento.rdlc";
 
                 rvReportExp.LocalReport.ReportPath = "Reportes/ReportExp.rdlc";
 
                 rvGrafico.LocalReport.ReportPath = "Reportes/Graficos.rdlc";
+
+                rvTalentoporActiv.LocalReport.ReportPath = "Reportes/TalentoporActiv.rdlc";
+
+                rvTalentoporOrg.LocalReport.ReportPath = "Reportes/TalentoporOrg.rdlc";
+
+                rvActivporOrg.LocalReport.ReportPath = "Reportes/ActivporOrg.rdlc";
+
 
                 refrescarInformes();
 
@@ -171,6 +181,7 @@ namespace Oferentes.WEB.Usuario
             dlProvAct.Enabled = false;
             dlDistAct.Enabled = false;
             dlActividad.Enabled = false;
+            dlOrganizacion.Enabled = false;
 
             btnBuscar.Enabled = true;
             btnOk.Enabled = false;
@@ -179,16 +190,34 @@ namespace Oferentes.WEB.Usuario
             txtUbigeo.Text = dlDist.SelectedValue;
 
             txtDNI.Text = string.Empty;
+            txtDNI.Enabled = false;
             txtLugarActv.Text = string.Empty;
             txtActividad.Text = string.Empty;
+            txtOrg.Text = string.Empty;
+
+            chbTodosDept.Enabled = true;
+            chbTodosProv.Enabled = true;
+            chbTodosDist.Enabled = true;
+
+            chbTodosDeptlugaractiv.Enabled = false;
+            chbTodosProvlugaractiv.Enabled = false;
+            chbTodosDistlugaractiv.Enabled = false;
+
+            chbTodosActiv.Enabled = false;
+            chbTodasOrg.Enabled = false;
+
+            quitarcheck();
         }
 
         protected void rbDNI_CheckedChanged(object sender, EventArgs e)
         {
             txtUbigeo.Text = string.Empty;
             txtDNI.Text = string.Empty;
+            txtDNI.Enabled = true;
             txtLugarActv.Text = string.Empty;
             txtActividad.Text = string.Empty;
+            txtOrg.Text = string.Empty;
+
             rbTotal.Checked = false;
             rbUbigeo.Checked = false;
             rbDNI.Checked = true;
@@ -202,10 +231,24 @@ namespace Oferentes.WEB.Usuario
             dlProvAct.Enabled = false;
             dlDistAct.Enabled = false;
             dlActividad.Enabled = false;
+            dlOrganizacion.Enabled = false;
 
             btnBuscar.Enabled = false;
             btnOk.Enabled = true;
             btnIr.Enabled = false;
+
+            chbTodosDept.Enabled = false;
+            chbTodosProv.Enabled = false;
+            chbTodosDist.Enabled = false;
+
+            chbTodosDeptlugaractiv.Enabled = false;
+            chbTodosProvlugaractiv.Enabled = false;
+            chbTodosDistlugaractiv.Enabled = false;
+
+            chbTodosActiv.Enabled = false;
+            chbTodasOrg.Enabled = false;
+
+            quitarcheck();
         }
 
         protected void rbLugarActv_CheckedChanged(object sender, EventArgs e)
@@ -228,13 +271,29 @@ namespace Oferentes.WEB.Usuario
             dlDepAct.Enabled = true;
             dlProvAct.Enabled = true;
             dlDistAct.Enabled = true;
-            dlActividad.Enabled = false;
+            dlActividad.Enabled = true;
+            dlOrganizacion.Enabled = true;
 
             txtLugarActv.Text = dlDistAct.SelectedValue;
 
             txtUbigeo.Text = string.Empty;
             txtDNI.Text = string.Empty;
+            txtDNI.Enabled = false;
             txtActividad.Text = string.Empty;
+            txtOrg.Text = string.Empty;
+
+            chbTodosDept.Enabled = false;
+            chbTodosProv.Enabled = false;
+            chbTodosDist.Enabled = false;
+
+            chbTodosDeptlugaractiv.Enabled = true;
+            chbTodosProvlugaractiv.Enabled = true;
+            chbTodosDistlugaractiv.Enabled = true;
+
+            chbTodosActiv.Enabled = true;
+            chbTodasOrg.Enabled = true;
+
+            quitarcheck();
         }
 
         protected void rbActiv_CheckedChanged(object sender, EventArgs e)
@@ -271,6 +330,18 @@ namespace Oferentes.WEB.Usuario
 
         protected void btnIr_Click(object sender, EventArgs e)
         {
+
+
+            if (chbTodosActiv.Checked)
+                txtActividad.Text = string.Empty;
+            else
+                txtActividad.Text = dlActividad.SelectedValue;
+
+            if (chbTodasOrg.Checked)
+                txtOrg.Text = string.Empty;
+            else
+                txtOrg.Text = dlOrganizacion.SelectedValue;
+
             refrescarInformes();
         }
 
@@ -279,12 +350,202 @@ namespace Oferentes.WEB.Usuario
             rvReporteTalento.LocalReport.Refresh();
             rvReportExp.LocalReport.Refresh();
             rvGrafico.LocalReport.Refresh();
+            rvTalentoporActiv.LocalReport.Refresh();
+            rvTalentoporOrg.LocalReport.Refresh();
+            rvActivporOrg.LocalReport.Refresh();
+        }
+
+        protected void quitarcheck()
+        {
+            chbTodosDept.Checked = false;
+            chbTodosProv.Checked = false;
+            chbTodosDist.Checked = false;
+
+            chbTodosDeptlugaractiv.Checked = false;
+            chbTodosProvlugaractiv.Checked = false;
+            chbTodosDistlugaractiv.Checked = false;
+
+            chbTodosActiv.Checked = false;
+            chbTodasOrg.Checked = false;
         }
 
         protected void dlActividad_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtActividad.Text = dlActividad.SelectedValue;
-            refrescarInformes();
+            //refrescarInformes();
+        }
+
+        protected void chbTodosDept_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbTodosDept.Checked)
+            {
+                chbTodosProv.Enabled = false;
+                chbTodosDist.Enabled = false;
+
+                dlDep.Enabled = false;
+                dlProv.Enabled = false;
+                dlDist.Enabled = false;
+                txtUbigeo.Text = "______";
+            }
+            else
+            {
+                chbTodosProv.Enabled = true;
+                chbTodosDist.Enabled = true;
+
+                dlDep.Enabled = true;
+                dlProv.Enabled = true;
+                dlDist.Enabled = true;
+                txtUbigeo.Text = dlDist.SelectedValue;
+            }
+
+        }
+
+        protected void chbTodosProv_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbTodosProv.Checked)
+            {
+                chbTodosDept.Enabled = false;
+                chbTodosDist.Enabled = false;
+
+
+                dlProv.Enabled = false;
+                dlDist.Enabled = false;
+                txtUbigeo.Text = dlDep.SelectedValue + "____";
+            }
+            else
+            {
+                chbTodosDept.Enabled = true;
+                chbTodosDist.Enabled = true;
+
+
+                dlProv.Enabled = true;
+                dlDist.Enabled = true;
+                txtUbigeo.Text = dlDist.SelectedValue;
+            }
+        }
+
+        protected void chbTodosDist_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbTodosDist.Checked)
+            {
+                chbTodosDept.Enabled = false;
+                chbTodosProv.Enabled = false;
+
+
+
+                dlDist.Enabled = false;
+                txtUbigeo.Text = dlProv.SelectedValue + "__";
+            }
+            else
+            {
+                chbTodosDept.Enabled = true;
+                chbTodosProv.Enabled = true;
+
+
+
+                dlDist.Enabled = true;
+                txtUbigeo.Text = dlDist.SelectedValue;
+            }
+        }
+
+        protected void chbTodosDeptlugaractiv_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbTodosDeptlugaractiv.Checked)
+            {
+                chbTodosProvlugaractiv.Enabled = false;
+                chbTodosDistlugaractiv.Enabled = false;
+
+                dlDepAct.Enabled = false;
+                dlProvAct.Enabled = false;
+                dlDistAct.Enabled = false;
+
+                txtLugarActv.Text = "______";
+            }
+            else
+            {
+                chbTodosProvlugaractiv.Enabled = true;
+                chbTodosDistlugaractiv.Enabled = true;
+
+                dlDepAct.Enabled = true;
+                dlProvAct.Enabled = true;
+                dlDistAct.Enabled = true;
+
+                txtLugarActv.Text = dlDistAct.SelectedValue;
+            }
+        }
+
+        protected void chbTodosProvlugaractiv_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbTodosProvlugaractiv.Checked)
+            {
+                chbTodosDeptlugaractiv.Enabled = false;
+                chbTodosDistlugaractiv.Enabled = false;
+
+
+                dlProvAct.Enabled = false;
+                dlDistAct.Enabled = false;
+
+                txtLugarActv.Text = dlDepAct.SelectedValue + "____";
+            }
+            else
+            {
+                chbTodosDeptlugaractiv.Enabled = true;
+                chbTodosDistlugaractiv.Enabled = true;
+
+
+                dlProvAct.Enabled = true;
+                dlDistAct.Enabled = true;
+
+                txtLugarActv.Text = dlDistAct.SelectedValue;
+            }
+        }
+
+        protected void chbTodosDistlugaractiv_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbTodosDistlugaractiv.Checked)
+            {
+                chbTodosDeptlugaractiv.Enabled = false;
+                chbTodosProvlugaractiv.Enabled = false;
+
+
+
+                dlDistAct.Enabled = false;
+
+                txtLugarActv.Text = dlProvAct.SelectedValue + "__";
+            }
+            else
+            {
+                chbTodosDeptlugaractiv.Enabled = true;
+                chbTodosProvlugaractiv.Enabled = true;
+
+
+
+                dlDistAct.Enabled = true;
+
+                txtLugarActv.Text = dlDistAct.SelectedValue;
+            }
+        }
+
+        protected void chbTodosActiv_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbTodosActiv.Checked)
+                dlActividad.Enabled = false;
+            else
+                dlActividad.Enabled = true;
+
+        }
+
+        protected void dlOrganizacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtOrg.Text = dlOrganizacion.SelectedValue;
+        }
+
+        protected void chbTodasOrg_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbTodasOrg.Checked)
+                dlOrganizacion.Enabled = false;
+            else
+                dlOrganizacion.Enabled = true;
         }
 
     }

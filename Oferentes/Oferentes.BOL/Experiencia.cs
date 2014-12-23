@@ -9,9 +9,21 @@ namespace Oferentes.BOL
 {
     public class Experiencia
     {
-        Int32 num, num_dni;
-        string actividad, duracion, certificado, lugar_activ, organizacion_atendida, referente, reconocimientos;
+        Int32 num, num_dni, actividad, organizacion_atendida;
 
+        string duracion, certificado, lugar_activ, referente, reconocimientos;
+
+        public Int32 _organizacion_atendida
+        {
+            get { return organizacion_atendida; }
+            set { organizacion_atendida = value; }
+        }        
+
+        public Int32 _actividad
+        {
+            get { return actividad; }
+            set { actividad = value; }
+        }
 
         public Int32 _num
         {
@@ -34,13 +46,7 @@ namespace Oferentes.BOL
         {
             get { return referente; }
             set { referente = value; }
-        }
-
-        public string _organizacion_atendida
-        {
-            get { return organizacion_atendida; }
-            set { organizacion_atendida = value; }
-        }
+        }       
 
         public string _lugar_activ
         {
@@ -52,13 +58,7 @@ namespace Oferentes.BOL
         {
             get { return duracion; }
             set { duracion = value; }
-        }
-
-        public string _actividad
-        {
-            get { return actividad; }
-            set { actividad = value; }
-        }
+        }        
 
         public Int32 _num_dni
         {
@@ -91,17 +91,7 @@ namespace Oferentes.BOL
             return oDb.ExecuteDataSet("sp_Experiencia_read");
 
 
-        }
-
-        public static DataSet listar_Experiencia_Actividad()
-        {
-
-            DBAccess oDb = new DBAccess();
-
-            return oDb.ExecuteDataSet("sp_Experiencia_read_actividad");
-
-
-        }
+        }            
 
         public static DataSet listar_Experiencia_dni(Experiencia exp)
         {

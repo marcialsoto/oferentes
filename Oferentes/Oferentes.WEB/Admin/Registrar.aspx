@@ -56,7 +56,7 @@
                     </asp:UpdatePanel>
                     
                 </td>
-                <td  width ="30px" >DNI:</td>
+                <td>DNI:</td>
                 <td>
                     <asp:UpdatePanel ID="UpdatePanel19" runat="server">
                         <ContentTemplate>
@@ -290,7 +290,7 @@
 
            <tr>
                 <td colspan="2">
-                    <h3>Formación Académica:</h3>
+                    <h3>Nivel Educacional:</h3>
                 </td>
 
                 <td>Nivel:</td>
@@ -306,13 +306,39 @@
                     
                 </td>
 
-                <td>Grado:</td>
+               <td rowspan="2">
+                   <asp:UpdatePanel ID="UpdatePanel32" runat="server">
+                       <ContentTemplate>
+                           <asp:RadioButton ID="rbLectura" runat="server" Text="Lectura" AutoPostBack="True" Checked="True" OnCheckedChanged="rbLectura_CheckedChanged" />
+                           <br />
+                           <asp:RadioButton ID="rbEscritura" runat="server" Text="Escritura" AutoPostBack="True" OnCheckedChanged="rbEscritura_CheckedChanged" />
+                           <br />
+                           <asp:RadioButton ID="rbAmbos" runat="server" Text="Ambos" AutoPostBack="True" OnCheckedChanged="rbAmbos_CheckedChanged" />
+                       </ContentTemplate>
+                   </asp:UpdatePanel>
+                   
+               </td>
+               <td></td>
+               <td>Idioma:</td>
+              <td>
+                  <asp:UpdatePanel ID="UpdatePanel33" runat="server">
+                      <ContentTemplate>
+                          <asp:DropDownList ID="dlIdioma" runat="server"  Width="170px" DataTextField="nombre" DataValueField="cod_Idioma"></asp:DropDownList>
+                      </ContentTemplate>
+                  </asp:UpdatePanel>
+              </td>
+           </tr>
+                        
+            <tr>
+                <td></td>
+                <td></td>
+                 <td>Grado:</td>
                 <td>
                     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
                         <ContentTemplate>
                             <asp:DropDownList ID="dlGrado" runat="server" Width = 177px 
                                 DataTextField="grado" DataValueField="cod_estudio" 
-                                onselectedindexchanged="dlGrado_SelectedIndexChanged" AutoPostBack="True">
+                                onselectedindexchanged="dlGrado_SelectedIndexChanged" AutoPostBack="True" Enabled="False">
                             </asp:DropDownList>
                         </ContentTemplate>
                         <Triggers>
@@ -323,56 +349,95 @@
                     
                     
                 </td>
+                <td>
+                   
+               </td>
+            </tr>
 
-              
-           </tr>
-
+          
             <tr>
                  <td colspan="8">
-                    <h3>Experiencia Profesional:</h3>
+                    <h3>Experiencia Laboral:</h3>
                      <hr />
                 </td>
             </tr>
             <tr>
-               
-
-                <td>Actividad:</td>
-                <td colspan ="3">
+              <td>Actividad:</td>
+                <td>
+                    <asp:UpdatePanel ID="UpdatePanel30" runat="server">
+                        <ContentTemplate>
+                            <asp:DropDownList ID="dlActiv" runat="server" Height="19px" Width="180px" DataTextField="nombre" DataValueField="cod_activ"></asp:DropDownList>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    
+                </td>
+                
+                <td>
+                    <asp:UpdatePanel ID="UpdatePanel31" runat="server">
+                        <ContentTemplate>
+                            <asp:CheckBox ID="chbOtraActiv" runat="server" Text="Otra Actividad" AutoPostBack="True" OnCheckedChanged="chbOtraActiv_CheckedChanged" />
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    
+                </td>
+                <td>
                     <asp:UpdatePanel ID="UpdatePanel9" runat="server">
                         <ContentTemplate>
-                            <asp:TextBox ID="txtActiv" runat="server" Width="462px" BorderStyle="Solid"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvActv" runat="server" ControlToValidate="txtActiv" ErrorMessage="Ingrese Actividad" ValidationGroup="ValidarExp">*</asp:RequiredFieldValidator>
+                            <asp:TextBox ID="txtActiv" runat="server" Width="150px" BorderStyle="Solid" Enabled="False"></asp:TextBox>
+                            <% if (chbOtraActiv.Checked) {%>
+                                <asp:RequiredFieldValidator ID="rfvActv" runat="server" ControlToValidate="txtActiv" ErrorMessage="Ingrese Actividad" ValidationGroup="ValidarExp">*</asp:RequiredFieldValidator>
+                            <% } %>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                     
                 </td>
 
-                <td>Duración:</td>
+                <td>Rango:</td>
                 <td>
-                    <asp:UpdatePanel ID="UpdatePanel10" runat="server">
+                    <%--<asp:UpdatePanel ID="UpdatePanel10" runat="server">
                         <ContentTemplate>
                             <asp:TextBox ID="txtDuracion" runat="server" BorderStyle="Solid"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvDuracion" runat="server" ControlToValidate="txtDuracion" ErrorMessage="Ingrese Duración" ValidationGroup="ValidarExp">*</asp:RequiredFieldValidator>
                         </ContentTemplate>
-                    </asp:UpdatePanel>
-                    
+                    </asp:UpdatePanel>--%>
 
+                    <asp:UpdatePanel ID="UpdatePanel10" runat="server">
+                        <ContentTemplate>
+                             <asp:DropDownList ID="dlRango" runat="server" Height="17px" Width="149px" AutoPostBack="True">
+                                <asp:ListItem Selected="True" Value="3 - 5">3 - 5 años</asp:ListItem>
+                                <asp:ListItem Value="5 - 8">5 - 8 años</asp:ListItem>
+                                <asp:ListItem Value="8">más de 8</asp:ListItem>
+                            </asp:DropDownList>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                   
                 </td>
 
-                 <td>Certificado:</td>
+               <td>Certificado:</td>
                <td>
+                   <asp:UpdatePanel ID="UpdatePanel37" runat="server">
+                       <ContentTemplate>
+                           <asp:RadioButton ID="rbCertNo" runat="server" Text="No" AutoPostBack="True" Checked="True" OnCheckedChanged="rbCertNo_CheckedChanged" />  
+                       </ContentTemplate>
+                   </asp:UpdatePanel>                                    
+
                    <asp:UpdatePanel ID="UpdatePanel11" runat="server">
                        <ContentTemplate>
-                           <asp:TextBox ID="txtCertif" runat="server" BorderStyle="Solid"></asp:TextBox>
+                           <asp:RadioButton ID="rbCertSi" runat="server" Text="Si" AutoPostBack="True" OnCheckedChanged="rbCertSi_CheckedChanged" />
+                           <asp:TextBox ID="txtCertif" runat="server" BorderStyle="Solid" Enabled="False">No cuenta con uno</asp:TextBox>
                            <asp:RequiredFieldValidator ID="rfvCertf" runat="server" ControlToValidate="txtCertif" ErrorMessage="Ingrese si cuenta con Certificado" ValidationGroup="ValidarExp">*</asp:RequiredFieldValidator>
                        </ContentTemplate>
                    </asp:UpdatePanel>
                    
                </td>
             </tr>
+            
             <tr>
-                <td colspan="2">Lugar donde realizó actividad:</td>
-               
+                <td colspan="2">Lugar donde realizó actividad:</td>           
+                
+            </tr>
+            
+            <tr>
                 <td>Departamento:</td>
                 <td>
                     <asp:UpdatePanel ID="UpdatePanel15" runat="server">
@@ -417,13 +482,20 @@
 
                         <Triggers>
                             <asp:AsyncPostBackTrigger ControlID="dlProvAct" EventName="SelectedIndexChanged" />
-                        </Triggers>
-
+                        </Triggers>                        
 
                     </asp:UpdatePanel>
                     
+                    
                 </td>
-
+                <td>
+                    <asp:UpdatePanel ID="UpdatePanel36" runat="server">
+                        <ContentTemplate>
+                            <asp:CheckBox ID="chbTodosDist" runat="server" Text="Todos los Distritos" AutoPostBack="True" OnCheckedChanged="chbTodosDist_CheckedChanged" />
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    
+                </td>
             </tr>
 
             <tr>
@@ -432,14 +504,36 @@
                 <td class="auto-style1">
                     <asp:UpdatePanel ID="UpdatePanel12" runat="server">
                         <ContentTemplate>
-                            <asp:TextBox ID="txtOrg" runat="server" BorderStyle="Solid"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvOrg" runat="server" ControlToValidate="txtOrg" ErrorMessage="Ingrese organización atendida" ValidationGroup="ValidarExp">*</asp:RequiredFieldValidator>
+                            <asp:DropDownList ID="dlOrg" runat="server" Height="20px" Width="170px" DataTextField="nombre" DataValueField="cod_orgatend"></asp:DropDownList>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                     
                 </td>
 
-                <td>Referente:</td>
+               <td>
+                    <asp:UpdatePanel ID="UpdatePanel34" runat="server">
+                        <ContentTemplate>
+                            <asp:CheckBox ID="chbOtraOrg" runat="server" Text="Otra Organización" AutoPostBack="True" OnCheckedChanged="chbOtraOrg_CheckedChanged"  />
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    
+                </td>
+                <td>
+                    <asp:UpdatePanel ID="UpdatePanel35" runat="server">
+                        <ContentTemplate>
+                            <asp:TextBox ID="txtOrg" runat="server" BorderStyle="Solid" Height="16px" Width="152px" Enabled="False"></asp:TextBox>                                                   
+                            <% if (chbOtraOrg.Checked) {%>
+                                <asp:RequiredFieldValidator ID="rfvOrg" runat="server" ControlToValidate="txtOrg" ErrorMessage="Ingrese organización atendida" ValidationGroup="ValidarExp">*</asp:RequiredFieldValidator>
+                            <% } %>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    
+                </td>
+
+            </tr>
+
+            <tr>
+                 <td>Persona de contacto:</td>
                 <td>
                     <asp:UpdatePanel ID="UpdatePanel13" runat="server">
                         <ContentTemplate>
@@ -466,9 +560,7 @@
                     </asp:UpdatePanel>
                     
                 </td>
-
             </tr>
-
             <tr align="center">
                 <td colspan="2">
                     <asp:UpdatePanel ID="UpdatePanel16" runat="server">

@@ -11,13 +11,24 @@ namespace Oferentes.BOL
     {
         private Int32 num_dni, telefono_fijo, telefono_celular;
 
-        private int estado_civil, residencia;
+        private int estado_civil, residencia, idioma;
 
-        private string apellidos, nombres, lugar_nac, sexo, direccion, ubigeo, correo, estudio, estado;
+        public int _idioma
+        {
+            get { return idioma; }
+            set { idioma = value; }
+        }
+
+        private string apellidos, nombres, lugar_nac, sexo, direccion, ubigeo, correo, estudio, lect_esc, estado;        
 
         private DateTime fecha_nac;
-    
 
+        public string _lect_esc
+        {
+            get { return lect_esc; }
+            set { lect_esc = value; }
+        }
+       
         public DateTime _fecha_nac
         {
             get { return fecha_nac; }
@@ -128,6 +139,8 @@ namespace Oferentes.BOL
             oDb.AddParameter("@fono_cell", tal._telefono_celular);
             oDb.AddParameter("@correo", tal._correo);
             oDb.AddParameter("@estudio", tal._estudio);
+            oDb.AddParameter("@lect_esc", tal._lect_esc);
+            oDb.AddParameter("@idioma", tal._idioma);
 
             oDb.ExecuteNonQuery("sp_Talento_insert");
 
@@ -192,6 +205,8 @@ namespace Oferentes.BOL
             oDb.AddParameter("@fono_cell", tal._telefono_celular);
             oDb.AddParameter("@correo", tal._correo);
             oDb.AddParameter("@estudio", tal._estudio);
+            oDb.AddParameter("@lect_esc", tal._lect_esc);
+            oDb.AddParameter("@idioma", tal._idioma);
 
             oDb.ExecuteNonQuery("sp_Talento_update");
 
