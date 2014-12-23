@@ -66,6 +66,7 @@
         <div class="row no-gutter">
             <div class="form-group col-sm-3 col-xs-6">
                 <label for="">Género</label>
+
                 <asp:UpdatePanel ID="UpdatePanel6" runat="server">
                     <ContentTemplate>
 
@@ -76,6 +77,7 @@
                     </ContentTemplate>
 
                 </asp:UpdatePanel>
+
             </div>
             <div class="form-group col-sm-3 col-xs-6">
                 <label for="dlEstCivil">Estado Civil</label>

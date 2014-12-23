@@ -90,6 +90,15 @@
     <Content Include="dist\css\bootstrap.min.css" />
     <Content Include="dist\css\offcanvas.css" />
     <Content Include="dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="dist\img\all-header-bg.jpg" />
+    <Content Include="dist\img\fida-logo.jpg" />
+    <Content Include="dist\img\logo-sm.png" />
+    <Content Include="dist\img\preboot-master\.gitignore" />
+    <Content Include="dist\img\preboot-master\css\docs-compiled.css" />
+    <Content Include="dist\img\preboot-master\index.html" />
+    <Content Include="dist\img\preboot-master\preboot-favicon.png" />
+    <Content Include="dist\img\preboot-master\_layouts\default.html" />
+    <Content Include="dist\img\super-header-bg.png" />
     <Content Include="dist\js\bootstrap.js" />
     <Content Include="dist\js\bootstrap.min.js" />
     <Content Include="dist\js\npm.js" />
@@ -434,6 +443,16 @@
     <Content Include="docs\_jade\customizer-variables.jade" />
     <Content Include="docs\_plugins\bridge.rb" />
     <Content Include="docs\_plugins\bugify.rb" />
+    <Content Include="dist\img\preboot-master\CNAME" />
+    <Content Include="dist\img\preboot-master\less\docs.less" />
+    <Content Include="dist\img\preboot-master\less\normalize.less" />
+    <Content Include="dist\img\preboot-master\less\preboot.less" />
+    <Content Include="dist\img\preboot-master\less\pygments.less" />
+    <Content Include="dist\img\preboot-master\LICENSE.md" />
+    <Content Include="dist\img\preboot-master\Makefile" />
+    <Content Include="dist\img\preboot-master\package.json" />
+    <Content Include="dist\img\preboot-master\README.md" />
+    <Content Include="dist\img\preboot-master\_config.yml" />
     <None Include="dsDirectorio.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

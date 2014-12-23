@@ -127,10 +127,33 @@ fieldset {
     border-color: @green;
     &:hover{
         color: darken(@green, 15%);
-        border-color: darken(@green, 15%);
+        border-color: darken(@green, 15%); 
     }
-    &:before{
-        content: 'Hola';
+}
+
+.btn-del{
+    .btn-del();
+    
+    color: @red;
+    border-color: @red;
+    &:hover{
+        color: darken(@red, 15%);
+        border-color: darken(@red, 15%);
+    }
+}
+
+.table{
+    .table;
+}
+
+.btn-default{
+    .btn-add();
+    
+    color: @black-50;
+    border-color: @black-50;
+    &:hover{
+        color: darken(@black-50, 15%);
+        border-color: darken(@black-50, 15%);
     }
 }
 

@@ -7,8 +7,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Reportes</title>
-   
-    <link href="../CSS/Estilos.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../Scripts/Bloqueo.js"></script>
 </asp:Content>
 

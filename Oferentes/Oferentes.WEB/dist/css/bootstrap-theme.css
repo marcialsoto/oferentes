@@ -6318,7 +6318,9 @@ button.close {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.btn-add {
+.btn-add,
+.btn-del,
+.btn-default {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -6337,25 +6339,55 @@ button.close {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: transparent !important;
+  background-image: none !important;
 }
 .btn-add:focus,
+.btn-del:focus,
+.btn-default:focus,
 .btn-add:active:focus,
+.btn-del:active:focus,
+.btn-default:active:focus,
 .btn-add.active:focus,
+.btn-del.active:focus,
+.btn-default.active:focus,
 .btn-add.focus,
+.btn-del.focus,
+.btn-default.focus,
 .btn-add:active.focus,
-.btn-add.active.focus {
+.btn-del:active.focus,
+.btn-default:active.focus,
+.btn-add.active.focus,
+.btn-del.active.focus,
+.btn-default.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 .btn-add:hover,
+.btn-del:hover,
+.btn-default:hover,
 .btn-add:focus,
-.btn-add.focus {
+.btn-del:focus,
+.btn-default:focus,
+.btn-add.focus,
+.btn-del.focus,
+.btn-default.focus {
   color: #333333;
   text-decoration: none;
 }
 .btn-add:active,
-.btn-add.active {
+.btn-del:active,
+.btn-default:active,
+.btn-add.active,
+.btn-del.active,
+.btn-default.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -6363,8 +6395,14 @@ button.close {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn-add.disabled,
+.btn-del.disabled,
+.btn-default.disabled,
 .btn-add[disabled],
-fieldset[disabled] .btn-add {
+.btn-del[disabled],
+.btn-default[disabled],
+fieldset[disabled] .btn-add,
+fieldset[disabled] .btn-del,
+fieldset[disabled] .btn-default {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -6374,7 +6412,11 @@ fieldset[disabled] .btn-add {
   box-shadow: none;
 }
 .btn-add:active,
-.btn-add.active {
+.btn-del:active,
+.btn-default:active,
+.btn-add.active,
+.btn-del.active,
+.btn-default.active {
   background-image: none;
 }
 /*
@@ -6504,6 +6546,8 @@ fieldset .radio-inline label {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background-color: transparent !important;
+  background-image: none !important;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -6557,8 +6601,305 @@ fieldset[disabled] .btn-add {
   color: #2a612a;
   border-color: #2a612a;
 }
-.btn-add:before {
-  content: 'Hola';
+.btn-del {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #d9534f;
+  border-color: #d9534f;
+}
+.btn-del:focus,
+.btn-del:active:focus,
+.btn-del.active:focus,
+.btn-del.focus,
+.btn-del:active.focus,
+.btn-del.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn-del:hover,
+.btn-del:focus,
+.btn-del.focus {
+  color: #333333;
+  text-decoration: none;
+}
+.btn-del:active,
+.btn-del.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-del.disabled,
+.btn-del[disabled],
+fieldset[disabled] .btn-del {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn-del:active,
+.btn-del.active {
+  background-image: none;
+}
+.btn-del:hover {
+  color: #b52b27;
+  border-color: #b52b27;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  overflow-x: auto;
+  min-height: 0.01%;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.table > tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+.table .table {
+  background-color: #ffffff;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  border: 1px solid #dddddd;
+}
+.table > thead > tr > th,
+.table > thead > tr > td {
+  border-bottom-width: 2px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 5px;
+}
+.table > tbody > tr:hover {
+  background-color: #f5f5f5;
+}
+.table > tbody > tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+@media screen and (max-width: 767px) {
+  .table {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #dddddd;
+  }
+  .table > .table {
+    margin-bottom: 0;
+  }
+  .table > .table > thead > tr > th,
+  .table > .table > tbody > tr > th,
+  .table > .table > tfoot > tr > th,
+  .table > .table > thead > tr > td,
+  .table > .table > tbody > tr > td,
+  .table > .table > tfoot > tr > td {
+    white-space: nowrap;
+  }
+  .table > .table-bordered {
+    border: 0;
+  }
+  .table > .table-bordered > thead > tr > th:first-child,
+  .table > .table-bordered > tbody > tr > th:first-child,
+  .table > .table-bordered > tfoot > tr > th:first-child,
+  .table > .table-bordered > thead > tr > td:first-child,
+  .table > .table-bordered > tbody > tr > td:first-child,
+  .table > .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+  }
+  .table > .table-bordered > thead > tr > th:last-child,
+  .table > .table-bordered > tbody > tr > th:last-child,
+  .table > .table-bordered > tfoot > tr > th:last-child,
+  .table > .table-bordered > thead > tr > td:last-child,
+  .table > .table-bordered > tbody > tr > td:last-child,
+  .table > .table-bordered > tfoot > tr > td:last-child {
+    border-right: 0;
+  }
+  .table > .table-bordered > tbody > tr:last-child > th,
+  .table > .table-bordered > tfoot > tr:last-child > th,
+  .table > .table-bordered > tbody > tr:last-child > td,
+  .table > .table-bordered > tfoot > tr:last-child > td {
+    border-bottom: 0;
+  }
+}
+.btn-default {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent !important;
+  background-image: none !important;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: transparent;
+  color: #419641;
+  border-color: #419641;
+  color: #808080;
+  border-color: #808080;
+}
+.btn-default:focus,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.btn-default.focus,
+.btn-default:active.focus,
+.btn-default.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus {
+  color: #333333;
+  text-decoration: none;
+}
+.btn-default:active,
+.btn-default.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn-default:active,
+.btn-default.active {
+  background-image: none;
+}
+.btn-default:focus,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.btn-default.focus,
+.btn-default:active.focus,
+.btn-default.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus {
+  color: #333333;
+  text-decoration: none;
+}
+.btn-default:active,
+.btn-default.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn-default:active,
+.btn-default.active {
+  background-image: none;
+}
+.btn-default:hover {
+  color: #2a612a;
+  border-color: #2a612a;
+}
+.btn-default:hover {
+  color: #595959;
+  border-color: #595959;
 }
 .content-info {
   background-color: #bbd06c;
