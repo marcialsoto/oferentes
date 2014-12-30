@@ -1,0 +1,19 @@
+C:\xampp\htdocs\oferentes\Oferentes\Oferentes.DAL\bin\Debug\Oferentes.DAL.dll
+C:\xampp\htdocs\oferentes\Oferentes\Oferentes.DAL\bin\Debug\Oferentes.DAL.pdb
+C:\xampp\htdocs\oferentes\Oferentes\Oferentes.DAL\obj\Debug\Oferentes.DAL.dll
+C:\xampp\htdocs\oferentes\Oferentes\Oferentes.DAL\obj\Debug\Oferentes.DAL.pdb
+C:\xampp\htdocs\oferentes\Oferentes\Oferentes.DAL\obj\Debug\Oferentes.DAL.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\Proyecto Oferentes Final\PORTAL\Oferentes.DAL\bin\Debug\Oferentes.DAL.dll
+C:\Users\HP\Desktop\Proyecto Oferentes Final\PORTAL\Oferentes.DAL\bin\Debug\Oferentes.DAL.pdb
+C:\Users\HP\Desktop\Proyecto Oferentes Final\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\Proyecto Oferentes Final\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.dll
+C:\Users\HP\Desktop\Proyecto Oferentes Final\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.pdb
+C:\Users\HP\Desktop\PORTAL v 1\Oferentes.DAL\bin\Debug\Oferentes.DAL.dll
+C:\Users\HP\Desktop\PORTAL v 1\Oferentes.DAL\bin\Debug\Oferentes.DAL.pdb
+C:\Users\HP\Desktop\PORTAL v 1\Oferentes.DAL\obj\Debug\Oferentes.DAL.dll
+C:\Users\HP\Desktop\PORTAL v 1\Oferentes.DAL\obj\Debug\Oferentes.DAL.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\bin\Debug\Oferentes.DAL.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\bin\Debug\Oferentes.DAL.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.pdb
