@@ -18,7 +18,6 @@
             <asp:UpdatePanel ID="UpdatePanel34" runat="server">
                 <ContentTemplate>
                     <asp:DropDownList ID="ddlDNI" runat="server" CssClass="form-control" AutoPostBack="True" DataTextField="ident" DataValueField="num_dni" OnSelectedIndexChanged="ddlDNI_SelectedIndexChanged">
-                        
                     </asp:DropDownList>
 
 
@@ -506,7 +505,7 @@
             </div>
         </div>
         <hr />
-        
+
     </fieldset>
 
 
@@ -536,30 +535,41 @@
         </ContentTemplate>
     </asp:UpdatePanel>
     <br />
-        <div class="row no-gutter">
-            <div class="col-sm-4">
-                <label>Estado</label>
-                <asp:UpdatePanel ID="UpdatePanel35" runat="server">
-                    <ContentTemplate>
-                        <asp:Label ID="lbEstado" runat="server" Text=""></asp:Label>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-                <asp:UpdatePanel ID="UpdatePanel36" runat="server">
-                    <ContentTemplate>
-                        <asp:Button ID="btnHabilitar" CssClass="btn-default" runat="server" Text="Habilitar" Enabled="False" OnClick="btnHabilitar_Click" />
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-            </div>
-            <div class="col-sm-4">
-                <label>&nbsp;</label>
-                <asp:UpdatePanel ID="UpdatePanel7" runat="server">
-                    <ContentTemplate>
-                        <asp:Button ID="btnActualizar" CssClass="btn btn-success pull-right" runat="server" Text="Actualizar Talento" ValidationGroup="ValidarTalento" OnClick="btnActualizar_Click" />
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-            </div>
+    <div class="row no-gutter">
+        <div class="col-sm-4">
+            <label>Estado</label>
+            <asp:UpdatePanel ID="UpdatePanel35" runat="server">
+                <ContentTemplate>
+                    <asp:Label ID="lbEstado" runat="server" Text=""></asp:Label>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            <asp:UpdatePanel ID="UpdatePanel36" runat="server">
+                <ContentTemplate>
+                    <asp:Button ID="btnHabilitar" CssClass="btn-default" runat="server" Text="Habilitar" Enabled="False" OnClick="btnHabilitar_Click" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
         </div>
-    <br /><br />
+        <div class="col-sm-4">
+            <label>&nbsp;</label>
+            <asp:UpdatePanel ID="UpdatePanel7" runat="server">
+                <ContentTemplate>
+                    <asp:Button ID="btnActualizar" CssClass="btn btn-success pull-right" runat="server" Text="Actualizar Talento" ValidationGroup="ValidarTalento" OnClick="btnActualizar_Click" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        <div class="col-sm-4">
+            <label>&nbsp;</label>
+            <asp:UpdatePanel ID="UpdatePanel32" runat="server">
+                <ContentTemplate>
+                    <asp:Button ID="btnEliminar" runat="server" CssClass="btn btn-danger" Text="Eliminar Talento" ValidationGroup="ValidarTalento" OnClick="btnEliminar_Click" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+    </div>
+
+
+    <br />
+    <br />
     <asp:ValidationSummary ID="vsValidarTalento" runat="server"
         ShowMessageBox="True" ShowSummary="False" ValidationGroup="ValidarTalento" />
 

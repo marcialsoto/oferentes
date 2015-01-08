@@ -1012,6 +1012,24 @@ namespace Oferentes.WEB.Admin {
         protected global::System.Web.UI.WebControls.Button btnActualizar;
         
         /// <summary>
+        /// Control UpdatePanel32.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel32;
+        
+        /// <summary>
+        /// Control btnEliminar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEliminar;
+        
+        /// <summary>
         /// Control vsValidarTalento.
         /// </summary>
         /// <remarks>

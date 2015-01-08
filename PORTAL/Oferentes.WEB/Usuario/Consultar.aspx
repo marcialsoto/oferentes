@@ -117,7 +117,7 @@
                 <asp:Button ID="btnOk" runat="server" Text="OK" ValidationGroup="ValidarDNI" OnClick="btnOk_Click" Enabled="False" />
             </ContentTemplate>
         </asp:UpdatePanel>
-
+        <hr />
         <asp:UpdatePanel ID="UpdatePanel7" runat="server">
             <ContentTemplate>
                 <asp:RadioButton ID="rbLugarActv" runat="server" Text="Búsqueda por Lugar y Actividad" AutoPostBack="True" OnCheckedChanged="rbLugarActv_CheckedChanged" />
@@ -125,61 +125,64 @@
         </asp:UpdatePanel>
 
 
+        <div class="form-group">
+            <asp:UpdatePanel ID="UpdatePanel20" runat="server">
+                <ContentTemplate>
 
-        <asp:UpdatePanel ID="UpdatePanel20" runat="server">
-            <ContentTemplate>
-                Departamento:
-                            &nbsp&nbsp&nbsp&nbsp&nbsp
-                           <asp:CheckBox ID="chbTodosDeptlugaractiv" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosDeptlugaractiv_CheckedChanged" />
-            </ContentTemplate>
-        </asp:UpdatePanel>
-
-        <asp:UpdatePanel ID="UpdatePanel15" runat="server">
-            <ContentTemplate>
-                <asp:DropDownList ID="dlDepAct" runat="server" CssClass="form-control"
-                    DataTextField="departamento" DataValueField="cod_dep"
-                    OnSelectedIndexChanged="dlDepAct_SelectedIndexChanged" AutoPostBack="True" Enabled="False">
-                </asp:DropDownList>
-            </ContentTemplate>
-        </asp:UpdatePanel>
+                    <label>Departamento</label>
+                    <asp:CheckBox ID="chbTodosDeptlugaractiv" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosDeptlugaractiv_CheckedChanged" />
 
 
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        <div class="form-group">
+            <asp:UpdatePanel ID="UpdatePanel15" runat="server">
+                <ContentTemplate>
+                    <asp:DropDownList ID="dlDepAct" runat="server" CssClass="form-control"
+                        DataTextField="departamento" DataValueField="cod_dep"
+                        OnSelectedIndexChanged="dlDepAct_SelectedIndexChanged" AutoPostBack="True" Enabled="False">
+                    </asp:DropDownList>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
 
-        <asp:UpdatePanel ID="UpdatePanel21" runat="server">
-            <ContentTemplate>
-                Provincia:   
-                           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                           <asp:CheckBox ID="chbTodosProvlugaractiv" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosProvlugaractiv_CheckedChanged" />
-            </ContentTemplate>
-        </asp:UpdatePanel>
+        <div class="form-group">
+            <asp:UpdatePanel ID="UpdatePanel21" runat="server">
+                <ContentTemplate>
+                    <label>Provincia</label>
+                    <asp:CheckBox ID="chbTodosProvlugaractiv" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosProvlugaractiv_CheckedChanged" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        <div class="form-group">
+            <asp:UpdatePanel ID="UpdatePanel9" runat="server">
+                <ContentTemplate>
+                    <asp:DropDownList ID="dlProvAct" runat="server" CssClass="form-control"
+                        DataTextField="provincia" DataValueField="cod_prov"
+                        OnSelectedIndexChanged="dlProvAct_SelectedIndexChanged" AutoPostBack="True" Enabled="False">
+                    </asp:DropDownList>
+                </ContentTemplate>
 
-        <asp:UpdatePanel ID="UpdatePanel9" runat="server">
-            <ContentTemplate>
-                <asp:DropDownList ID="dlProvAct" runat="server" CssClass="form-control"
-                    DataTextField="provincia" DataValueField="cod_prov"
-                    OnSelectedIndexChanged="dlProvAct_SelectedIndexChanged" AutoPostBack="True" Enabled="False">
-                </asp:DropDownList>
-            </ContentTemplate>
-
-            <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="dlDepAct" EventName="SelectedIndexChanged" />
-            </Triggers>
-
-
-        </asp:UpdatePanel>
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="dlDepAct" EventName="SelectedIndexChanged" />
+                </Triggers>
 
 
-        <asp:UpdatePanel ID="UpdatePanel22" runat="server">
-            <ContentTemplate>
-                Distrito:
-                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <asp:CheckBox ID="chbTodosDistlugaractiv" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosDistlugaractiv_CheckedChanged" />
-            </ContentTemplate>
-        </asp:UpdatePanel>
+            </asp:UpdatePanel>
 
+        </div>
+        <div class="form-group">
+            <asp:UpdatePanel ID="UpdatePanel22" runat="server">
+                <ContentTemplate>
+                    <label>Distrito</label>
+                    <asp:CheckBox ID="chbTodosDistlugaractiv" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosDistlugaractiv_CheckedChanged" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
         <asp:UpdatePanel ID="UpdatePanel10" runat="server">
             <ContentTemplate>
-                <asp:DropDownList ID="dlDistAct" runat="server" CssClass="form-control" º
+                <asp:DropDownList ID="dlDistAct" runat="server" CssClass="form-control"
                     DataTextField="distrito" DataValueField="cod_dist"
                     OnSelectedIndexChanged="dlDistAct_SelectedIndexChanged" AutoPostBack="True" Enabled="False">
                 </asp:DropDownList>
@@ -195,7 +198,7 @@
 
         <asp:UpdatePanel ID="UpdatePanel8" runat="server">
             <ContentTemplate>
-                <asp:TextBox ID="txtLugarActv" runat="server" Enabled="False" Height="20px" Width="101px"></asp:TextBox>
+                <asp:TextBox ID="txtLugarActv" runat="server" Enabled="False" CssClass="form-control"></asp:TextBox>
 
             </ContentTemplate>
             <Triggers>
@@ -216,24 +219,25 @@
                 <asp:RadioButton ID="rbActiv" runat="server" Text="Búsqueda por Actividad" AutoPostBack="True" OnCheckedChanged="rbActiv_CheckedChanged" Visible="False" />
             </ContentTemplate>
         </asp:UpdatePanel>
-
-
-
+        <hr />
         <asp:UpdatePanel ID="UpdatePanel23" runat="server">
             <ContentTemplate>
-                Actividad:
-                             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                             <asp:CheckBox ID="chbTodosActiv" runat="server" Text="Todas" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosActiv_CheckedChanged" />
+                <label>Actividad</label>
+                <asp:CheckBox ID="chbTodosActiv" runat="server" Text="Todas" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosActiv_CheckedChanged" />
             </ContentTemplate>
         </asp:UpdatePanel>
 
 
-        <asp:UpdatePanel ID="UpdatePanel13" runat="server">
-            <ContentTemplate>
-                <asp:DropDownList ID="dlActividad" runat="server" Height="18px" Width="250px" AutoPostBack="True" DataTextField="nombre" DataValueField="cod_activ" Enabled="False" OnSelectedIndexChanged="dlActividad_SelectedIndexChanged"></asp:DropDownList>
 
-            </ContentTemplate>
-        </asp:UpdatePanel>
+        <div class="form-group">
+            <asp:UpdatePanel ID="UpdatePanel13" runat="server">
+                <ContentTemplate>
+                    <asp:DropDownList ID="dlActividad" runat="server" CssClass="form-control" AutoPostBack="True" DataTextField="nombre" DataValueField="cod_activ" Enabled="False" OnSelectedIndexChanged="dlActividad_SelectedIndexChanged"></asp:DropDownList>
+
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+
 
 
         <asp:UpdatePanel ID="UpdatePanel14" runat="server">
@@ -246,19 +250,21 @@
 
         <asp:UpdatePanel ID="UpdatePanel24" runat="server">
             <ContentTemplate>
-                Organización Atendida:
-                             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                             <asp:CheckBox ID="chbTodasOrg" runat="server" Text="Todas" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodasOrg_CheckedChanged" />
+                <label>Organización Atendida</label>
+
+                <asp:CheckBox ID="chbTodasOrg" runat="server" Text="Todas" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodasOrg_CheckedChanged" />
             </ContentTemplate>
         </asp:UpdatePanel>
 
+        <div class="form-group">
+            <asp:UpdatePanel ID="UpdatePanel25" runat="server">
+                <ContentTemplate>
+                    <asp:DropDownList ID="dlOrganizacion" runat="server" CssClass="form-control" AutoPostBack="True" Enabled="False" OnSelectedIndexChanged="dlOrganizacion_SelectedIndexChanged" DataTextField="nombre" DataValueField="cod_orgatend"></asp:DropDownList>
 
-        <asp:UpdatePanel ID="UpdatePanel25" runat="server">
-            <ContentTemplate>
-                <asp:DropDownList ID="dlOrganizacion" runat="server" Height="18px" Width="250px" AutoPostBack="True" Enabled="False" OnSelectedIndexChanged="dlOrganizacion_SelectedIndexChanged" DataTextField="nombre" DataValueField="cod_orgatend"></asp:DropDownList>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
 
-            </ContentTemplate>
-        </asp:UpdatePanel>
 
 
         <asp:UpdatePanel ID="UpdatePanel26" runat="server">
@@ -278,10 +284,11 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
         </p>
 
-        <asp:TabContainer ID="Talento" runat="server" ActiveTabIndex="7" Width="1013px" Height="555px" Style="margin-top: 0px">
+        <asp:TabContainer ID="Talento" runat="server" ActiveTabIndex="0" Width="1013px" Height="555px" Style="margin-top: 0px">
             <asp:TabPanel runat="server" HeaderText="Talentos" ID="tpTalentos">
                 <HeaderTemplate>
                     Talentos
+               
                 </HeaderTemplate>
                 <ContentTemplate>
 
@@ -313,6 +320,7 @@
 
                 <HeaderTemplate>
                     Experiencias
+               
                 </HeaderTemplate>
 
                 <ContentTemplate>
