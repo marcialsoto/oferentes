@@ -6473,9 +6473,6 @@ footer {
 .ajax__tab_xp .ajax__tab_header .ajax__tab_tab {
   height: 100% !important;
 }
-.ajax__tab_xp .ajax__tab_header .ajax__tab_tab span {
-  font-size: 10px !important;
-}
 .row.no-gutter {
   margin-right: 0;
   margin-left: 0;

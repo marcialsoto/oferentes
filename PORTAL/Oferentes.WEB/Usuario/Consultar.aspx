@@ -19,11 +19,13 @@
                 <asp:RadioButton ID="rbTotal" runat="server" Checked="True" Text="Seleccionar Todos los Departamentos" AutoPostBack="True" OnCheckedChanged="rbTotal_CheckedChanged" Visible="False" />
             </ContentTemplate>
         </asp:UpdatePanel>
+
         <asp:UpdatePanel ID="UpdatePanel3" runat="server">
             <ContentTemplate>
                 <asp:RadioButton ID="rbUbigeo" runat="server" AutoPostBack="True" OnCheckedChanged="rbUbigeo_CheckedChanged" Text="Seleccionar por Ubigeo Talentos" />
             </ContentTemplate>
         </asp:UpdatePanel>
+
         <div class="form-group">
             <asp:UpdatePanel ID="UpdatePanel17" runat="server">
                 <ContentTemplate>
@@ -86,19 +88,21 @@
 
             </asp:UpdatePanel>
         </div>
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <ContentTemplate>
-                <asp:TextBox ID="txtUbigeo" runat="server" Height="20px" Width="101px" Enabled="False"></asp:TextBox>
-            </ContentTemplate>
+        <div class="form-group">
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:TextBox ID="txtUbigeo" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
+                </ContentTemplate>
 
-            <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="dlDist" EventName="SelectedIndexChanged" />
-            </Triggers>
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="dlDist" EventName="SelectedIndexChanged" />
+                </Triggers>
 
-        </asp:UpdatePanel>
+            </asp:UpdatePanel>
+        </div>
         <asp:UpdatePanel ID="UpdatePanel4" runat="server">
             <ContentTemplate>
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" Enabled="False" />
+                <asp:Button ID="btnBuscar" CssClass="btn btn-default" runat="server" Text="Buscar" OnClick="btnBuscar_Click" Enabled="False" />
             </ContentTemplate>
         </asp:UpdatePanel>
 
@@ -284,7 +288,7 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
         </p>
 
-        <asp:TabContainer ID="Talento" runat="server" ActiveTabIndex="0" Width="1013px" Height="555px" Style="margin-top: 0px">
+        <asp:TabContainer ID="Talento" runat="server" ActiveTabIndex="0" Height="555px" Style="margin-top: 0px">
             <asp:TabPanel runat="server" HeaderText="Talentos" ID="tpTalentos">
                 <HeaderTemplate>
                     Talentos
