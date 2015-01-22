@@ -95,15 +95,18 @@ namespace Oferentes.WEB.Admin
                 DataTable dt = new DataTable();
 
                 dt.Columns.Add("cod Activ");
-                dt.Columns.Add("Actividad");
-                dt.Columns.Add("Duración");
-                dt.Columns.Add("Certificado");
-                dt.Columns.Add("Lugar Actividad");
+                dt.Columns.Add("Actividad");               
                 dt.Columns.Add("Ubigeo");
+                dt.Columns.Add("Lugar Actividad");
+                dt.Columns.Add("Duración");                
                 dt.Columns.Add("cod Org Atendida");
                 dt.Columns.Add("Organización Atendida");
+                dt.Columns.Add("Certificado");
                 dt.Columns.Add("Referente");
                 dt.Columns.Add("Reconocimientos");
+
+                
+
 
                 //dt.Rows.Add("", "");
 
@@ -255,7 +258,7 @@ namespace Oferentes.WEB.Admin
                 DataTable dtDist = Session["distritos"] as DataTable;
 
                 int codActiv, codOrg;
-                string lugar, ubigeo, actividad, organizacion;
+                string lugar, ubigeo, actividad, organizacion, rango;
 
                 if (chbOtraActiv.Checked)
                 {
@@ -270,6 +273,7 @@ namespace Oferentes.WEB.Admin
 
                 lugar = dlDistAct.SelectedItem + ", " + dlProvAct.SelectedItem + ", " + dlDepAct.SelectedItem;
                 ubigeo = dlDistAct.SelectedValue;
+                rango = txtInicio.Text + " - " + txtFin.Text;
 
                 if (chbOtraOrg.Checked)
                 {
@@ -288,11 +292,12 @@ namespace Oferentes.WEB.Admin
                     {
                         lugar = dtDist.Rows[i][1].ToString() + ", " + dlProvAct.SelectedItem + ", " + dlDepAct.SelectedItem;
                         ubigeo = dtDist.Rows[i][0].ToString();
-                        dt.Rows.Add(codActiv, actividad, dlRango.SelectedValue, txtCertif.Text, lugar, ubigeo, codOrg, organizacion, txtRefer.Text, txtRecon.Text);
+                        dt.Rows.Add(codActiv, actividad, ubigeo, lugar, rango, codOrg, organizacion, txtCertif.Text, txtRefer.Text, txtRecon.Text);
                     }
                 }
                 else
-                    dt.Rows.Add(codActiv, actividad, dlRango.SelectedValue, txtCertif.Text, lugar, ubigeo, codOrg, organizacion, txtRefer.Text, txtRecon.Text);
+                    dt.Rows.Add(codActiv, actividad, ubigeo, lugar, rango, codOrg, organizacion, txtCertif.Text, txtRefer.Text, txtRecon.Text);
+
 
                 gdvExp.DataSource = dt;
                 gdvExp.DataBind();
@@ -310,6 +315,11 @@ namespace Oferentes.WEB.Admin
             {
 
             }
+
+        }
+
+        protected void ordenar_experiencia()
+        {
 
         }
 
@@ -396,13 +406,13 @@ namespace Oferentes.WEB.Admin
                     else
                         exp._actividad = Convert.ToInt16(dt.Rows[i][0].ToString());
 
-                    exp._duracion = dt.Rows[i][2].ToString();
-                    exp._certificado = dt.Rows[i][3].ToString();
-                    exp._lugar_activ = dt.Rows[i][5].ToString();
+                    exp._duracion = dt.Rows[i][4].ToString();
+                    exp._certificado = dt.Rows[i][7].ToString();
+                    exp._lugar_activ = dt.Rows[i][2].ToString();
 
-                    if (dt.Rows[i][6].ToString() == "0")
+                    if (dt.Rows[i][5].ToString() == "0")
                     {
-                        org._nombre = dt.Rows[i][7].ToString();
+                        org._nombre = dt.Rows[i][6].ToString();
 
                         ds = OrgAtendida.buscar_OrgAtendida_nombre(org);
 
@@ -421,7 +431,7 @@ namespace Oferentes.WEB.Admin
                         exp._organizacion_atendida = codOrg;
                     }
                     else
-                        exp._organizacion_atendida = Convert.ToInt16(dt.Rows[i][6].ToString());
+                        exp._organizacion_atendida = Convert.ToInt16(dt.Rows[i][5].ToString());
 
                     exp._referente = dt.Rows[i][8].ToString();
                     exp._reconocimientos = dt.Rows[i][9].ToString();
@@ -513,7 +523,7 @@ namespace Oferentes.WEB.Admin
             txtActiv.Text = string.Empty;
             //txtDuracion.Text = string.Empty;
 
-            dlRango.SelectedIndex = 0;
+            //dlRango.SelectedIndex = 0;
 
             txtCertif.Text = string.Empty;
 
@@ -540,6 +550,8 @@ namespace Oferentes.WEB.Admin
             txtOrg.Text = string.Empty;
             txtRefer.Text = string.Empty;
             txtRecon.Text = string.Empty;
+            txtInicio.Text = string.Empty;
+            txtFin.Text = string.Empty;
 
             rbCertNo.Checked = true;
             rbCertSi.Checked = false;
@@ -662,6 +674,41 @@ namespace Oferentes.WEB.Admin
             rbCertSi.Checked = true;
             txtCertif.Enabled = true;
             txtCertif.Text = string.Empty;
+        }
+
+        protected void gdvExp_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
+            e.Row.Cells[3].Visible = false;
+            e.Row.Cells[6].Visible = false;
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Talento tal = new Talento();
+                DataSet ds = new DataSet();
+
+                tal._num_dni = Convert.ToInt32(txtDNI.Text);
+
+                ds = Talento.buscar_Reniec_dni(tal);
+
+                if(ds.Tables[0].Rows.Count>0)
+                {
+                    txtNomb.Text = (ds.Tables[0].Rows[0][3]).ToString();
+                    txtApell.Text = (ds.Tables[0].Rows[0][1]).ToString() + " " + (ds.Tables[0].Rows[0][2]).ToString();
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "msg", "alert('DNI no existe en la BD de Reniec')", true);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "msg", "alert('Error')", true);
+            }
         }
 
 

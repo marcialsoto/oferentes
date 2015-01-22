@@ -13,15 +13,16 @@ namespace Oferentes.BOL
 
         private int estado_civil, residencia, idioma;
 
+        private string apellidos, nombres, lugar_nac, sexo, direccion, ubigeo, correo, estudio, lect_esc, estado;
+
+        private DateTime fecha_nac;
+
         public int _idioma
         {
             get { return idioma; }
             set { idioma = value; }
         }
-
-        private string apellidos, nombres, lugar_nac, sexo, direccion, ubigeo, correo, estudio, lect_esc, estado;        
-
-        private DateTime fecha_nac;
+              
 
         public string _lect_esc
         {
@@ -174,6 +175,16 @@ namespace Oferentes.BOL
             oDb.AddParameter("@dni", tal._num_dni);
 
             return oDb.ExecuteDataSet("sp_Talento_search_dni");
+
+        }
+
+        public static DataSet buscar_Reniec_dni(Talento tal)
+        {
+            DBAccess oDb = new DBAccess();
+
+            oDb.AddParameter("@dni", tal._num_dni);
+
+            return oDb.ExecuteDataSet("sp_Reniec_search_dni");
 
         }
 

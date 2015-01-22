@@ -536,7 +536,7 @@ namespace Oferentes.WEB.Admin
             {
                 DataTable dt = Session["datos"] as DataTable;
 
-                string ubigeo;
+                string ubigeo, rango;
                 int fila, num;
 
                 fila = e.RowIndex;
@@ -547,7 +547,13 @@ namespace Oferentes.WEB.Admin
 
                 dlActiv.SelectedValue = (dt.Rows[fila][2]).ToString();
 
-                dlRango.SelectedValue = (dt.Rows[fila][4]).ToString();
+                //dlRango.SelectedValue = (dt.Rows[fila][4]).ToString();
+
+                rango = (dt.Rows[fila][4]).ToString();
+
+                txtInicio.Text = rango.Substring(0, 4);
+
+                txtFin.Text = rango.Substring(7, 4);
 
                 txtCertif.Text = (dt.Rows[fila][5]).ToString();
 
@@ -671,7 +677,7 @@ namespace Oferentes.WEB.Admin
             txtActiv.Text = string.Empty;
             //txtDuracion.Text = string.Empty;
 
-            dlRango.SelectedIndex = 0;
+            //dlRango.SelectedIndex = 0;
 
             txtCertif.Text = string.Empty;
 
@@ -699,6 +705,8 @@ namespace Oferentes.WEB.Admin
             txtOrg.Text = string.Empty;
             txtRefer.Text = string.Empty;
             txtRecon.Text = string.Empty;
+            txtInicio.Text = string.Empty;
+            txtFin.Text = string.Empty;
 
             rbCertNo.Checked = true;
             rbCertSi.Checked = false;
@@ -745,7 +753,7 @@ namespace Oferentes.WEB.Admin
                 else
                     exp._actividad = Convert.ToInt16(dlActiv.SelectedValue);
 
-                exp._duracion = dlRango.SelectedValue;
+                exp._duracion = txtInicio.Text + " - " + txtFin.Text;
                 exp._certificado = txtCertif.Text;
                 exp._lugar_activ = dlDistAct.SelectedValue;
 
@@ -817,7 +825,7 @@ namespace Oferentes.WEB.Admin
                 else
                     exp._actividad = Convert.ToInt16(dlActiv.SelectedValue);
 
-                exp._duracion = dlRango.SelectedValue;
+                exp._duracion = txtInicio.Text + " - " + txtFin.Text;
                 exp._certificado = txtCertif.Text;
                 exp._lugar_activ = dlDistAct.SelectedValue;
 

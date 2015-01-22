@@ -288,7 +288,7 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
         </p>
 
-        <asp:TabContainer ID="Talento" runat="server" ActiveTabIndex="0" Height="555px" Style="margin-top: 0px">
+        <asp:TabContainer ID="Talento" runat="server" ActiveTabIndex="0" Height="555px" Style="margin-top: 0px">        
             <asp:TabPanel runat="server" HeaderText="Talentos" ID="tpTalentos">
                 <HeaderTemplate>
                     Talentos

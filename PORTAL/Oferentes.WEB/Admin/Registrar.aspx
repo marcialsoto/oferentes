@@ -20,14 +20,25 @@
             <h4>Ficha Personal</h4>
             <div class="form-group col-sm-3 col-xs-6">
                 <label for="txtDNI">DNI</label>
+
                 <asp:UpdatePanel ID="UpdatePanel19" runat="server">
                     <ContentTemplate>
-                        <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control" MaxLength="8" onkeypress="return numeros(event);" ViewStateMode="Inherit" ClientIDMode="Static"></asp:TextBox>
+
                         <asp:RequiredFieldValidator ID="rfvDNI" runat="server" ErrorMessage="Ingrese DNI" ValidationGroup="ValidarTalento" ControlToValidate="txtDNI" ViewStateMode="Disabled" Enabled="True" SetFocusOnError="True" Display="Dynamic">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="DNI: Ingrese 8 dígitos" ValidationExpression="\d{8}" ControlToValidate="txtDNI" ValidationGroup="ValidarTalento" Display="Dynamic">*</asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Ingrese DNI" ValidationGroup="ValidarDNI" ControlToValidate="txtDNI">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator Display="Dynamic" ID="RegularExpressionValidator5" runat="server" ErrorMessage="DNI: Ingrese 8 dígitos" ValidationExpression="\d{8}" ControlToValidate="txtDNI" ValidationGroup="ValidarDNI">*</asp:RegularExpressionValidator>
+                        <div class="input-group">
+                            <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control" MaxLength="8" onkeypress="return numeros(event);" ViewStateMode="Inherit" ClientIDMode="Static"></asp:TextBox>
+                            <span class="input-group-btn">
+                                <asp:Button ID="btnBuscar" CssClass="btn btn-default" runat="server" Text="Buscar" OnClick="btnBuscar_Click" ValidationGroup="ValidarDNI" Visible="true" />
+                            </span>
+                        </div>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
+
+
 
             <div class="form-group col-sm-3 col-xs-6">
                 <label for="txtNomb">Nombre(s)</label>
@@ -90,8 +101,7 @@
                 <asp:UpdatePanel ID="UpdatePanel22" runat="server">
                     <ContentTemplate>
                         <asp:TextBox ID="txtFijo" runat="server" CssClass="form-control" ClientIDMode="Static" onkeypress="return numeros(event);"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvFijo" runat="server" ErrorMessage="Ingrese Teléfono Fijo" ValidationGroup="ValidarTalento" ControlToValidate="txtFijo" Display="Dynamic">*</asp:RequiredFieldValidator>
-
+                        <%--<asp:RequiredFieldValidator ID="rfvFijo" runat="server" ErrorMessage="Ingrese Teléfono Fijo" ValidationGroup="ValidarTalento" ControlToValidate="txtFijo" Display="Dynamic">*</asp:RequiredFieldValidator>--%>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
@@ -327,11 +337,29 @@
                 <label for="dlRango">Experiencia</label>
                 <asp:UpdatePanel ID="UpdatePanel10" runat="server">
                     <ContentTemplate>
-                        <asp:DropDownList ID="dlRango" runat="server" CssClass="form-control"  AutoPostBack="True">
+                        <div class="form-inline row">
+                            <div class="form-group col-sm-6">
+                                <label>Inicio</label>
+                        <asp:TextBox ID="txtInicio" runat="server" CssClass="form-control" onkeypress="return numeros(event);" MaxLength="4"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtInicio" ErrorMessage="Ingrese Año inicial" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Año inicio: Ingrese 4 dígitos" ValidationExpression="\d{4}" ControlToValidate="txtInicio" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RegularExpressionValidator>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label>Fin</label>                       
+                        <asp:TextBox ID="txtFin" runat="server" CssClass="form-control" onkeypress="return numeros(event);" MaxLength="4"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFin" ErrorMessage="Ingrese Año final" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Año fin: Ingrese 4 dígitos" ValidationExpression="\d{4}" ControlToValidate="txtFin" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RegularExpressionValidator>
+                            </div>
+                        </div>
+
+
+
+
+                        <%-- <asp:DropDownList ID="dlRango" runat="server" CssClass="form-control"  AutoPostBack="True">
                             <asp:ListItem Selected="True" Value="3 - 5">3 - 5 años</asp:ListItem>
                             <asp:ListItem Value="5 - 8">5 - 8 años</asp:ListItem>
                             <asp:ListItem Value="8">más de 8</asp:ListItem>
-                        </asp:DropDownList>
+                        </asp:DropDownList>--%>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
@@ -443,7 +471,7 @@
                     <ContentTemplate>
                         <asp:TextBox ID="txtRefer" runat="server" CssClass="form-control" ClientIDMode="Static"></asp:TextBox>
 
-                        <asp:RequiredFieldValidator ID="rfvRefer" runat="server" ErrorMessage="Ingrese Referente" ControlToValidate="txtRefer" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvRefer" runat="server" ErrorMessage="Ingrese Persona de Contacto" ControlToValidate="txtRefer" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>
 
                     </ContentTemplate>
                 </asp:UpdatePanel>
@@ -473,7 +501,7 @@
 
     <asp:UpdatePanel ID="UpdatePanel7" runat="server">
         <ContentTemplate>
-            <asp:GridView CssClass="table" ID="gdvExp" runat="server" OnRowDeleting="gdvExp_RowDeleting">
+            <asp:GridView CssClass="table" ID="gdvExp" runat="server" OnRowDeleting="gdvExp_RowDeleting" OnRowDataBound="gdvExp_RowDataBound">
                 <Columns>
                     <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
                 </Columns>
@@ -498,6 +526,9 @@
 
     <asp:ValidationSummary ID="vsValidarTalento" runat="server"
         ShowMessageBox="True" ShowSummary="False" ValidationGroup="ValidarTalento" />
+
+    <asp:ValidationSummary ID="vsValidarDNI" runat="server"
+        ShowMessageBox="True" ShowSummary="False" ValidationGroup="ValidarDNI" />
 
     <asp:ValidationSummary ID="vsValidarExperiencia" runat="server"
         ShowMessageBox="True" ShowSummary="False" ValidationGroup="ValidarExp" />

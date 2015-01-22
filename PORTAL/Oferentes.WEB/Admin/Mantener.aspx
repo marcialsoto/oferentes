@@ -343,11 +343,23 @@
                 <label for="dlRango">Experiencia</label>
                 <asp:UpdatePanel ID="UpdatePanel10" runat="server">
                     <ContentTemplate>
-                        <asp:DropDownList ID="dlRango" runat="server" CssClass="form-control" AutoPostBack="True">
+
+                        Inicio:
+                        <asp:TextBox ID="txtInicio" runat="server" Height="20px" Width="80px"  onkeypress="return numeros(event);" MaxLength="4"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtInicio" ErrorMessage="Ingrese Año inicial" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Año inicio: Ingrese 4 dígitos" ValidationExpression="\d{4}" ControlToValidate="txtInicio" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RegularExpressionValidator>
+
+                        Fin:                       
+                        <asp:TextBox ID="txtFin" runat="server" Height="20px" Width="80px"  onkeypress="return numeros(event);" MaxLength="4"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFin" ErrorMessage="Ingrese Año final" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Año fin: Ingrese 4 dígitos" ValidationExpression="\d{4}" ControlToValidate="txtFin" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RegularExpressionValidator>
+
+
+                       <%-- <asp:DropDownList ID="dlRango" runat="server" CssClass="form-control" AutoPostBack="True">
                             <asp:ListItem Selected="True" Value="3 - 5">3 - 5 años</asp:ListItem>
                             <asp:ListItem Value="5 - 8">5 - 8 años</asp:ListItem>
                             <asp:ListItem Value="8">más de 8</asp:ListItem>
-                        </asp:DropDownList>
+                        </asp:DropDownList>--%>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
@@ -517,17 +529,19 @@
         <ContentTemplate>
             <asp:GridView ID="gdvExp" CssClass="table" runat="server" OnRowDeleting="gdvExp_RowDeleting" AutoGenerateColumns="False" AllowSorting="True">
                 <Columns>
-                    <asp:CommandField ButtonType="Button" ControlStyle-CssClass="btn-link" ShowDeleteButton="True" DeleteText="Editar" />
+                    <asp:CommandField ButtonType="Button" ControlStyle-CssClass="btn-link" ShowDeleteButton="True" DeleteText="Editar" >
+                    <ControlStyle CssClass="btn-link" />
+                    </asp:CommandField>
                     <asp:BoundField DataField="num" HeaderText="Número" Visible="False" />
                     <asp:BoundField DataField="dni" HeaderText="DNI" Visible="False" />
                     <asp:BoundField DataField="cod_act" HeaderText="cod_act" Visible="False" />
                     <asp:BoundField DataField="actividad" HeaderText="Actividad" />
+                    <asp:BoundField DataField="cod_lugar_activ" HeaderText="Ubigeo Lugar" Visible="False" />
+                    <asp:BoundField DataField="lugar_activ" HeaderText="Lugar Actividad" />
                     <asp:BoundField DataField="duracion" HeaderText="Duración" />
-                    <asp:BoundField DataField="certificado" HeaderText="Certificado" />
-                    <asp:BoundField DataField="cod_lugar_activ" HeaderText="Ubigeo Lugar" />
-                    <asp:BoundField DataField="lugar_activ" HeaderText="Lugar" />
                     <asp:BoundField DataField="cod_org" HeaderText="cod Org" Visible="False" />
                     <asp:BoundField DataField="organizacion" HeaderText="Organización Atendida" />
+                    <asp:BoundField DataField="certificado" HeaderText="Certificado" />
                     <asp:BoundField DataField="referente" HeaderText="Referente" />
                     <asp:BoundField DataField="reconocimientos" HeaderText="Reconocimientos" />
                 </Columns>

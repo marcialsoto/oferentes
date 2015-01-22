@@ -6815,6 +6815,7 @@ fieldset[disabled] .btn-del {
   background-color: transparent;
   color: #419641;
   border-color: #419641;
+  padding: 4px 12px;
   color: #808080;
   border-color: #808080;
 }

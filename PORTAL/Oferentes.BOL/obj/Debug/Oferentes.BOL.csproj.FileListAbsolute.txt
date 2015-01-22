@@ -96,3 +96,17 @@ C:\Users\HP\Desktop\oferentes-final\oferentes-master\PORTAL\Oferentes.BOL\bin\De
 C:\Users\HP\Desktop\oferentes-final\oferentes-master\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.csprojResolveAssemblyReference.cache
 C:\Users\HP\Desktop\oferentes-final\oferentes-master\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.dll
 C:\Users\HP\Desktop\oferentes-final\oferentes-master\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.pdb
+C:\Users\HP\Desktop\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.BOL.dll
+C:\Users\HP\Desktop\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.BOL.pdb
+C:\Users\HP\Desktop\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.DAL.dll
+C:\Users\HP\Desktop\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.DAL.pdb
+C:\Users\HP\Desktop\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.dll
+C:\Users\HP\Desktop\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.pdb
+C:\Users\HP\Desktop\PORTAL v 5\Oferentes.BOL\bin\Debug\Oferentes.BOL.dll
+C:\Users\HP\Desktop\PORTAL v 5\Oferentes.BOL\bin\Debug\Oferentes.BOL.pdb
+C:\Users\HP\Desktop\PORTAL v 5\Oferentes.BOL\bin\Debug\Oferentes.DAL.dll
+C:\Users\HP\Desktop\PORTAL v 5\Oferentes.BOL\bin\Debug\Oferentes.DAL.pdb
+C:\Users\HP\Desktop\PORTAL v 5\Oferentes.BOL\obj\Debug\Oferentes.BOL.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\PORTAL v 5\Oferentes.BOL\obj\Debug\Oferentes.BOL.dll
+C:\Users\HP\Desktop\PORTAL v 5\Oferentes.BOL\obj\Debug\Oferentes.BOL.pdb
