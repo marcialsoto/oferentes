@@ -29,19 +29,19 @@
     <form id="form1" runat="server">
         <header class="allHeader">
             <div class="superHeader section">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="col-sm-2">
                         <h1>
                             <asp:HyperLink NavigateUrl="~/Inicio.aspx" ID="HyperLink2" CssClass="logo" runat="server"><span>PSSA</span></asp:HyperLink></h1>
                     </div>
-                    <div class="col-sm-2 col-sm-offset-8">
-                        <h1>Sistema de Oferentes del Proyecto Sierra y Selva Alta del Perú</h1>
+                    <div class="col-sm-3 col-sm-offset-7">
+                        <h1>Sistema de Oferentes</h1>
                     </div>
                 </div>
             </div>
         </header>
         <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
@@ -74,7 +74,7 @@
         </nav>
         <!-- /.navbar -->
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -84,7 +84,7 @@
         </div>
 
         <footer class="footer content-info section" role="contentinfo">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-4 col-xs-4">
                         <section class="widget text-3 widget_text footer-1">

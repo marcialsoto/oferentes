@@ -21,32 +21,34 @@ footer {
 
 // Header
 
-.allHeader{
+.allHeader {
     background-image: url(../img/all-header-bg.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     background-color: #02b17a;
 
-    .superHeader{
+    .superHeader {
         background: transparent url(../img/super-header-bg.png) no-repeat center bottom;
-        &.section{
+
+        &.section {
             padding-top: 30px;
             padding-bottom: 30px;
 
-            h1{
+            h1 {
                 margin: 0;
-                .logo{
+
+                .logo {
                     background: transparent url(../img/logo-sm.png) no-repeat 0px 0px;
                     width: 112px;
                     height: 135px;
                     display: block;
                     outline: none;
 
-                    &:hover{
+                    &:hover {
                         opacity: 0.75;
                     }
 
-                    span{
+                    span {
                         position: relative;
                         display: block;
                         text-indent: 100%;
@@ -58,6 +60,15 @@ footer {
                 }
             }
         }
+
+            .col-sm-3.col-sm-offset-7{
+            height: 135px;
+                h1 {
+                    color: @white;
+                    font-size: 24px;
+                    line-height: 135px;
+                    }
+            }
     }
 }
 
@@ -299,6 +310,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 260px;
+  padding-bottom: 50px;
 }
 
 .footer {
