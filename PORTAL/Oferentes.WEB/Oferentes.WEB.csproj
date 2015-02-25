@@ -74,6 +74,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="Admin\CV.aspx" />
     <Content Include="Admin\Mantener.aspx" />
     <Content Include="Admin\Registrar.aspx" />
     <Content Include="bin\AjaxControlToolkit.dll" />
@@ -89,6 +90,7 @@
     <Content Include="dist\css\bootstrap.css" />
     <Content Include="dist\css\bootstrap.min.css" />
     <Content Include="dist\css\offcanvas.css" />
+    <Content Include="dist\fonts\fontawesome-webfont.svg" />
     <Content Include="dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="dist\img\all-header-bg.jpg" />
     <Content Include="dist\img\fida-logo.jpg" />
@@ -283,14 +285,14 @@
     <Content Include="docs\_layouts\default.html" />
     <Content Include="docs\_layouts\home.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="login.aspx" />
     <Content Include="Gruntfile.js" />
     <Content Include="grunt\bs-commonjs-generator.js" />
     <Content Include="grunt\bs-lessdoc-parser.js" />
     <Content Include="grunt\bs-raw-files-generator.js" />
     <Content Include="Imagenes\agrorural.jpg" />
     <Content Include="Imagenes\logo-minagri.png" />
-    <Content Include="Inicio.aspx" />
-    <Content Include="CSS\Estilos.css" />
+    <Content Include="Default.aspx" />
     <Content Include="js\affix.js" />
     <Content Include="js\alert.js" />
     <Content Include="js\button.js" />
@@ -347,6 +349,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\CV.aspx.cs">
+      <DependentUpon>CV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CV.aspx.designer.cs">
+      <DependentUpon>CV.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Mantener.aspx.cs">
       <DependentUpon>Mantener.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -361,12 +370,19 @@
     <Compile Include="Admin\Registrar.aspx.designer.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.aspx.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Inicio.aspx.designer.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Oferentes.Master.cs">
       <DependentUpon>Oferentes.Master</DependentUpon>
@@ -387,6 +403,13 @@
     </Compile>
     <Compile Include="Usuario\Consultar.aspx.designer.cs">
       <DependentUpon>Consultar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -410,6 +433,7 @@
     <Folder Include="bin\zh-CHT\" />
     <Folder Include="bin\zh-Hans\" />
     <Folder Include="bin\zh-Hant\" />
+    <Folder Include="CSS\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="dsDirectorio.xsc">
@@ -453,6 +477,11 @@
     <Content Include="dist\img\preboot-master\package.json" />
     <Content Include="dist\img\preboot-master\README.md" />
     <Content Include="dist\img\preboot-master\_config.yml" />
+    <Content Include="dist\fonts\fontawesome-webfont.eot" />
+    <Content Include="dist\fonts\fontawesome-webfont.ttf" />
+    <Content Include="dist\fonts\fontawesome-webfont.woff" />
+    <Content Include="dist\fonts\fontawesome-webfont.woff2" />
+    <Content Include="dist\fonts\FontAwesome.otf" />
     <None Include="dsDirectorio.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -550,14 +579,17 @@
     <Content Include="test-infra\S3Cachefile.json" />
     <Content Include="test-infra\s3_cache.py" />
     <Content Include="test-infra\uncached-npm-install.sh" />
+    <Content Include="WebForm1.aspx" />
     <Content Include="_config.yml" />
     <Content Include="less\app.less" />
     <Content Include="less\mixins\appMixins.less" />
     <Content Include="less\appVariables.less" />
+    <None Include="Properties\PublishProfiles\oferentes.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\ActivporAnio.rdlc" />
     <EmbeddedResource Include="Reportes\ActivporOrg.rdlc" />
+    <EmbeddedResource Include="Reportes\CV.rdlc" />
     <EmbeddedResource Include="Reportes\DeptporAnio.rdlc" />
     <EmbeddedResource Include="Reportes\Estadisticas.rdlc" />
     <EmbeddedResource Include="Reportes\Graficos.rdlc" />

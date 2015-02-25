@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>N° TALENTOS POR ORGANIZACIÓN Y AÑO</Value>
+                <Value>REGISTRO DE TALENTO POR ORGANIZACIÓN</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -178,7 +178,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!fecha_reg1.Value</Value>
+                            <Value>=MonthName(Month(Fields!fecha_reg1.Value)) &amp;" "&amp;Year(Fields!fecha_reg1.Value)</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                               <Format>yyyy</Format>
@@ -305,7 +305,7 @@
         <Top>2.90724cm</Top>
         <Left>2.88078cm</Left>
         <Height>1.8cm</Height>
-        <Width>7.27542cm</Width>
+        <Width>7.27541cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>

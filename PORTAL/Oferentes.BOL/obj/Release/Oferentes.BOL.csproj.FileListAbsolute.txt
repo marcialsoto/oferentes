@@ -1,0 +1,7 @@
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.BOL\bin\Release\Oferentes.BOL.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.BOL\bin\Release\Oferentes.BOL.pdb
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.BOL\bin\Release\Oferentes.DAL.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.BOL\bin\Release\Oferentes.DAL.pdb
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.BOL\obj\Release\Oferentes.BOL.csprojResolveAssemblyReference.cache
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.BOL\obj\Release\Oferentes.BOL.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.BOL\obj\Release\Oferentes.BOL.pdb

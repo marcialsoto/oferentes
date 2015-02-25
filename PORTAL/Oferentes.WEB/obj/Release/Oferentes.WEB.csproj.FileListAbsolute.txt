@@ -1,0 +1,12 @@
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.dll.config
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.pdb
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.BOL.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.DAL.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.BOL.pdb
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.DAL.pdb
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Release\Oferentes.WEB.csprojResolveAssemblyReference.cache
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Release\RdlCompile.cache
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Release\RdlCompile.compiled
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Release\Oferentes.WEB.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Release\Oferentes.WEB.pdb

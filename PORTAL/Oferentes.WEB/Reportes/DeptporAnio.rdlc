@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>N° TALENTOS POR LUCAR DE ACTIVIDAD Y AÑO</Value>
+                <Value>REGISTRO DE TALENTOS POR LUGAR DE ACTIVIDAD DESARROLLADA</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -17,13 +17,15 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>1.10229cm</Top>
         <Left>1.78324cm</Left>
-        <Height>1.20854cm</Height>
+        <Height>2.00229cm</Height>
         <Width>17.22976cm</Width>
         <Style>
           <Border>
@@ -48,7 +50,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Departamento</Value>
+                            <Value>Dept / Prov / Dist</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                             </Style>
@@ -178,7 +180,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!fecha_reg1.Value</Value>
+                            <Value>=MonthName(Month(Fields!fecha_reg1.Value)) &amp;" "&amp;Year(Fields!fecha_reg1.Value)</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                               <Format>yyyy</Format>
@@ -211,7 +213,7 @@
             <TablixMember>
               <Group Name="lugar_activ">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!departamento.Value</GroupExpression>
+                  <GroupExpression>=Fields!departamento.Value &amp; " - " &amp; Fields!provincia.Value &amp; " - " &amp; Fields!distrito.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
@@ -220,7 +222,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>4.48438cm</Size>
+                <Size>5.62209cm</Size>
                 <CellContents>
                   <Textbox Name="departamento">
                     <CanGrow>true</CanGrow>
@@ -229,7 +231,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!departamento.Value</Value>
+                            <Value>=Fields!departamento.Value &amp; " - " &amp; Fields!provincia.Value &amp; " - " &amp; Fields!distrito.Value</Value>
                             <Style />
                           </TextRun>
                         </TextRuns>
@@ -254,7 +256,7 @@
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>4.48438cm</Size>
+                <Size>5.62209cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox19">
                     <CanGrow>true</CanGrow>
@@ -300,10 +302,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>3.30412cm</Top>
-        <Left>1.78324cm</Left>
+        <Top>3.64808cm</Top>
+        <Left>1.28053cm</Left>
         <Height>1.8cm</Height>
-        <Width>8.43958cm</Width>
+        <Width>9.5773cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -491,10 +493,14 @@
           <DataField>distrito</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Tiempo">
+          <DataField>Tiempo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsDirectorio</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\HP\Desktop\PORTAL v 1\Oferentes.WEB\dsDirectorio.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\dsDirectorio.xsd</rd:SchemaPath>
         <rd:TableName>sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

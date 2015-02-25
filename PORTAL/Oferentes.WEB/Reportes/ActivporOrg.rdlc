@@ -53,21 +53,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="actividad">
+                    <Textbox Name="Tiempo">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=iif(Fields!actividad.Value, "Si", "")</Value>
+                              <Value>=Max(Fields!Tiempo.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>actividad</rd:DefaultName>
+                      <rd:DefaultName>Tiempo</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -79,6 +79,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -390,10 +391,30 @@
           <DataField>estado1</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="cod_ubigeo">
+          <DataField>cod_ubigeo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="departamento">
+          <DataField>departamento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="provincia">
+          <DataField>provincia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="distrito">
+          <DataField>distrito</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tiempo">
+          <DataField>Tiempo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsDirectorio</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\HP\Desktop\Versión 9 con Master Page\Oferentes\Oferentes.WEB\dsDirectorio.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\dsDirectorio.xsd</rd:SchemaPath>
         <rd:TableName>sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

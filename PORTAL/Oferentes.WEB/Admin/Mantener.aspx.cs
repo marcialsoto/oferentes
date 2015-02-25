@@ -84,6 +84,12 @@ namespace Oferentes.WEB.Admin
 
                 ddlDNI.DataSource = Talento.listar_Talento_combo_mant();
                 ddlDNI.DataBind();
+
+                string popupScript = "Javascript: return " +
+                    "window.open('" + "../Admin/CV.aspx" + "', 'CustomPopUp', " +
+                    "'width=1000, height=600, menubar=no, resizable=no');";
+
+                btnCV.Attributes.Add("onclick", popupScript);
             }
         }
 
@@ -356,7 +362,7 @@ namespace Oferentes.WEB.Admin
 
                 cargarExperiencia();
 
-
+                Session["DNI"] = txtDNI.Text;
             }
             catch (Exception ex)
             {
@@ -551,9 +557,9 @@ namespace Oferentes.WEB.Admin
 
                 rango = (dt.Rows[fila][4]).ToString();
 
-                txtInicio.Text = rango.Substring(0, 4);
+                txtInicio.Text = rango.Substring(0, 7);
 
-                txtFin.Text = rango.Substring(7, 4);
+                txtFin.Text = rango.Substring(10, 7);
 
                 txtCertif.Text = (dt.Rows[fila][5]).ToString();
 
@@ -981,6 +987,11 @@ namespace Oferentes.WEB.Admin
                 dlOrg.Enabled = true;
                 txtOrg.Enabled = false;
             }
+        }
+
+        protected void btnCV_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

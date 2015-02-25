@@ -24,9 +24,13 @@ namespace Oferentes.WEB {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class dsDirectorio : global::System.Data.DataSet {
         
+        private sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org;
+        
         private sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org;
         
-        private sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org;
+        private sp_Experiencia_search_dniDataTable tablesp_Experiencia_search_dni;
+        
+        private sp_Talento_cv_search_dniDataTable tablesp_Talento_cv_search_dni;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -56,11 +60,17 @@ namespace Oferentes.WEB {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+                if ((ds.Tables["sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org"] != null)) {
+                    base.Tables.Add(new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable(ds.Tables["sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org"]));
+                }
                 if ((ds.Tables["sp_Talento_search_dni_ubigeo_activ_lugar_activ_org"] != null)) {
                     base.Tables.Add(new sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable(ds.Tables["sp_Talento_search_dni_ubigeo_activ_lugar_activ_org"]));
                 }
-                if ((ds.Tables["sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org"] != null)) {
-                    base.Tables.Add(new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable(ds.Tables["sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org"]));
+                if ((ds.Tables["sp_Experiencia_search_dni"] != null)) {
+                    base.Tables.Add(new sp_Experiencia_search_dniDataTable(ds.Tables["sp_Experiencia_search_dni"]));
+                }
+                if ((ds.Tables["sp_Talento_cv_search_dni"] != null)) {
+                    base.Tables.Add(new sp_Talento_cv_search_dniDataTable(ds.Tables["sp_Talento_cv_search_dni"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -84,6 +94,16 @@ namespace Oferentes.WEB {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org {
+            get {
+                return this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable sp_Talento_search_dni_ubigeo_activ_lugar_activ_org {
             get {
                 return this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org;
@@ -94,9 +114,19 @@ namespace Oferentes.WEB {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org {
+        public sp_Experiencia_search_dniDataTable sp_Experiencia_search_dni {
             get {
-                return this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org;
+                return this.tablesp_Experiencia_search_dni;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_Talento_cv_search_dniDataTable sp_Talento_cv_search_dni {
+            get {
+                return this.tablesp_Talento_cv_search_dni;
             }
         }
         
@@ -167,11 +197,17 @@ namespace Oferentes.WEB {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
+                if ((ds.Tables["sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org"] != null)) {
+                    base.Tables.Add(new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable(ds.Tables["sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org"]));
+                }
                 if ((ds.Tables["sp_Talento_search_dni_ubigeo_activ_lugar_activ_org"] != null)) {
                     base.Tables.Add(new sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable(ds.Tables["sp_Talento_search_dni_ubigeo_activ_lugar_activ_org"]));
                 }
-                if ((ds.Tables["sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org"] != null)) {
-                    base.Tables.Add(new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable(ds.Tables["sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org"]));
+                if ((ds.Tables["sp_Experiencia_search_dni"] != null)) {
+                    base.Tables.Add(new sp_Experiencia_search_dniDataTable(ds.Tables["sp_Experiencia_search_dni"]));
+                }
+                if ((ds.Tables["sp_Talento_cv_search_dni"] != null)) {
+                    base.Tables.Add(new sp_Talento_cv_search_dniDataTable(ds.Tables["sp_Talento_cv_search_dni"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -206,16 +242,28 @@ namespace Oferentes.WEB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
+            this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org = ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable)(base.Tables["sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org != null)) {
+                    this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org.InitVars();
+                }
+            }
             this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org = ((sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable)(base.Tables["sp_Talento_search_dni_ubigeo_activ_lugar_activ_org"]));
             if ((initTable == true)) {
                 if ((this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org != null)) {
                     this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.InitVars();
                 }
             }
-            this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org = ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable)(base.Tables["sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org"]));
+            this.tablesp_Experiencia_search_dni = ((sp_Experiencia_search_dniDataTable)(base.Tables["sp_Experiencia_search_dni"]));
             if ((initTable == true)) {
-                if ((this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org != null)) {
-                    this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org.InitVars();
+                if ((this.tablesp_Experiencia_search_dni != null)) {
+                    this.tablesp_Experiencia_search_dni.InitVars();
+                }
+            }
+            this.tablesp_Talento_cv_search_dni = ((sp_Talento_cv_search_dniDataTable)(base.Tables["sp_Talento_cv_search_dni"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_Talento_cv_search_dni != null)) {
+                    this.tablesp_Talento_cv_search_dni.InitVars();
                 }
             }
         }
@@ -228,10 +276,20 @@ namespace Oferentes.WEB {
             this.Namespace = "http://tempuri.org/dsDirectorio.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org = new sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable();
-            base.Tables.Add(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org);
             this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org = new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable();
             base.Tables.Add(this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org);
+            this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org = new sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable();
+            base.Tables.Add(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org);
+            this.tablesp_Experiencia_search_dni = new sp_Experiencia_search_dniDataTable();
+            base.Tables.Add(this.tablesp_Experiencia_search_dni);
+            this.tablesp_Talento_cv_search_dni = new sp_Talento_cv_search_dniDataTable();
+            base.Tables.Add(this.tablesp_Talento_cv_search_dni);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org() {
+            return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,7 +300,13 @@ namespace Oferentes.WEB {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org() {
+        private bool ShouldSerializesp_Experiencia_search_dni() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializesp_Talento_cv_search_dni() {
             return false;
         }
         
@@ -302,10 +366,891 @@ namespace Oferentes.WEB {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEventHandler(object sender, sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgRowChangeEventHandler(object sender, sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEventHandler(object sender, sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent e);
+        public delegate void sp_Experiencia_search_dniRowChangeEventHandler(object sender, sp_Experiencia_search_dniRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void sp_Talento_cv_search_dniRowChangeEventHandler(object sender, sp_Talento_cv_search_dniRowChangeEvent e);
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable : global::System.Data.TypedTableBase<sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow> {
+            
+            private global::System.Data.DataColumn columnnum;
+            
+            private global::System.Data.DataColumn columnnum_dni;
+            
+            private global::System.Data.DataColumn columnactividad;
+            
+            private global::System.Data.DataColumn columnduracion;
+            
+            private global::System.Data.DataColumn columncertificado;
+            
+            private global::System.Data.DataColumn columnlugar_activ;
+            
+            private global::System.Data.DataColumn columnorganizacion_atendida;
+            
+            private global::System.Data.DataColumn columnreferente;
+            
+            private global::System.Data.DataColumn columnreconocimientos;
+            
+            private global::System.Data.DataColumn columnfecha_reg;
+            
+            private global::System.Data.DataColumn columnestado;
+            
+            private global::System.Data.DataColumn columncod_activ;
+            
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columncod_orgatend;
+            
+            private global::System.Data.DataColumn columnnombre1;
+            
+            private global::System.Data.DataColumn columnnum_dni1;
+            
+            private global::System.Data.DataColumn columnapellidos;
+            
+            private global::System.Data.DataColumn columnnombres;
+            
+            private global::System.Data.DataColumn columnfecha_nac;
+            
+            private global::System.Data.DataColumn columnlugar_nac;
+            
+            private global::System.Data.DataColumn columnsexo;
+            
+            private global::System.Data.DataColumn columnestado_civil;
+            
+            private global::System.Data.DataColumn columnresidencia;
+            
+            private global::System.Data.DataColumn columndireccion;
+            
+            private global::System.Data.DataColumn columnubigeo;
+            
+            private global::System.Data.DataColumn columntelefono_fijo;
+            
+            private global::System.Data.DataColumn columntelefono_celular;
+            
+            private global::System.Data.DataColumn columncorreo;
+            
+            private global::System.Data.DataColumn columnestudio;
+            
+            private global::System.Data.DataColumn columnlect_esc;
+            
+            private global::System.Data.DataColumn columnidioma;
+            
+            private global::System.Data.DataColumn columnfecha_reg1;
+            
+            private global::System.Data.DataColumn columnestado1;
+            
+            private global::System.Data.DataColumn columncod_ubigeo;
+            
+            private global::System.Data.DataColumn columndepartamento;
+            
+            private global::System.Data.DataColumn columnprovincia;
+            
+            private global::System.Data.DataColumn columndistrito;
+            
+            private global::System.Data.DataColumn columnTiempo;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable() {
+                this.TableName = "sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn numColumn {
+                get {
+                    return this.columnnum;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn num_dniColumn {
+                get {
+                    return this.columnnum_dni;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn actividadColumn {
+                get {
+                    return this.columnactividad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn duracionColumn {
+                get {
+                    return this.columnduracion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn certificadoColumn {
+                get {
+                    return this.columncertificado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn lugar_activColumn {
+                get {
+                    return this.columnlugar_activ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn organizacion_atendidaColumn {
+                get {
+                    return this.columnorganizacion_atendida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn referenteColumn {
+                get {
+                    return this.columnreferente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn reconocimientosColumn {
+                get {
+                    return this.columnreconocimientos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_regColumn {
+                get {
+                    return this.columnfecha_reg;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn estadoColumn {
+                get {
+                    return this.columnestado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_activColumn {
+                get {
+                    return this.columncod_activ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_orgatendColumn {
+                get {
+                    return this.columncod_orgatend;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre1Column {
+                get {
+                    return this.columnnombre1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn num_dni1Column {
+                get {
+                    return this.columnnum_dni1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn apellidosColumn {
+                get {
+                    return this.columnapellidos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombresColumn {
+                get {
+                    return this.columnnombres;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_nacColumn {
+                get {
+                    return this.columnfecha_nac;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn lugar_nacColumn {
+                get {
+                    return this.columnlugar_nac;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn sexoColumn {
+                get {
+                    return this.columnsexo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn estado_civilColumn {
+                get {
+                    return this.columnestado_civil;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn residenciaColumn {
+                get {
+                    return this.columnresidencia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn direccionColumn {
+                get {
+                    return this.columndireccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ubigeoColumn {
+                get {
+                    return this.columnubigeo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn telefono_fijoColumn {
+                get {
+                    return this.columntelefono_fijo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn telefono_celularColumn {
+                get {
+                    return this.columntelefono_celular;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn correoColumn {
+                get {
+                    return this.columncorreo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn estudioColumn {
+                get {
+                    return this.columnestudio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn lect_escColumn {
+                get {
+                    return this.columnlect_esc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idiomaColumn {
+                get {
+                    return this.columnidioma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fecha_reg1Column {
+                get {
+                    return this.columnfecha_reg1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn estado1Column {
+                get {
+                    return this.columnestado1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_ubigeoColumn {
+                get {
+                    return this.columncod_ubigeo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn departamentoColumn {
+                get {
+                    return this.columndepartamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn provinciaColumn {
+                get {
+                    return this.columnprovincia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn distritoColumn {
+                get {
+                    return this.columndistrito;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TiempoColumn {
+                get {
+                    return this.columnTiempo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow this[int index] {
+                get {
+                    return ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEventHandler sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEventHandler sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEventHandler sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEventHandler sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow(sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow Addsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow(
+                        decimal num_dni, 
+                        int actividad, 
+                        string duracion, 
+                        string certificado, 
+                        string lugar_activ, 
+                        int organizacion_atendida, 
+                        string referente, 
+                        string reconocimientos, 
+                        System.DateTime fecha_reg, 
+                        string estado, 
+                        string nombre, 
+                        string nombre1, 
+                        decimal num_dni1, 
+                        string apellidos, 
+                        string nombres, 
+                        System.DateTime fecha_nac, 
+                        string lugar_nac, 
+                        string sexo, 
+                        int estado_civil, 
+                        int residencia, 
+                        string direccion, 
+                        string ubigeo, 
+                        decimal telefono_fijo, 
+                        decimal telefono_celular, 
+                        string correo, 
+                        string estudio, 
+                        string lect_esc, 
+                        int idioma, 
+                        System.DateTime fecha_reg1, 
+                        string estado1, 
+                        string cod_ubigeo, 
+                        string departamento, 
+                        string provincia, 
+                        string distrito, 
+                        string Tiempo) {
+                sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow rowsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow = ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        num_dni,
+                        actividad,
+                        duracion,
+                        certificado,
+                        lugar_activ,
+                        organizacion_atendida,
+                        referente,
+                        reconocimientos,
+                        fecha_reg,
+                        estado,
+                        null,
+                        nombre,
+                        null,
+                        nombre1,
+                        num_dni1,
+                        apellidos,
+                        nombres,
+                        fecha_nac,
+                        lugar_nac,
+                        sexo,
+                        estado_civil,
+                        residencia,
+                        direccion,
+                        ubigeo,
+                        telefono_fijo,
+                        telefono_celular,
+                        correo,
+                        estudio,
+                        lect_esc,
+                        idioma,
+                        fecha_reg1,
+                        estado1,
+                        cod_ubigeo,
+                        departamento,
+                        provincia,
+                        distrito,
+                        Tiempo};
+                rowsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow);
+                return rowsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow FindBynumnum_dnicod_activcod_orgatendnum_dni1cod_ubigeo(int num, decimal num_dni, int cod_activ, int cod_orgatend, decimal num_dni1, string cod_ubigeo) {
+                return ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(this.Rows.Find(new object[] {
+                            num,
+                            num_dni,
+                            cod_activ,
+                            cod_orgatend,
+                            num_dni1,
+                            cod_ubigeo})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable cln = ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnnum = base.Columns["num"];
+                this.columnnum_dni = base.Columns["num_dni"];
+                this.columnactividad = base.Columns["actividad"];
+                this.columnduracion = base.Columns["duracion"];
+                this.columncertificado = base.Columns["certificado"];
+                this.columnlugar_activ = base.Columns["lugar_activ"];
+                this.columnorganizacion_atendida = base.Columns["organizacion_atendida"];
+                this.columnreferente = base.Columns["referente"];
+                this.columnreconocimientos = base.Columns["reconocimientos"];
+                this.columnfecha_reg = base.Columns["fecha_reg"];
+                this.columnestado = base.Columns["estado"];
+                this.columncod_activ = base.Columns["cod_activ"];
+                this.columnnombre = base.Columns["nombre"];
+                this.columncod_orgatend = base.Columns["cod_orgatend"];
+                this.columnnombre1 = base.Columns["nombre1"];
+                this.columnnum_dni1 = base.Columns["num_dni1"];
+                this.columnapellidos = base.Columns["apellidos"];
+                this.columnnombres = base.Columns["nombres"];
+                this.columnfecha_nac = base.Columns["fecha_nac"];
+                this.columnlugar_nac = base.Columns["lugar_nac"];
+                this.columnsexo = base.Columns["sexo"];
+                this.columnestado_civil = base.Columns["estado_civil"];
+                this.columnresidencia = base.Columns["residencia"];
+                this.columndireccion = base.Columns["direccion"];
+                this.columnubigeo = base.Columns["ubigeo"];
+                this.columntelefono_fijo = base.Columns["telefono_fijo"];
+                this.columntelefono_celular = base.Columns["telefono_celular"];
+                this.columncorreo = base.Columns["correo"];
+                this.columnestudio = base.Columns["estudio"];
+                this.columnlect_esc = base.Columns["lect_esc"];
+                this.columnidioma = base.Columns["idioma"];
+                this.columnfecha_reg1 = base.Columns["fecha_reg1"];
+                this.columnestado1 = base.Columns["estado1"];
+                this.columncod_ubigeo = base.Columns["cod_ubigeo"];
+                this.columndepartamento = base.Columns["departamento"];
+                this.columnprovincia = base.Columns["provincia"];
+                this.columndistrito = base.Columns["distrito"];
+                this.columnTiempo = base.Columns["Tiempo"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnnum = new global::System.Data.DataColumn("num", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum);
+                this.columnnum_dni = new global::System.Data.DataColumn("num_dni", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum_dni);
+                this.columnactividad = new global::System.Data.DataColumn("actividad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnactividad);
+                this.columnduracion = new global::System.Data.DataColumn("duracion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnduracion);
+                this.columncertificado = new global::System.Data.DataColumn("certificado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncertificado);
+                this.columnlugar_activ = new global::System.Data.DataColumn("lugar_activ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlugar_activ);
+                this.columnorganizacion_atendida = new global::System.Data.DataColumn("organizacion_atendida", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnorganizacion_atendida);
+                this.columnreferente = new global::System.Data.DataColumn("referente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreferente);
+                this.columnreconocimientos = new global::System.Data.DataColumn("reconocimientos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreconocimientos);
+                this.columnfecha_reg = new global::System.Data.DataColumn("fecha_reg", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_reg);
+                this.columnestado = new global::System.Data.DataColumn("estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestado);
+                this.columncod_activ = new global::System.Data.DataColumn("cod_activ", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_activ);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columncod_orgatend = new global::System.Data.DataColumn("cod_orgatend", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_orgatend);
+                this.columnnombre1 = new global::System.Data.DataColumn("nombre1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre1);
+                this.columnnum_dni1 = new global::System.Data.DataColumn("num_dni1", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum_dni1);
+                this.columnapellidos = new global::System.Data.DataColumn("apellidos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnapellidos);
+                this.columnnombres = new global::System.Data.DataColumn("nombres", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombres);
+                this.columnfecha_nac = new global::System.Data.DataColumn("fecha_nac", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_nac);
+                this.columnlugar_nac = new global::System.Data.DataColumn("lugar_nac", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlugar_nac);
+                this.columnsexo = new global::System.Data.DataColumn("sexo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsexo);
+                this.columnestado_civil = new global::System.Data.DataColumn("estado_civil", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestado_civil);
+                this.columnresidencia = new global::System.Data.DataColumn("residencia", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnresidencia);
+                this.columndireccion = new global::System.Data.DataColumn("direccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndireccion);
+                this.columnubigeo = new global::System.Data.DataColumn("ubigeo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnubigeo);
+                this.columntelefono_fijo = new global::System.Data.DataColumn("telefono_fijo", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefono_fijo);
+                this.columntelefono_celular = new global::System.Data.DataColumn("telefono_celular", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefono_celular);
+                this.columncorreo = new global::System.Data.DataColumn("correo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncorreo);
+                this.columnestudio = new global::System.Data.DataColumn("estudio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestudio);
+                this.columnlect_esc = new global::System.Data.DataColumn("lect_esc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlect_esc);
+                this.columnidioma = new global::System.Data.DataColumn("idioma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidioma);
+                this.columnfecha_reg1 = new global::System.Data.DataColumn("fecha_reg1", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_reg1);
+                this.columnestado1 = new global::System.Data.DataColumn("estado1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestado1);
+                this.columncod_ubigeo = new global::System.Data.DataColumn("cod_ubigeo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_ubigeo);
+                this.columndepartamento = new global::System.Data.DataColumn("departamento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndepartamento);
+                this.columnprovincia = new global::System.Data.DataColumn("provincia", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprovincia);
+                this.columndistrito = new global::System.Data.DataColumn("distrito", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndistrito);
+                this.columnTiempo = new global::System.Data.DataColumn("Tiempo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTiempo);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnnum,
+                                this.columnnum_dni,
+                                this.columncod_activ,
+                                this.columncod_orgatend,
+                                this.columnnum_dni1,
+                                this.columncod_ubigeo}, true));
+                this.columnnum.AutoIncrement = true;
+                this.columnnum.AllowDBNull = false;
+                this.columnnum.ReadOnly = true;
+                this.columnnum_dni.AllowDBNull = false;
+                this.columnactividad.AllowDBNull = false;
+                this.columnduracion.AllowDBNull = false;
+                this.columnduracion.MaxLength = 30;
+                this.columncertificado.MaxLength = 50;
+                this.columnlugar_activ.AllowDBNull = false;
+                this.columnlugar_activ.MaxLength = 6;
+                this.columnorganizacion_atendida.AllowDBNull = false;
+                this.columnreferente.AllowDBNull = false;
+                this.columnreferente.MaxLength = 100;
+                this.columnreconocimientos.MaxLength = 200;
+                this.columnfecha_reg.AllowDBNull = false;
+                this.columnestado.MaxLength = 1;
+                this.columncod_activ.AutoIncrement = true;
+                this.columncod_activ.AllowDBNull = false;
+                this.columncod_activ.ReadOnly = true;
+                this.columnnombre.AllowDBNull = false;
+                this.columnnombre.MaxLength = 50;
+                this.columncod_orgatend.AutoIncrement = true;
+                this.columncod_orgatend.AllowDBNull = false;
+                this.columncod_orgatend.ReadOnly = true;
+                this.columnnombre1.AllowDBNull = false;
+                this.columnnombre1.MaxLength = 50;
+                this.columnnum_dni1.AllowDBNull = false;
+                this.columnapellidos.AllowDBNull = false;
+                this.columnapellidos.MaxLength = 30;
+                this.columnnombres.AllowDBNull = false;
+                this.columnnombres.MaxLength = 20;
+                this.columnfecha_nac.AllowDBNull = false;
+                this.columnlugar_nac.AllowDBNull = false;
+                this.columnlugar_nac.MaxLength = 6;
+                this.columnsexo.AllowDBNull = false;
+                this.columnsexo.MaxLength = 10;
+                this.columnestado_civil.AllowDBNull = false;
+                this.columndireccion.AllowDBNull = false;
+                this.columndireccion.MaxLength = 150;
+                this.columnubigeo.AllowDBNull = false;
+                this.columnubigeo.MaxLength = 6;
+                this.columncorreo.MaxLength = 30;
+                this.columnestudio.AllowDBNull = false;
+                this.columnestudio.MaxLength = 2;
+                this.columnlect_esc.MaxLength = 20;
+                this.columnidioma.AllowDBNull = false;
+                this.columnfecha_reg1.AllowDBNull = false;
+                this.columnestado1.MaxLength = 1;
+                this.columncod_ubigeo.AllowDBNull = false;
+                this.columncod_ubigeo.MaxLength = 6;
+                this.columndepartamento.MaxLength = 50;
+                this.columnprovincia.MaxLength = 50;
+                this.columndistrito.AllowDBNull = false;
+                this.columndistrito.MaxLength = 50;
+                this.columnTiempo.ReadOnly = true;
+                this.columnTiempo.MaxLength = 30;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow Newsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow() {
+                return ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanged != null)) {
+                    this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanged(this, new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent(((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanging != null)) {
+                    this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanging(this, new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent(((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleted != null)) {
+                    this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleted(this, new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent(((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleting != null)) {
+                    this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleting(this, new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent(((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removesp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow(sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsDirectorio ds = new dsDirectorio();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -949,11 +1894,13 @@ namespace Oferentes.WEB {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable : global::System.Data.TypedTableBase<sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow> {
+        public partial class sp_Experiencia_search_dniDataTable : global::System.Data.TypedTableBase<sp_Experiencia_search_dniRow> {
             
             private global::System.Data.DataColumn columnnum;
             
-            private global::System.Data.DataColumn columnnum_dni;
+            private global::System.Data.DataColumn columndni;
+            
+            private global::System.Data.DataColumn columncod_act;
             
             private global::System.Data.DataColumn columnactividad;
             
@@ -961,27 +1908,420 @@ namespace Oferentes.WEB {
             
             private global::System.Data.DataColumn columncertificado;
             
-            private global::System.Data.DataColumn columnlugar_activ;
+            private global::System.Data.DataColumn columncod_lugar_activ;
             
-            private global::System.Data.DataColumn columnorganizacion_atendida;
+            private global::System.Data.DataColumn columncod_org;
+            
+            private global::System.Data.DataColumn columnorganizacion;
             
             private global::System.Data.DataColumn columnreferente;
             
             private global::System.Data.DataColumn columnreconocimientos;
             
-            private global::System.Data.DataColumn columnfecha_reg;
+            private global::System.Data.DataColumn columnlugar_activ;
             
-            private global::System.Data.DataColumn columnestado;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_dniDataTable() {
+                this.TableName = "sp_Experiencia_search_dni";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
             
-            private global::System.Data.DataColumn columncod_activ;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal sp_Experiencia_search_dniDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
             
-            private global::System.Data.DataColumn columnnombre;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected sp_Experiencia_search_dniDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
             
-            private global::System.Data.DataColumn columncod_orgatend;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn numColumn {
+                get {
+                    return this.columnnum;
+                }
+            }
             
-            private global::System.Data.DataColumn columnnombre1;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dniColumn {
+                get {
+                    return this.columndni;
+                }
+            }
             
-            private global::System.Data.DataColumn columnnum_dni1;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_actColumn {
+                get {
+                    return this.columncod_act;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn actividadColumn {
+                get {
+                    return this.columnactividad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn duracionColumn {
+                get {
+                    return this.columnduracion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn certificadoColumn {
+                get {
+                    return this.columncertificado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_lugar_activColumn {
+                get {
+                    return this.columncod_lugar_activ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_orgColumn {
+                get {
+                    return this.columncod_org;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn organizacionColumn {
+                get {
+                    return this.columnorganizacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn referenteColumn {
+                get {
+                    return this.columnreferente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn reconocimientosColumn {
+                get {
+                    return this.columnreconocimientos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn lugar_activColumn {
+                get {
+                    return this.columnlugar_activ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_dniRow this[int index] {
+                get {
+                    return ((sp_Experiencia_search_dniRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sp_Experiencia_search_dniRowChangeEventHandler sp_Experiencia_search_dniRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sp_Experiencia_search_dniRowChangeEventHandler sp_Experiencia_search_dniRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sp_Experiencia_search_dniRowChangeEventHandler sp_Experiencia_search_dniRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event sp_Experiencia_search_dniRowChangeEventHandler sp_Experiencia_search_dniRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addsp_Experiencia_search_dniRow(sp_Experiencia_search_dniRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_dniRow Addsp_Experiencia_search_dniRow(decimal dni, string actividad, string duracion, string certificado, string cod_lugar_activ, string organizacion, string referente, string reconocimientos, string lugar_activ) {
+                sp_Experiencia_search_dniRow rowsp_Experiencia_search_dniRow = ((sp_Experiencia_search_dniRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        dni,
+                        null,
+                        actividad,
+                        duracion,
+                        certificado,
+                        cod_lugar_activ,
+                        null,
+                        organizacion,
+                        referente,
+                        reconocimientos,
+                        lugar_activ};
+                rowsp_Experiencia_search_dniRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_Experiencia_search_dniRow);
+                return rowsp_Experiencia_search_dniRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_Experiencia_search_dniDataTable cln = ((sp_Experiencia_search_dniDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_Experiencia_search_dniDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnnum = base.Columns["num"];
+                this.columndni = base.Columns["dni"];
+                this.columncod_act = base.Columns["cod_act"];
+                this.columnactividad = base.Columns["actividad"];
+                this.columnduracion = base.Columns["duracion"];
+                this.columncertificado = base.Columns["certificado"];
+                this.columncod_lugar_activ = base.Columns["cod_lugar_activ"];
+                this.columncod_org = base.Columns["cod_org"];
+                this.columnorganizacion = base.Columns["organizacion"];
+                this.columnreferente = base.Columns["referente"];
+                this.columnreconocimientos = base.Columns["reconocimientos"];
+                this.columnlugar_activ = base.Columns["lugar_activ"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnnum = new global::System.Data.DataColumn("num", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum);
+                this.columndni = new global::System.Data.DataColumn("dni", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndni);
+                this.columncod_act = new global::System.Data.DataColumn("cod_act", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_act);
+                this.columnactividad = new global::System.Data.DataColumn("actividad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnactividad);
+                this.columnduracion = new global::System.Data.DataColumn("duracion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnduracion);
+                this.columncertificado = new global::System.Data.DataColumn("certificado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncertificado);
+                this.columncod_lugar_activ = new global::System.Data.DataColumn("cod_lugar_activ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_lugar_activ);
+                this.columncod_org = new global::System.Data.DataColumn("cod_org", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_org);
+                this.columnorganizacion = new global::System.Data.DataColumn("organizacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnorganizacion);
+                this.columnreferente = new global::System.Data.DataColumn("referente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreferente);
+                this.columnreconocimientos = new global::System.Data.DataColumn("reconocimientos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreconocimientos);
+                this.columnlugar_activ = new global::System.Data.DataColumn("lugar_activ", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlugar_activ);
+                this.columnnum.AutoIncrement = true;
+                this.columnnum.AllowDBNull = false;
+                this.columnnum.ReadOnly = true;
+                this.columndni.AllowDBNull = false;
+                this.columncod_act.AutoIncrement = true;
+                this.columncod_act.AllowDBNull = false;
+                this.columncod_act.ReadOnly = true;
+                this.columnactividad.AllowDBNull = false;
+                this.columnactividad.MaxLength = 50;
+                this.columnduracion.AllowDBNull = false;
+                this.columnduracion.MaxLength = 30;
+                this.columncertificado.MaxLength = 50;
+                this.columncod_lugar_activ.AllowDBNull = false;
+                this.columncod_lugar_activ.MaxLength = 6;
+                this.columncod_org.AutoIncrement = true;
+                this.columncod_org.AllowDBNull = false;
+                this.columncod_org.ReadOnly = true;
+                this.columnorganizacion.AllowDBNull = false;
+                this.columnorganizacion.MaxLength = 50;
+                this.columnreferente.AllowDBNull = false;
+                this.columnreferente.MaxLength = 100;
+                this.columnreconocimientos.MaxLength = 200;
+                this.columnlugar_activ.ReadOnly = true;
+                this.columnlugar_activ.MaxLength = 154;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_dniRow Newsp_Experiencia_search_dniRow() {
+                return ((sp_Experiencia_search_dniRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_Experiencia_search_dniRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_Experiencia_search_dniRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_Experiencia_search_dniRowChanged != null)) {
+                    this.sp_Experiencia_search_dniRowChanged(this, new sp_Experiencia_search_dniRowChangeEvent(((sp_Experiencia_search_dniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_Experiencia_search_dniRowChanging != null)) {
+                    this.sp_Experiencia_search_dniRowChanging(this, new sp_Experiencia_search_dniRowChangeEvent(((sp_Experiencia_search_dniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_Experiencia_search_dniRowDeleted != null)) {
+                    this.sp_Experiencia_search_dniRowDeleted(this, new sp_Experiencia_search_dniRowChangeEvent(((sp_Experiencia_search_dniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_Experiencia_search_dniRowDeleting != null)) {
+                    this.sp_Experiencia_search_dniRowDeleting(this, new sp_Experiencia_search_dniRowChangeEvent(((sp_Experiencia_search_dniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removesp_Experiencia_search_dniRow(sp_Experiencia_search_dniRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsDirectorio ds = new dsDirectorio();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_Experiencia_search_dniDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_Talento_cv_search_dniDataTable : global::System.Data.TypedTableBase<sp_Talento_cv_search_dniRow> {
+            
+            private global::System.Data.DataColumn columnnum_dni;
             
             private global::System.Data.DataColumn columnapellidos;
             
@@ -1013,9 +2353,27 @@ namespace Oferentes.WEB {
             
             private global::System.Data.DataColumn columnidioma;
             
-            private global::System.Data.DataColumn columnfecha_reg1;
+            private global::System.Data.DataColumn columnfecha_reg;
             
-            private global::System.Data.DataColumn columnestado1;
+            private global::System.Data.DataColumn columnestado;
+            
+            private global::System.Data.DataColumn columncod_estcivil;
+            
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columncod_resid;
+            
+            private global::System.Data.DataColumn columnnombre1;
+            
+            private global::System.Data.DataColumn columncod_estudio;
+            
+            private global::System.Data.DataColumn columnnivel;
+            
+            private global::System.Data.DataColumn columngrado;
+            
+            private global::System.Data.DataColumn columncod_Idioma;
+            
+            private global::System.Data.DataColumn columnnombre2;
             
             private global::System.Data.DataColumn columncod_ubigeo;
             
@@ -1027,8 +2385,8 @@ namespace Oferentes.WEB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable() {
-                this.TableName = "sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org";
+            public sp_Talento_cv_search_dniDataTable() {
+                this.TableName = "sp_Talento_cv_search_dni";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1036,7 +2394,7 @@ namespace Oferentes.WEB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable(global::System.Data.DataTable table) {
+            internal sp_Talento_cv_search_dniDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1053,17 +2411,9 @@ namespace Oferentes.WEB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected sp_Talento_cv_search_dniDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn numColumn {
-                get {
-                    return this.columnnum;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1071,118 +2421,6 @@ namespace Oferentes.WEB {
             public global::System.Data.DataColumn num_dniColumn {
                 get {
                     return this.columnnum_dni;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn actividadColumn {
-                get {
-                    return this.columnactividad;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn duracionColumn {
-                get {
-                    return this.columnduracion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn certificadoColumn {
-                get {
-                    return this.columncertificado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn lugar_activColumn {
-                get {
-                    return this.columnlugar_activ;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn organizacion_atendidaColumn {
-                get {
-                    return this.columnorganizacion_atendida;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn referenteColumn {
-                get {
-                    return this.columnreferente;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn reconocimientosColumn {
-                get {
-                    return this.columnreconocimientos;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn fecha_regColumn {
-                get {
-                    return this.columnfecha_reg;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn estadoColumn {
-                get {
-                    return this.columnestado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cod_activColumn {
-                get {
-                    return this.columncod_activ;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
-                get {
-                    return this.columnnombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cod_orgatendColumn {
-                get {
-                    return this.columncod_orgatend;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombre1Column {
-                get {
-                    return this.columnnombre1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn num_dni1Column {
-                get {
-                    return this.columnnum_dni1;
                 }
             }
             
@@ -1308,17 +2546,89 @@ namespace Oferentes.WEB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn fecha_reg1Column {
+            public global::System.Data.DataColumn fecha_regColumn {
                 get {
-                    return this.columnfecha_reg1;
+                    return this.columnfecha_reg;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn estado1Column {
+            public global::System.Data.DataColumn estadoColumn {
                 get {
-                    return this.columnestado1;
+                    return this.columnestado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_estcivilColumn {
+                get {
+                    return this.columncod_estcivil;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_residColumn {
+                get {
+                    return this.columncod_resid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre1Column {
+                get {
+                    return this.columnnombre1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_estudioColumn {
+                get {
+                    return this.columncod_estudio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nivelColumn {
+                get {
+                    return this.columnnivel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn gradoColumn {
+                get {
+                    return this.columngrado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_IdiomaColumn {
+                get {
+                    return this.columncod_Idioma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre2Column {
+                get {
+                    return this.columnnombre2;
                 }
             }
             
@@ -1365,46 +2675,34 @@ namespace Oferentes.WEB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow this[int index] {
+            public sp_Talento_cv_search_dniRow this[int index] {
                 get {
-                    return ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(this.Rows[index]));
+                    return ((sp_Talento_cv_search_dniRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEventHandler sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanging;
+            public event sp_Talento_cv_search_dniRowChangeEventHandler sp_Talento_cv_search_dniRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEventHandler sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanged;
+            public event sp_Talento_cv_search_dniRowChangeEventHandler sp_Talento_cv_search_dniRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEventHandler sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleting;
+            public event sp_Talento_cv_search_dniRowChangeEventHandler sp_Talento_cv_search_dniRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEventHandler sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleted;
+            public event sp_Talento_cv_search_dniRowChangeEventHandler sp_Talento_cv_search_dniRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow(sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow row) {
+            public void Addsp_Talento_cv_search_dniRow(sp_Talento_cv_search_dniRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow Addsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow(
+            public sp_Talento_cv_search_dniRow Addsp_Talento_cv_search_dniRow(
                         decimal num_dni, 
-                        int actividad, 
-                        string duracion, 
-                        string certificado, 
-                        string lugar_activ, 
-                        int organizacion_atendida, 
-                        string referente, 
-                        string reconocimientos, 
-                        System.DateTime fecha_reg, 
-                        string estado, 
-                        string nombre, 
-                        string nombre1, 
-                        decimal num_dni1, 
                         string apellidos, 
                         string nombres, 
                         System.DateTime fecha_nac, 
@@ -1420,30 +2718,21 @@ namespace Oferentes.WEB {
                         string estudio, 
                         string lect_esc, 
                         int idioma, 
-                        System.DateTime fecha_reg1, 
-                        string estado1, 
+                        System.DateTime fecha_reg, 
+                        string estado, 
+                        string nombre, 
+                        string nombre1, 
+                        string cod_estudio, 
+                        string nivel, 
+                        string grado, 
+                        string nombre2, 
                         string cod_ubigeo, 
                         string departamento, 
                         string provincia, 
                         string distrito) {
-                sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow rowsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow = ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(this.NewRow()));
+                sp_Talento_cv_search_dniRow rowsp_Talento_cv_search_dniRow = ((sp_Talento_cv_search_dniRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         num_dni,
-                        actividad,
-                        duracion,
-                        certificado,
-                        lugar_activ,
-                        organizacion_atendida,
-                        referente,
-                        reconocimientos,
-                        fecha_reg,
-                        estado,
-                        null,
-                        nombre,
-                        null,
-                        nombre1,
-                        num_dni1,
                         apellidos,
                         nombres,
                         fecha_nac,
@@ -1459,33 +2748,42 @@ namespace Oferentes.WEB {
                         estudio,
                         lect_esc,
                         idioma,
-                        fecha_reg1,
-                        estado1,
+                        fecha_reg,
+                        estado,
+                        null,
+                        nombre,
+                        null,
+                        nombre1,
+                        cod_estudio,
+                        nivel,
+                        grado,
+                        null,
+                        nombre2,
                         cod_ubigeo,
                         departamento,
                         provincia,
                         distrito};
-                rowsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow);
-                return rowsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow;
+                rowsp_Talento_cv_search_dniRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_Talento_cv_search_dniRow);
+                return rowsp_Talento_cv_search_dniRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow FindBynumnum_dnicod_activcod_orgatendnum_dni1cod_ubigeo(int num, decimal num_dni, int cod_activ, int cod_orgatend, decimal num_dni1, string cod_ubigeo) {
-                return ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(this.Rows.Find(new object[] {
-                            num,
+            public sp_Talento_cv_search_dniRow FindBynum_dnicod_estcivilcod_residcod_estudiocod_Idiomacod_ubigeo(decimal num_dni, int cod_estcivil, int cod_resid, string cod_estudio, int cod_Idioma, string cod_ubigeo) {
+                return ((sp_Talento_cv_search_dniRow)(this.Rows.Find(new object[] {
                             num_dni,
-                            cod_activ,
-                            cod_orgatend,
-                            num_dni1,
+                            cod_estcivil,
+                            cod_resid,
+                            cod_estudio,
+                            cod_Idioma,
                             cod_ubigeo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable cln = ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable)(base.Clone()));
+                sp_Talento_cv_search_dniDataTable cln = ((sp_Talento_cv_search_dniDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1493,28 +2791,13 @@ namespace Oferentes.WEB {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable();
+                return new sp_Talento_cv_search_dniDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnnum = base.Columns["num"];
                 this.columnnum_dni = base.Columns["num_dni"];
-                this.columnactividad = base.Columns["actividad"];
-                this.columnduracion = base.Columns["duracion"];
-                this.columncertificado = base.Columns["certificado"];
-                this.columnlugar_activ = base.Columns["lugar_activ"];
-                this.columnorganizacion_atendida = base.Columns["organizacion_atendida"];
-                this.columnreferente = base.Columns["referente"];
-                this.columnreconocimientos = base.Columns["reconocimientos"];
-                this.columnfecha_reg = base.Columns["fecha_reg"];
-                this.columnestado = base.Columns["estado"];
-                this.columncod_activ = base.Columns["cod_activ"];
-                this.columnnombre = base.Columns["nombre"];
-                this.columncod_orgatend = base.Columns["cod_orgatend"];
-                this.columnnombre1 = base.Columns["nombre1"];
-                this.columnnum_dni1 = base.Columns["num_dni1"];
                 this.columnapellidos = base.Columns["apellidos"];
                 this.columnnombres = base.Columns["nombres"];
                 this.columnfecha_nac = base.Columns["fecha_nac"];
@@ -1530,8 +2813,17 @@ namespace Oferentes.WEB {
                 this.columnestudio = base.Columns["estudio"];
                 this.columnlect_esc = base.Columns["lect_esc"];
                 this.columnidioma = base.Columns["idioma"];
-                this.columnfecha_reg1 = base.Columns["fecha_reg1"];
-                this.columnestado1 = base.Columns["estado1"];
+                this.columnfecha_reg = base.Columns["fecha_reg"];
+                this.columnestado = base.Columns["estado"];
+                this.columncod_estcivil = base.Columns["cod_estcivil"];
+                this.columnnombre = base.Columns["nombre"];
+                this.columncod_resid = base.Columns["cod_resid"];
+                this.columnnombre1 = base.Columns["nombre1"];
+                this.columncod_estudio = base.Columns["cod_estudio"];
+                this.columnnivel = base.Columns["nivel"];
+                this.columngrado = base.Columns["grado"];
+                this.columncod_Idioma = base.Columns["cod_Idioma"];
+                this.columnnombre2 = base.Columns["nombre2"];
                 this.columncod_ubigeo = base.Columns["cod_ubigeo"];
                 this.columndepartamento = base.Columns["departamento"];
                 this.columnprovincia = base.Columns["provincia"];
@@ -1541,38 +2833,8 @@ namespace Oferentes.WEB {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnnum = new global::System.Data.DataColumn("num", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnum);
                 this.columnnum_dni = new global::System.Data.DataColumn("num_dni", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnum_dni);
-                this.columnactividad = new global::System.Data.DataColumn("actividad", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnactividad);
-                this.columnduracion = new global::System.Data.DataColumn("duracion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnduracion);
-                this.columncertificado = new global::System.Data.DataColumn("certificado", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncertificado);
-                this.columnlugar_activ = new global::System.Data.DataColumn("lugar_activ", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlugar_activ);
-                this.columnorganizacion_atendida = new global::System.Data.DataColumn("organizacion_atendida", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnorganizacion_atendida);
-                this.columnreferente = new global::System.Data.DataColumn("referente", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnreferente);
-                this.columnreconocimientos = new global::System.Data.DataColumn("reconocimientos", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnreconocimientos);
-                this.columnfecha_reg = new global::System.Data.DataColumn("fecha_reg", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_reg);
-                this.columnestado = new global::System.Data.DataColumn("estado", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnestado);
-                this.columncod_activ = new global::System.Data.DataColumn("cod_activ", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncod_activ);
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columncod_orgatend = new global::System.Data.DataColumn("cod_orgatend", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncod_orgatend);
-                this.columnnombre1 = new global::System.Data.DataColumn("nombre1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre1);
-                this.columnnum_dni1 = new global::System.Data.DataColumn("num_dni1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnum_dni1);
                 this.columnapellidos = new global::System.Data.DataColumn("apellidos", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnapellidos);
                 this.columnnombres = new global::System.Data.DataColumn("nombres", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1603,10 +2865,28 @@ namespace Oferentes.WEB {
                 base.Columns.Add(this.columnlect_esc);
                 this.columnidioma = new global::System.Data.DataColumn("idioma", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidioma);
-                this.columnfecha_reg1 = new global::System.Data.DataColumn("fecha_reg1", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_reg1);
-                this.columnestado1 = new global::System.Data.DataColumn("estado1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnestado1);
+                this.columnfecha_reg = new global::System.Data.DataColumn("fecha_reg", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_reg);
+                this.columnestado = new global::System.Data.DataColumn("estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestado);
+                this.columncod_estcivil = new global::System.Data.DataColumn("cod_estcivil", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_estcivil);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columncod_resid = new global::System.Data.DataColumn("cod_resid", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_resid);
+                this.columnnombre1 = new global::System.Data.DataColumn("nombre1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre1);
+                this.columncod_estudio = new global::System.Data.DataColumn("cod_estudio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_estudio);
+                this.columnnivel = new global::System.Data.DataColumn("nivel", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnivel);
+                this.columngrado = new global::System.Data.DataColumn("grado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngrado);
+                this.columncod_Idioma = new global::System.Data.DataColumn("cod_Idioma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_Idioma);
+                this.columnnombre2 = new global::System.Data.DataColumn("nombre2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre2);
                 this.columncod_ubigeo = new global::System.Data.DataColumn("cod_ubigeo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncod_ubigeo);
                 this.columndepartamento = new global::System.Data.DataColumn("departamento", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1616,39 +2896,13 @@ namespace Oferentes.WEB {
                 this.columndistrito = new global::System.Data.DataColumn("distrito", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndistrito);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnnum,
                                 this.columnnum_dni,
-                                this.columncod_activ,
-                                this.columncod_orgatend,
-                                this.columnnum_dni1,
+                                this.columncod_estcivil,
+                                this.columncod_resid,
+                                this.columncod_estudio,
+                                this.columncod_Idioma,
                                 this.columncod_ubigeo}, true));
-                this.columnnum.AutoIncrement = true;
-                this.columnnum.AllowDBNull = false;
-                this.columnnum.ReadOnly = true;
                 this.columnnum_dni.AllowDBNull = false;
-                this.columnactividad.AllowDBNull = false;
-                this.columnduracion.AllowDBNull = false;
-                this.columnduracion.MaxLength = 30;
-                this.columncertificado.MaxLength = 50;
-                this.columnlugar_activ.AllowDBNull = false;
-                this.columnlugar_activ.MaxLength = 6;
-                this.columnorganizacion_atendida.AllowDBNull = false;
-                this.columnreferente.AllowDBNull = false;
-                this.columnreferente.MaxLength = 100;
-                this.columnreconocimientos.MaxLength = 200;
-                this.columnfecha_reg.AllowDBNull = false;
-                this.columnestado.MaxLength = 1;
-                this.columncod_activ.AutoIncrement = true;
-                this.columncod_activ.AllowDBNull = false;
-                this.columncod_activ.ReadOnly = true;
-                this.columnnombre.AllowDBNull = false;
-                this.columnnombre.MaxLength = 50;
-                this.columncod_orgatend.AutoIncrement = true;
-                this.columncod_orgatend.AllowDBNull = false;
-                this.columncod_orgatend.ReadOnly = true;
-                this.columnnombre1.AllowDBNull = false;
-                this.columnnombre1.MaxLength = 50;
-                this.columnnum_dni1.AllowDBNull = false;
                 this.columnapellidos.AllowDBNull = false;
                 this.columnapellidos.MaxLength = 30;
                 this.columnnombres.AllowDBNull = false;
@@ -1668,8 +2922,29 @@ namespace Oferentes.WEB {
                 this.columnestudio.MaxLength = 2;
                 this.columnlect_esc.MaxLength = 20;
                 this.columnidioma.AllowDBNull = false;
-                this.columnfecha_reg1.AllowDBNull = false;
-                this.columnestado1.MaxLength = 1;
+                this.columnfecha_reg.AllowDBNull = false;
+                this.columnestado.MaxLength = 1;
+                this.columncod_estcivil.AutoIncrement = true;
+                this.columncod_estcivil.AllowDBNull = false;
+                this.columncod_estcivil.ReadOnly = true;
+                this.columnnombre.AllowDBNull = false;
+                this.columnnombre.MaxLength = 20;
+                this.columncod_resid.AutoIncrement = true;
+                this.columncod_resid.AllowDBNull = false;
+                this.columncod_resid.ReadOnly = true;
+                this.columnnombre1.AllowDBNull = false;
+                this.columnnombre1.MaxLength = 20;
+                this.columncod_estudio.AllowDBNull = false;
+                this.columncod_estudio.MaxLength = 2;
+                this.columnnivel.AllowDBNull = false;
+                this.columnnivel.MaxLength = 10;
+                this.columngrado.AllowDBNull = false;
+                this.columngrado.MaxLength = 15;
+                this.columncod_Idioma.AutoIncrement = true;
+                this.columncod_Idioma.AllowDBNull = false;
+                this.columncod_Idioma.ReadOnly = true;
+                this.columnnombre2.AllowDBNull = false;
+                this.columnnombre2.MaxLength = 30;
                 this.columncod_ubigeo.AllowDBNull = false;
                 this.columncod_ubigeo.MaxLength = 6;
                 this.columndepartamento.MaxLength = 50;
@@ -1680,28 +2955,28 @@ namespace Oferentes.WEB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow Newsp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow() {
-                return ((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(this.NewRow()));
+            public sp_Talento_cv_search_dniRow Newsp_Talento_cv_search_dniRow() {
+                return ((sp_Talento_cv_search_dniRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow(builder);
+                return new sp_Talento_cv_search_dniRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow);
+                return typeof(sp_Talento_cv_search_dniRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanged != null)) {
-                    this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanged(this, new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent(((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(e.Row)), e.Action));
+                if ((this.sp_Talento_cv_search_dniRowChanged != null)) {
+                    this.sp_Talento_cv_search_dniRowChanged(this, new sp_Talento_cv_search_dniRowChangeEvent(((sp_Talento_cv_search_dniRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1709,8 +2984,8 @@ namespace Oferentes.WEB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanging != null)) {
-                    this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChanging(this, new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent(((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(e.Row)), e.Action));
+                if ((this.sp_Talento_cv_search_dniRowChanging != null)) {
+                    this.sp_Talento_cv_search_dniRowChanging(this, new sp_Talento_cv_search_dniRowChangeEvent(((sp_Talento_cv_search_dniRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1718,8 +2993,8 @@ namespace Oferentes.WEB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleted != null)) {
-                    this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleted(this, new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent(((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(e.Row)), e.Action));
+                if ((this.sp_Talento_cv_search_dniRowDeleted != null)) {
+                    this.sp_Talento_cv_search_dniRowDeleted(this, new sp_Talento_cv_search_dniRowChangeEvent(((sp_Talento_cv_search_dniRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1727,14 +3002,14 @@ namespace Oferentes.WEB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleting != null)) {
-                    this.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowDeleting(this, new sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent(((sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow)(e.Row)), e.Action));
+                if ((this.sp_Talento_cv_search_dniRowDeleting != null)) {
+                    this.sp_Talento_cv_search_dniRowDeleting(this, new sp_Talento_cv_search_dniRowChangeEvent(((sp_Talento_cv_search_dniRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removesp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow(sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow row) {
+            public void Removesp_Talento_cv_search_dniRow(sp_Talento_cv_search_dniRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1761,7 +3036,7 @@ namespace Oferentes.WEB {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable";
+                attribute2.FixedValue = "sp_Talento_cv_search_dniDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1799,411 +3074,6 @@ namespace Oferentes.WEB {
                 }
                 xs.Add(dsSchema);
                 return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgRow : global::System.Data.DataRow {
-            
-            private sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org = ((sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal num_dni {
-                get {
-                    return ((decimal)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.num_dniColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.num_dniColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string apellidos {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.apellidosColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.apellidosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombres {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombresColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombresColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime fecha_nac {
-                get {
-                    return ((global::System.DateTime)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.fecha_nacColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.fecha_nacColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string lugar_nac {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lugar_nacColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lugar_nacColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string sexo {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.sexoColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.sexoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int estado_civil {
-                get {
-                    return ((int)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.estado_civilColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.estado_civilColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombreColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int residencia {
-                get {
-                    try {
-                        return ((int)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.residenciaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'residencia\' de la tabla \'sp_Talento_search_dni_ubigeo_act" +
-                                "iv_lugar_activ_org\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.residenciaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre1 {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombre1Column]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombre1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string direccion {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.direccionColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.direccionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ubigeo {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.ubigeoColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.ubigeoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal telefono_fijo {
-                get {
-                    try {
-                        return ((decimal)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_fijoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono_fijo\' de la tabla \'sp_Talento_search_dni_ubigeo_" +
-                                "activ_lugar_activ_org\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_fijoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal telefono_celular {
-                get {
-                    try {
-                        return ((decimal)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_celularColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono_celular\' de la tabla \'sp_Talento_search_dni_ubig" +
-                                "eo_activ_lugar_activ_org\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_celularColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string correo {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.correoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'correo\' de la tabla \'sp_Talento_search_dni_ubigeo_activ_l" +
-                                "ugar_activ_org\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.correoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string estudio {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.estudioColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.estudioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string grado {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.gradoColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.gradoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nivel {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nivelColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nivelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string lect_esc {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lect_escColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'lect_esc\' de la tabla \'sp_Talento_search_dni_ubigeo_activ" +
-                                "_lugar_activ_org\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lect_escColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int idioma {
-                get {
-                    return ((int)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.idiomaColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.idiomaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre2 {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombre2Column]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombre2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string departamento {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.departamentoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'departamento\' de la tabla \'sp_Talento_search_dni_ubigeo_a" +
-                                "ctiv_lugar_activ_org\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.departamentoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string provincia {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.provinciaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'provincia\' de la tabla \'sp_Talento_search_dni_ubigeo_acti" +
-                                "v_lugar_activ_org\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.provinciaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string distrito {
-                get {
-                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.distritoColumn]));
-                }
-                set {
-                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.distritoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsresidenciaNull() {
-                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.residenciaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetresidenciaNull() {
-                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.residenciaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istelefono_fijoNull() {
-                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_fijoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settelefono_fijoNull() {
-                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_fijoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istelefono_celularNull() {
-                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_celularColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settelefono_celularNull() {
-                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_celularColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscorreoNull() {
-                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.correoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcorreoNull() {
-                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.correoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Islect_escNull() {
-                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lect_escColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setlect_escNull() {
-                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lect_escColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdepartamentoNull() {
-                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.departamentoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdepartamentoNull() {
-                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.departamentoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsprovinciaNull() {
-                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.provinciaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetprovinciaNull() {
-                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.provinciaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2696,6 +3566,23 @@ namespace Oferentes.WEB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tiempo {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org.TiempoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tiempo\' de la tabla \'sp_Experiencia_search_activ_lugaract" +
+                                "v_dni_ubigeo_org\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org.TiempoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscertificadoNull() {
                 return this.IsNull(this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org.certificadoColumn);
             }
@@ -2825,6 +3712,1158 @@ namespace Oferentes.WEB {
             public void SetprovinciaNull() {
                 this[this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org.provinciaColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTiempoNull() {
+                return this.IsNull(this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org.TiempoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTiempoNull() {
+                this[this.tablesp_Experiencia_search_activ_lugaractv_dni_ubigeo_org.TiempoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgRow : global::System.Data.DataRow {
+            
+            private sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org = ((sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal num_dni {
+                get {
+                    return ((decimal)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.num_dniColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.num_dniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string apellidos {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.apellidosColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.apellidosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombres {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombresColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombresColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime fecha_nac {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.fecha_nacColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.fecha_nacColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string lugar_nac {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lugar_nacColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lugar_nacColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string sexo {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.sexoColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.sexoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int estado_civil {
+                get {
+                    return ((int)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.estado_civilColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.estado_civilColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombreColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int residencia {
+                get {
+                    try {
+                        return ((int)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.residenciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'residencia\' de la tabla \'sp_Talento_search_dni_ubigeo_act" +
+                                "iv_lugar_activ_org\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.residenciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre1 {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombre1Column]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombre1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string direccion {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.direccionColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.direccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ubigeo {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.ubigeoColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.ubigeoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal telefono_fijo {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_fijoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono_fijo\' de la tabla \'sp_Talento_search_dni_ubigeo_" +
+                                "activ_lugar_activ_org\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_fijoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal telefono_celular {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_celularColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono_celular\' de la tabla \'sp_Talento_search_dni_ubig" +
+                                "eo_activ_lugar_activ_org\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_celularColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string correo {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.correoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'correo\' de la tabla \'sp_Talento_search_dni_ubigeo_activ_l" +
+                                "ugar_activ_org\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.correoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string estudio {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.estudioColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.estudioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string grado {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.gradoColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.gradoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nivel {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nivelColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nivelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string lect_esc {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lect_escColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'lect_esc\' de la tabla \'sp_Talento_search_dni_ubigeo_activ" +
+                                "_lugar_activ_org\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lect_escColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int idioma {
+                get {
+                    return ((int)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.idiomaColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.idiomaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre2 {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombre2Column]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.nombre2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string departamento {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.departamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'departamento\' de la tabla \'sp_Talento_search_dni_ubigeo_a" +
+                                "ctiv_lugar_activ_org\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.departamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string provincia {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.provinciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'provincia\' de la tabla \'sp_Talento_search_dni_ubigeo_acti" +
+                                "v_lugar_activ_org\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.provinciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string distrito {
+                get {
+                    return ((string)(this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.distritoColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.distritoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsresidenciaNull() {
+                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.residenciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetresidenciaNull() {
+                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.residenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istelefono_fijoNull() {
+                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_fijoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settelefono_fijoNull() {
+                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_fijoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istelefono_celularNull() {
+                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_celularColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settelefono_celularNull() {
+                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.telefono_celularColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscorreoNull() {
+                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.correoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcorreoNull() {
+                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.correoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Islect_escNull() {
+                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lect_escColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setlect_escNull() {
+                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.lect_escColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdepartamentoNull() {
+                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.departamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdepartamentoNull() {
+                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.departamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprovinciaNull() {
+                return this.IsNull(this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.provinciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprovinciaNull() {
+                this[this.tablesp_Talento_search_dni_ubigeo_activ_lugar_activ_org.provinciaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_Experiencia_search_dniRow : global::System.Data.DataRow {
+            
+            private sp_Experiencia_search_dniDataTable tablesp_Experiencia_search_dni;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal sp_Experiencia_search_dniRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_Experiencia_search_dni = ((sp_Experiencia_search_dniDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int num {
+                get {
+                    return ((int)(this[this.tablesp_Experiencia_search_dni.numColumn]));
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.numColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal dni {
+                get {
+                    return ((decimal)(this[this.tablesp_Experiencia_search_dni.dniColumn]));
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.dniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_act {
+                get {
+                    return ((int)(this[this.tablesp_Experiencia_search_dni.cod_actColumn]));
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.cod_actColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string actividad {
+                get {
+                    return ((string)(this[this.tablesp_Experiencia_search_dni.actividadColumn]));
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.actividadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string duracion {
+                get {
+                    return ((string)(this[this.tablesp_Experiencia_search_dni.duracionColumn]));
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.duracionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string certificado {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Experiencia_search_dni.certificadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'certificado\' de la tabla \'sp_Experiencia_search_dni\' es D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.certificadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cod_lugar_activ {
+                get {
+                    return ((string)(this[this.tablesp_Experiencia_search_dni.cod_lugar_activColumn]));
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.cod_lugar_activColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_org {
+                get {
+                    return ((int)(this[this.tablesp_Experiencia_search_dni.cod_orgColumn]));
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.cod_orgColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string organizacion {
+                get {
+                    return ((string)(this[this.tablesp_Experiencia_search_dni.organizacionColumn]));
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.organizacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string referente {
+                get {
+                    return ((string)(this[this.tablesp_Experiencia_search_dni.referenteColumn]));
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.referenteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string reconocimientos {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Experiencia_search_dni.reconocimientosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'reconocimientos\' de la tabla \'sp_Experiencia_search_dni\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.reconocimientosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string lugar_activ {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Experiencia_search_dni.lugar_activColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'lugar_activ\' de la tabla \'sp_Experiencia_search_dni\' es D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Experiencia_search_dni.lugar_activColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscertificadoNull() {
+                return this.IsNull(this.tablesp_Experiencia_search_dni.certificadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcertificadoNull() {
+                this[this.tablesp_Experiencia_search_dni.certificadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsreconocimientosNull() {
+                return this.IsNull(this.tablesp_Experiencia_search_dni.reconocimientosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetreconocimientosNull() {
+                this[this.tablesp_Experiencia_search_dni.reconocimientosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Islugar_activNull() {
+                return this.IsNull(this.tablesp_Experiencia_search_dni.lugar_activColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setlugar_activNull() {
+                this[this.tablesp_Experiencia_search_dni.lugar_activColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_Talento_cv_search_dniRow : global::System.Data.DataRow {
+            
+            private sp_Talento_cv_search_dniDataTable tablesp_Talento_cv_search_dni;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal sp_Talento_cv_search_dniRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_Talento_cv_search_dni = ((sp_Talento_cv_search_dniDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal num_dni {
+                get {
+                    return ((decimal)(this[this.tablesp_Talento_cv_search_dni.num_dniColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.num_dniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string apellidos {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.apellidosColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.apellidosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombres {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.nombresColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.nombresColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime fecha_nac {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_Talento_cv_search_dni.fecha_nacColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.fecha_nacColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string lugar_nac {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.lugar_nacColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.lugar_nacColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string sexo {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.sexoColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.sexoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int estado_civil {
+                get {
+                    return ((int)(this[this.tablesp_Talento_cv_search_dni.estado_civilColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.estado_civilColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int residencia {
+                get {
+                    try {
+                        return ((int)(this[this.tablesp_Talento_cv_search_dni.residenciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'residencia\' de la tabla \'sp_Talento_cv_search_dni\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.residenciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string direccion {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.direccionColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.direccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ubigeo {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.ubigeoColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.ubigeoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal telefono_fijo {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablesp_Talento_cv_search_dni.telefono_fijoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono_fijo\' de la tabla \'sp_Talento_cv_search_dni\' es " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.telefono_fijoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal telefono_celular {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablesp_Talento_cv_search_dni.telefono_celularColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono_celular\' de la tabla \'sp_Talento_cv_search_dni\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.telefono_celularColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string correo {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Talento_cv_search_dni.correoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'correo\' de la tabla \'sp_Talento_cv_search_dni\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.correoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string estudio {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.estudioColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.estudioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string lect_esc {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Talento_cv_search_dni.lect_escColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'lect_esc\' de la tabla \'sp_Talento_cv_search_dni\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.lect_escColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int idioma {
+                get {
+                    return ((int)(this[this.tablesp_Talento_cv_search_dni.idiomaColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.idiomaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime fecha_reg {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_Talento_cv_search_dni.fecha_regColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.fecha_regColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string estado {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Talento_cv_search_dni.estadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'estado\' de la tabla \'sp_Talento_cv_search_dni\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.estadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_estcivil {
+                get {
+                    return ((int)(this[this.tablesp_Talento_cv_search_dni.cod_estcivilColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.cod_estcivilColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.nombreColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_resid {
+                get {
+                    return ((int)(this[this.tablesp_Talento_cv_search_dni.cod_residColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.cod_residColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre1 {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.nombre1Column]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.nombre1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cod_estudio {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.cod_estudioColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.cod_estudioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nivel {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.nivelColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.nivelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string grado {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.gradoColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.gradoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_Idioma {
+                get {
+                    return ((int)(this[this.tablesp_Talento_cv_search_dni.cod_IdiomaColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.cod_IdiomaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre2 {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.nombre2Column]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.nombre2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cod_ubigeo {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.cod_ubigeoColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.cod_ubigeoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string departamento {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Talento_cv_search_dni.departamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'departamento\' de la tabla \'sp_Talento_cv_search_dni\' es D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.departamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string provincia {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Talento_cv_search_dni.provinciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'provincia\' de la tabla \'sp_Talento_cv_search_dni\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.provinciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string distrito {
+                get {
+                    return ((string)(this[this.tablesp_Talento_cv_search_dni.distritoColumn]));
+                }
+                set {
+                    this[this.tablesp_Talento_cv_search_dni.distritoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsresidenciaNull() {
+                return this.IsNull(this.tablesp_Talento_cv_search_dni.residenciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetresidenciaNull() {
+                this[this.tablesp_Talento_cv_search_dni.residenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istelefono_fijoNull() {
+                return this.IsNull(this.tablesp_Talento_cv_search_dni.telefono_fijoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settelefono_fijoNull() {
+                this[this.tablesp_Talento_cv_search_dni.telefono_fijoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istelefono_celularNull() {
+                return this.IsNull(this.tablesp_Talento_cv_search_dni.telefono_celularColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settelefono_celularNull() {
+                this[this.tablesp_Talento_cv_search_dni.telefono_celularColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscorreoNull() {
+                return this.IsNull(this.tablesp_Talento_cv_search_dni.correoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcorreoNull() {
+                this[this.tablesp_Talento_cv_search_dni.correoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Islect_escNull() {
+                return this.IsNull(this.tablesp_Talento_cv_search_dni.lect_escColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setlect_escNull() {
+                this[this.tablesp_Talento_cv_search_dni.lect_escColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsestadoNull() {
+                return this.IsNull(this.tablesp_Talento_cv_search_dni.estadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetestadoNull() {
+                this[this.tablesp_Talento_cv_search_dni.estadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdepartamentoNull() {
+                return this.IsNull(this.tablesp_Talento_cv_search_dni.departamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdepartamentoNull() {
+                this[this.tablesp_Talento_cv_search_dni.departamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprovinciaNull() {
+                return this.IsNull(this.tablesp_Talento_cv_search_dni.provinciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprovinciaNull() {
+                this[this.tablesp_Talento_cv_search_dni.provinciaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent : global::System.EventArgs {
+            
+            private sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent(sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
         }
         
         /// <summary>
@@ -2865,22 +4904,56 @@ namespace Oferentes.WEB {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent : global::System.EventArgs {
+        public class sp_Experiencia_search_dniRowChangeEvent : global::System.EventArgs {
             
-            private sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow eventRow;
+            private sp_Experiencia_search_dniRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRowChangeEvent(sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow row, global::System.Data.DataRowAction action) {
+            public sp_Experiencia_search_dniRowChangeEvent(sp_Experiencia_search_dniRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgRow Row {
+            public sp_Experiencia_search_dniRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class sp_Talento_cv_search_dniRowChangeEvent : global::System.EventArgs {
+            
+            private sp_Talento_cv_search_dniRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Talento_cv_search_dniRowChangeEvent(sp_Talento_cv_search_dniRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public sp_Talento_cv_search_dniRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2898,6 +4971,302 @@ namespace Oferentes.WEB {
 }
 namespace Oferentes.WEB.dsDirectorioTableAdapters {
     
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org";
+            tableMapping.ColumnMappings.Add("num", "num");
+            tableMapping.ColumnMappings.Add("num_dni", "num_dni");
+            tableMapping.ColumnMappings.Add("actividad", "actividad");
+            tableMapping.ColumnMappings.Add("duracion", "duracion");
+            tableMapping.ColumnMappings.Add("certificado", "certificado");
+            tableMapping.ColumnMappings.Add("lugar_activ", "lugar_activ");
+            tableMapping.ColumnMappings.Add("organizacion_atendida", "organizacion_atendida");
+            tableMapping.ColumnMappings.Add("referente", "referente");
+            tableMapping.ColumnMappings.Add("reconocimientos", "reconocimientos");
+            tableMapping.ColumnMappings.Add("fecha_reg", "fecha_reg");
+            tableMapping.ColumnMappings.Add("estado", "estado");
+            tableMapping.ColumnMappings.Add("cod_activ", "cod_activ");
+            tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("cod_orgatend", "cod_orgatend");
+            tableMapping.ColumnMappings.Add("nombre1", "nombre1");
+            tableMapping.ColumnMappings.Add("num_dni1", "num_dni1");
+            tableMapping.ColumnMappings.Add("apellidos", "apellidos");
+            tableMapping.ColumnMappings.Add("nombres", "nombres");
+            tableMapping.ColumnMappings.Add("fecha_nac", "fecha_nac");
+            tableMapping.ColumnMappings.Add("lugar_nac", "lugar_nac");
+            tableMapping.ColumnMappings.Add("sexo", "sexo");
+            tableMapping.ColumnMappings.Add("estado_civil", "estado_civil");
+            tableMapping.ColumnMappings.Add("residencia", "residencia");
+            tableMapping.ColumnMappings.Add("direccion", "direccion");
+            tableMapping.ColumnMappings.Add("ubigeo", "ubigeo");
+            tableMapping.ColumnMappings.Add("telefono_fijo", "telefono_fijo");
+            tableMapping.ColumnMappings.Add("telefono_celular", "telefono_celular");
+            tableMapping.ColumnMappings.Add("correo", "correo");
+            tableMapping.ColumnMappings.Add("estudio", "estudio");
+            tableMapping.ColumnMappings.Add("lect_esc", "lect_esc");
+            tableMapping.ColumnMappings.Add("idioma", "idioma");
+            tableMapping.ColumnMappings.Add("fecha_reg1", "fecha_reg1");
+            tableMapping.ColumnMappings.Add("estado1", "estado1");
+            tableMapping.ColumnMappings.Add("cod_ubigeo", "cod_ubigeo");
+            tableMapping.ColumnMappings.Add("departamento", "departamento");
+            tableMapping.ColumnMappings.Add("provincia", "provincia");
+            tableMapping.ColumnMappings.Add("distrito", "distrito");
+            tableMapping.ColumnMappings.Add("Tiempo", "Tiempo");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["BDDirectorioConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@activ", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lugar_act", global::System.Data.SqlDbType.Char, 6, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ubigeo", global::System.Data.SqlDbType.Char, 6, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dni", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 8, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@org", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecharegini", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecharegfin", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsDirectorio.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable dataTable, global::System.Nullable<int> activ, string lugar_act, string ubigeo, global::System.Nullable<decimal> dni, global::System.Nullable<int> org, string fecharegini, string fecharegfin) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((activ.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(activ.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((lugar_act == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(lugar_act));
+            }
+            if ((ubigeo == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(ubigeo));
+            }
+            if ((dni.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((decimal)(dni.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((org.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(org.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((fecharegini == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(fecharegini));
+            }
+            if ((fecharegfin == null)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(fecharegfin));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsDirectorio.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable GetData(global::System.Nullable<int> activ, string lugar_act, string ubigeo, global::System.Nullable<decimal> dni, global::System.Nullable<int> org, string fecharegini, string fecharegfin) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((activ.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(activ.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((lugar_act == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(lugar_act));
+            }
+            if ((ubigeo == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(ubigeo));
+            }
+            if ((dni.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((decimal)(dni.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((org.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(org.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((fecharegini == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(fecharegini));
+            }
+            if ((fecharegfin == null)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(fecharegfin));
+            }
+            dsDirectorio.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable dataTable = new dsDirectorio.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -3068,13 +5437,15 @@ namespace Oferentes.WEB.dsDirectorioTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ubigeo", global::System.Data.SqlDbType.Char, 6, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dni", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 8, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@org", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecharegini", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecharegfin", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsDirectorio.sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable dataTable, global::System.Nullable<int> activ, string lugar_act, string ubigeo, global::System.Nullable<decimal> dni, global::System.Nullable<int> org) {
+        public virtual int Fill(dsDirectorio.sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable dataTable, global::System.Nullable<int> activ, string lugar_act, string ubigeo, global::System.Nullable<decimal> dni, global::System.Nullable<int> org, string fecharegini, string fecharegfin) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((activ.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(activ.Value));
@@ -3105,6 +5476,18 @@ namespace Oferentes.WEB.dsDirectorioTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((fecharegini == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(fecharegini));
+            }
+            if ((fecharegfin == null)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(fecharegfin));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3117,7 +5500,7 @@ namespace Oferentes.WEB.dsDirectorioTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsDirectorio.sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable GetData(global::System.Nullable<int> activ, string lugar_act, string ubigeo, global::System.Nullable<decimal> dni, global::System.Nullable<int> org) {
+        public virtual dsDirectorio.sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable GetData(global::System.Nullable<int> activ, string lugar_act, string ubigeo, global::System.Nullable<decimal> dni, global::System.Nullable<int> org, string fecharegini, string fecharegfin) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((activ.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(activ.Value));
@@ -3148,6 +5531,18 @@ namespace Oferentes.WEB.dsDirectorioTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((fecharegini == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(fecharegini));
+            }
+            if ((fecharegfin == null)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(fecharegfin));
             }
             dsDirectorio.sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable dataTable = new dsDirectorio.sp_Talento_search_dni_ubigeo_activ_lugar_activ_orgDataTable();
             this.Adapter.Fill(dataTable);
@@ -3164,7 +5559,7 @@ namespace Oferentes.WEB.dsDirectorioTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgTableAdapter : global::System.ComponentModel.Component {
+    public partial class sp_Experiencia_search_dniTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3178,7 +5573,7 @@ namespace Oferentes.WEB.dsDirectorioTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgTableAdapter() {
+        public sp_Experiencia_search_dniTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3275,23 +5670,200 @@ namespace Oferentes.WEB.dsDirectorioTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org";
+            tableMapping.DataSetTable = "sp_Experiencia_search_dni";
             tableMapping.ColumnMappings.Add("num", "num");
-            tableMapping.ColumnMappings.Add("num_dni", "num_dni");
+            tableMapping.ColumnMappings.Add("dni", "dni");
+            tableMapping.ColumnMappings.Add("cod_act", "cod_act");
             tableMapping.ColumnMappings.Add("actividad", "actividad");
             tableMapping.ColumnMappings.Add("duracion", "duracion");
             tableMapping.ColumnMappings.Add("certificado", "certificado");
-            tableMapping.ColumnMappings.Add("lugar_activ", "lugar_activ");
-            tableMapping.ColumnMappings.Add("organizacion_atendida", "organizacion_atendida");
+            tableMapping.ColumnMappings.Add("cod_lugar_activ", "cod_lugar_activ");
+            tableMapping.ColumnMappings.Add("cod_org", "cod_org");
+            tableMapping.ColumnMappings.Add("organizacion", "organizacion");
             tableMapping.ColumnMappings.Add("referente", "referente");
             tableMapping.ColumnMappings.Add("reconocimientos", "reconocimientos");
-            tableMapping.ColumnMappings.Add("fecha_reg", "fecha_reg");
-            tableMapping.ColumnMappings.Add("estado", "estado");
-            tableMapping.ColumnMappings.Add("cod_activ", "cod_activ");
-            tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("cod_orgatend", "cod_orgatend");
-            tableMapping.ColumnMappings.Add("nombre1", "nombre1");
-            tableMapping.ColumnMappings.Add("num_dni1", "num_dni1");
+            tableMapping.ColumnMappings.Add("lugar_activ", "lugar_activ");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["BDDirectorioConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_Experiencia_search_dni";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@num_dni", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 8, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsDirectorio.sp_Experiencia_search_dniDataTable dataTable, global::System.Nullable<decimal> num_dni) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((num_dni.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(num_dni.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsDirectorio.sp_Experiencia_search_dniDataTable GetData(global::System.Nullable<decimal> num_dni) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((num_dni.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(num_dni.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            dsDirectorio.sp_Experiencia_search_dniDataTable dataTable = new dsDirectorio.sp_Experiencia_search_dniDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_Talento_cv_search_dniTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public sp_Talento_cv_search_dniTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_Talento_cv_search_dni";
+            tableMapping.ColumnMappings.Add("num_dni", "num_dni");
             tableMapping.ColumnMappings.Add("apellidos", "apellidos");
             tableMapping.ColumnMappings.Add("nombres", "nombres");
             tableMapping.ColumnMappings.Add("fecha_nac", "fecha_nac");
@@ -3307,8 +5879,17 @@ namespace Oferentes.WEB.dsDirectorioTableAdapters {
             tableMapping.ColumnMappings.Add("estudio", "estudio");
             tableMapping.ColumnMappings.Add("lect_esc", "lect_esc");
             tableMapping.ColumnMappings.Add("idioma", "idioma");
-            tableMapping.ColumnMappings.Add("fecha_reg1", "fecha_reg1");
-            tableMapping.ColumnMappings.Add("estado1", "estado1");
+            tableMapping.ColumnMappings.Add("fecha_reg", "fecha_reg");
+            tableMapping.ColumnMappings.Add("estado", "estado");
+            tableMapping.ColumnMappings.Add("cod_estcivil", "cod_estcivil");
+            tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("cod_resid", "cod_resid");
+            tableMapping.ColumnMappings.Add("nombre1", "nombre1");
+            tableMapping.ColumnMappings.Add("cod_estudio", "cod_estudio");
+            tableMapping.ColumnMappings.Add("nivel", "nivel");
+            tableMapping.ColumnMappings.Add("grado", "grado");
+            tableMapping.ColumnMappings.Add("cod_Idioma", "cod_Idioma");
+            tableMapping.ColumnMappings.Add("nombre2", "nombre2");
             tableMapping.ColumnMappings.Add("cod_ubigeo", "cod_ubigeo");
             tableMapping.ColumnMappings.Add("departamento", "departamento");
             tableMapping.ColumnMappings.Add("provincia", "provincia");
@@ -3329,51 +5910,23 @@ namespace Oferentes.WEB.dsDirectorioTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org";
+            this._commandCollection[0].CommandText = "dbo.sp_Talento_cv_search_dni";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@activ", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lugar_act", global::System.Data.SqlDbType.Char, 6, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ubigeo", global::System.Data.SqlDbType.Char, 6, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dni", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 8, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@org", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsDirectorio.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable dataTable, global::System.Nullable<int> activ, string lugar_act, string ubigeo, global::System.Nullable<decimal> dni, global::System.Nullable<int> org) {
+        public virtual int Fill(dsDirectorio.sp_Talento_cv_search_dniDataTable dataTable, global::System.Nullable<decimal> dni) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((activ.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(activ.Value));
+            if ((dni.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(dni.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((lugar_act == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(lugar_act));
-            }
-            if ((ubigeo == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(ubigeo));
-            }
-            if ((dni.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((decimal)(dni.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((org.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(org.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3386,39 +5939,15 @@ namespace Oferentes.WEB.dsDirectorioTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsDirectorio.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable GetData(global::System.Nullable<int> activ, string lugar_act, string ubigeo, global::System.Nullable<decimal> dni, global::System.Nullable<int> org) {
+        public virtual dsDirectorio.sp_Talento_cv_search_dniDataTable GetData(global::System.Nullable<decimal> dni) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((activ.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(activ.Value));
+            if ((dni.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(dni.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((lugar_act == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(lugar_act));
-            }
-            if ((ubigeo == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(ubigeo));
-            }
-            if ((dni.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((decimal)(dni.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((org.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(org.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            dsDirectorio.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable dataTable = new dsDirectorio.sp_Experiencia_search_activ_lugaractv_dni_ubigeo_orgDataTable();
+            dsDirectorio.sp_Talento_cv_search_dniDataTable dataTable = new dsDirectorio.sp_Talento_cv_search_dniDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

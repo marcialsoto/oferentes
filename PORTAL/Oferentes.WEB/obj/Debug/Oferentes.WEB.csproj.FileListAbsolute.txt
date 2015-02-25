@@ -82,3 +82,75 @@ C:\Users\HP\Desktop\PORTAL v 5\Oferentes.WEB\obj\Debug\RdlCompile.cache
 C:\Users\HP\Desktop\PORTAL v 5\Oferentes.WEB\obj\Debug\RdlCompile.compiled
 C:\Users\HP\Desktop\PORTAL v 5\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
 C:\Users\HP\Desktop\PORTAL v 5\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.dll.config
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.dll
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.pdb
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.BOL.dll
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.DAL.dll
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.BOL.pdb
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.DAL.pdb
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\RdlCompile.cache
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\RdlCompile.compiled
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
+C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\bin\Oferentes.WEB.dll.config
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\bin\Oferentes.WEB.dll
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\bin\Oferentes.WEB.pdb
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\bin\Oferentes.BOL.dll
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\bin\Oferentes.DAL.dll
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\bin\Oferentes.BOL.pdb
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\bin\Oferentes.DAL.pdb
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\obj\Debug\Oferentes.WEB.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\obj\Debug\RdlCompile.cache
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\obj\Debug\RdlCompile.compiled
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
+C:\Users\HP\Desktop\PORTAL v 6\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\bin\Oferentes.WEB.dll.config
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\bin\Oferentes.WEB.dll
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\bin\Oferentes.WEB.pdb
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\bin\Oferentes.BOL.dll
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\bin\Oferentes.DAL.dll
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\bin\Oferentes.BOL.pdb
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\bin\Oferentes.DAL.pdb
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\obj\Debug\Oferentes.WEB.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\obj\Debug\RdlCompile.cache
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\obj\Debug\RdlCompile.compiled
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
+C:\Users\HP\Desktop\PORTAL v 7\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.dll.config
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.dll
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.pdb
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\bin\Oferentes.BOL.dll
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\bin\Oferentes.DAL.dll
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\bin\Oferentes.BOL.pdb
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\bin\Oferentes.DAL.pdb
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\obj\Debug\RdlCompile.cache
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\obj\Debug\RdlCompile.compiled
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
+C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.dll.config
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.pdb
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.BOL.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.DAL.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.BOL.pdb
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.DAL.pdb
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.csprojResolveAssemblyReference.cache
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\RdlCompile.cache
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\RdlCompile.compiled
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
+D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.dll.config
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.dll
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.WEB.pdb
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.BOL.dll
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.DAL.dll
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.BOL.pdb
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\bin\Oferentes.DAL.pdb
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.csprojResolveAssemblyReference.cache
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\RdlCompile.cache
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\RdlCompile.compiled
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
+\\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb

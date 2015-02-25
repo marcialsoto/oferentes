@@ -85,6 +85,12 @@ namespace Oferentes.WEB.Admin
                 //------------------------------------
 
                 carga_datatable();
+
+                string popupScript = "Javascript: return " +
+                    "window.open('" + "../Admin/CV.aspx" + "', 'CustomPopUp', " +
+                    "'width=1000, height=600, menubar=no, resizable=no');";
+
+                btnCV.Attributes.Add("onclick", popupScript);                
             }
         }
 
@@ -305,6 +311,13 @@ namespace Oferentes.WEB.Admin
 
                 txtRefer.Text = string.Empty;
                 txtRecon.Text = string.Empty;
+                txtInicio.Text = string.Empty;
+                txtFin.Text = string.Empty;
+
+                rbCertNo.Checked = true;
+                rbCertSi.Checked = false;
+                txtCertif.Enabled = false;
+                txtCertif.Text = "No cuenta con uno";
 
                 chbTodosDist.Checked = false;
                 dlDistAct.Enabled = true;
@@ -439,10 +452,15 @@ namespace Oferentes.WEB.Admin
                     Experiencia.insertar_Experiencia(exp);
                 }
 
+                btnCV_Click(null, null);
+
                 limpiar_talento();
                 limpiar_experiencia();
 
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "msg", "alert('Grabó correctamente')", true);
+
+                
+
             }
             catch (Exception ex)
             {
@@ -703,6 +721,8 @@ namespace Oferentes.WEB.Admin
                 {
                     ScriptManager.RegisterStartupScript(Page, Page.GetType(), "msg", "alert('DNI no existe en la BD de Reniec')", true);
                 }
+
+                Session["DNI"] = txtDNI.Text;
                 
             }
             catch (Exception ex)
@@ -711,6 +731,12 @@ namespace Oferentes.WEB.Admin
             }
         }
 
+        protected void btnCV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
 
 
 

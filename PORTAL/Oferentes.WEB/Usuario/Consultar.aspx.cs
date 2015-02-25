@@ -222,6 +222,7 @@ namespace Oferentes.WEB.Usuario
             txtLugarActv.Text = string.Empty;
             txtActividad.Text = string.Empty;
             txtOrg.Text = string.Empty;
+            
 
             rbTotal.Checked = false;
             rbUbigeo.Checked = false;
@@ -287,6 +288,9 @@ namespace Oferentes.WEB.Usuario
             txtActividad.Text = string.Empty;
             txtOrg.Text = string.Empty;
 
+            txtInicio.Text = string.Empty;
+            txtFin.Text = string.Empty;
+
             chbTodosDept.Enabled = false;
             chbTodosProv.Enabled = false;
             chbTodosDist.Enabled = false;
@@ -330,6 +334,8 @@ namespace Oferentes.WEB.Usuario
 
         protected void btnOk_Click(object sender, EventArgs e)
         {
+            //txtInicio.Text = "01/01/2014";
+            //txtFin.Text = "31/12/2020";
             refrescarInformes();
         }
 

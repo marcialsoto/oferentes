@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>N° TALENTOS POR ACTIVIDAD Y AÑO</Value>
+                <Value>REGISTRO DE TALENTOS POR ACTIVIDAD</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -160,7 +160,7 @@
             <TablixMember>
               <Group Name="fecha_reg1">
                 <GroupExpressions>
-                  <GroupExpression>=Year(Fields!fecha_reg1.Value)</GroupExpression>
+                  <GroupExpression>=Month(Fields!fecha_reg1.Value)</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
@@ -178,10 +178,10 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!fecha_reg1.Value</Value>
+                            <Value>=MonthName(Month(Fields!fecha_reg1.Value)) &amp;" "&amp;Year(Fields!fecha_reg1.Value)</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
-                              <Format>yyyy</Format>
+                              <Format>mm</Format>
                             </Style>
                           </TextRun>
                         </TextRuns>
@@ -303,7 +303,7 @@
         <Top>2.90724cm</Top>
         <Left>2.98662cm</Left>
         <Height>1.8cm</Height>
-        <Width>7.46062cm</Width>
+        <Width>7.46063cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -475,10 +475,30 @@
           <DataField>estado1</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="cod_ubigeo">
+          <DataField>cod_ubigeo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="departamento">
+          <DataField>departamento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="provincia">
+          <DataField>provincia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="distrito">
+          <DataField>distrito</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tiempo">
+          <DataField>Tiempo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsDirectorio</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\HP\Desktop\PORTAL v 1\Oferentes.WEB\dsDirectorio.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\HP\Desktop\PORTAL v 8\Oferentes.WEB\dsDirectorio.xsd</rd:SchemaPath>
         <rd:TableName>sp_Experiencia_search_activ_lugaractv_dni_ubigeo_org</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

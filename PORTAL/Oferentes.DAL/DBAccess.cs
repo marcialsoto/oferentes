@@ -18,12 +18,16 @@ namespace Oferentes.DAL
 		{
             //ConnectionStringSettings objConnectionStringSettings = ConfigurationManager.ConnectionStrings["connectionstring"];
             //strConnectionString = @"Data Source=LAB605-DOCW8;Initial Catalog=Matricula;Integrated Security=False; User Id=sa; password=soporte@123";
-           strConnectionString = "data source=SRVDB05\\SRVDATA;initial catalog=BDDirectorio; Integrated Security=false; user id=agronet; password=agronet_server_st";
 
-       
+            strConnectionString = @"Data Source=SRVDB05\SRVDATA;Initial Catalog=BDDirectorio;Integrated Security=False; User ID=agronet;Password=agronet_server_st";
 
 
             
+
+
+
+    
+
 
             //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["BDDirectorioConnectionString"].ConnectionString);
 
