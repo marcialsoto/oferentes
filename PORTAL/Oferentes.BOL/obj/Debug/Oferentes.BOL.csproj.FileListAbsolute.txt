@@ -82,13 +82,6 @@ C:\Users\HP\Desktop\PORTAL v 1\Oferentes.BOL\bin\Debug\Oferentes.DAL.pdb
 C:\Users\HP\Desktop\PORTAL v 1\Oferentes.BOL\obj\Debug\Oferentes.BOL.csprojResolveAssemblyReference.cache
 C:\Users\HP\Desktop\PORTAL v 1\Oferentes.BOL\obj\Debug\Oferentes.BOL.dll
 C:\Users\HP\Desktop\PORTAL v 1\Oferentes.BOL\obj\Debug\Oferentes.BOL.pdb
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.BOL.dll
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.BOL.pdb
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.DAL.dll
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.DAL.pdb
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.csprojResolveAssemblyReference.cache
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.dll
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.pdb
 C:\Users\HP\Desktop\oferentes-final\oferentes-master\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.BOL.dll
 C:\Users\HP\Desktop\oferentes-final\oferentes-master\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.BOL.pdb
 C:\Users\HP\Desktop\oferentes-final\oferentes-master\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.DAL.dll
@@ -138,3 +131,10 @@ D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.BOL\bin\Debug\O
 D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.csprojResolveAssemblyReference.cache
 D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.dll
 D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.BOL.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.BOL.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.DAL.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\bin\Debug\Oferentes.DAL.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.BOL\obj\Debug\Oferentes.BOL.pdb

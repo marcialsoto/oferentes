@@ -110,28 +110,32 @@
 
             <asp:UpdatePanel ID="UpdatePanel6" runat="server">
                 <ContentTemplate>
-                    <asp:RadioButton ID="rbDNI" runat="server" Text="Búsqueda por DNI" AutoPostBack="True" OnCheckedChanged="rbDNI_CheckedChanged" />
+                    <div class="form-group">
+                        <asp:RadioButton ID="rbDNI" runat="server" Text="Búsqueda por DNI" AutoPostBack="True" OnCheckedChanged="rbDNI_CheckedChanged" />
+                    </div>
                 </ContentTemplate>
             </asp:UpdatePanel>
             <asp:UpdatePanel ID="UpdatePanel5" runat="server">
                 <ContentTemplate>
-                   <div class="input-group">
-              <asp:TextBox ID="txtDNI" CssClass="form-control" runat="server" AutoPostBack="True" onkeypress="return numeros(event);" MaxLength="8" Enabled="False"></asp:TextBox>
-                       <span class="input-group-btn">
-          <asp:Button ID="btnOk" runat="server" CssClass="" Text="OK" ValidationGroup="ValidarDNI" OnClick="btnOk_Click" Enabled="False" />
-          </span>
-                   
-                    <asp:RequiredFieldValidator ID="rfvDNI" runat="server" ErrorMessage="Ingrese DNI" ValidationGroup="ValidarDNI" ControlToValidate="txtDNI">*</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="DNI: Ingrese 8 dígitos" ValidationExpression="\d{8}" ControlToValidate="txtDNI" ValidationGroup="ValidarDNI">*</asp:RegularExpressionValidator>
-                    
-                   </div>
-       
+                    <div class="form-group">
+                        <div class="input-group">
+                            <asp:TextBox ID="txtDNI" CssClass="form-control" runat="server" AutoPostBack="True" onkeypress="return numeros(event);" MaxLength="8" Enabled="False"></asp:TextBox>
+                            <span class="input-group-btn">
+                                <asp:Button ID="btnOk" CssClass="btn btn-default" runat="server" Text="OK" ValidationGroup="ValidarDNI" OnClick="btnOk_Click" Enabled="False" />
+                            </span>
+                            <asp:RequiredFieldValidator Display="Dynamic" ID="rfvDNI" runat="server" ErrorMessage="Ingrese DNI" ValidationGroup="ValidarDNI" ControlToValidate="txtDNI">*</asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator Display="Dynamic" ID="RegularExpressionValidator2" runat="server" ErrorMessage="DNI: Ingrese 8 dígitos" ValidationExpression="\d{8}" ControlToValidate="txtDNI" ValidationGroup="ValidarDNI">*</asp:RegularExpressionValidator>
+
+                        </div>
+                    </div>
                 </ContentTemplate>
             </asp:UpdatePanel>
             <hr />
             <asp:UpdatePanel ID="UpdatePanel7" runat="server">
                 <ContentTemplate>
-                    <asp:RadioButton ID="rbLugarActv" runat="server" Text="Búsqueda por Lugar y Actividad" AutoPostBack="True" OnCheckedChanged="rbLugarActv_CheckedChanged" />
+                    <div class="form-group">
+                        <asp:RadioButton ID="rbLugarActv" runat="server" Text="Búsqueda por Lugar y Actividad" AutoPostBack="True" OnCheckedChanged="rbLugarActv_CheckedChanged" />
+                    </div>
                 </ContentTemplate>
             </asp:UpdatePanel>
 
@@ -141,7 +145,7 @@
                     <ContentTemplate>
 
                         <label>Departamento</label>
-                        <asp:CheckBox ID="chbTodosDeptlugaractiv" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosDeptlugaractiv_CheckedChanged" />
+                        <asp:CheckBox ID="chbTodosDeptlugaractiv" CssClass="selector__select" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosDeptlugaractiv_CheckedChanged" />
 
 
                     </ContentTemplate>
@@ -162,7 +166,7 @@
                 <asp:UpdatePanel ID="UpdatePanel21" runat="server">
                     <ContentTemplate>
                         <label>Provincia</label>
-                        <asp:CheckBox ID="chbTodosProvlugaractiv" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosProvlugaractiv_CheckedChanged" />
+                        <asp:CheckBox ID="chbTodosProvlugaractiv" CssClass="selector__select" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosProvlugaractiv_CheckedChanged" />
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
@@ -187,7 +191,7 @@
                 <asp:UpdatePanel ID="UpdatePanel22" runat="server">
                     <ContentTemplate>
                         <label>Distrito</label>
-                        <asp:CheckBox ID="chbTodosDistlugaractiv" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosDistlugaractiv_CheckedChanged" />
+                        <asp:CheckBox ID="chbTodosDistlugaractiv" CssClass="selector__select" runat="server" Text="Todos" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosDistlugaractiv_CheckedChanged" />
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
@@ -220,7 +224,8 @@
 
             <asp:UpdatePanel ID="UpdatePanel11" runat="server">
                 <ContentTemplate>
-                    <asp:Button ID="btnIr" runat="server" Text="Ir" ValidationGroup="ValidarActividad" OnClick="btnIr_Click" Enabled="False" />
+                    <br />
+                    <asp:Button ID="btnIr" CssClass="btn btn-default" runat="server" Text="Ir" ValidationGroup="ValidarActividad" OnClick="btnIr_Click" Enabled="False" />
                 </ContentTemplate>
             </asp:UpdatePanel>
 
@@ -233,8 +238,10 @@
             <hr />
             <asp:UpdatePanel ID="UpdatePanel23" runat="server">
                 <ContentTemplate>
-                    <label>Actividad</label>
-                    <asp:CheckBox ID="chbTodosActiv" runat="server" Text="Todas" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosActiv_CheckedChanged" />
+                    <div class="form-group">
+                        <label>Actividad</label>
+                        <asp:CheckBox ID="chbTodosActiv" CssClass="selector__select" runat="server" Text="Todas" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodosActiv_CheckedChanged" />
+                    </div>
                 </ContentTemplate>
             </asp:UpdatePanel>
 
@@ -243,8 +250,9 @@
             <div class="form-group">
                 <asp:UpdatePanel ID="UpdatePanel13" runat="server">
                     <ContentTemplate>
-                        <asp:DropDownList ID="dlActividad" runat="server" CssClass="form-control" AutoPostBack="True" DataTextField="nombre" DataValueField="cod_activ" Enabled="False" OnSelectedIndexChanged="dlActividad_SelectedIndexChanged"></asp:DropDownList>
-
+                        <div class="form-group">
+                            <asp:DropDownList ID="dlActividad" runat="server" CssClass="form-control" AutoPostBack="True" DataTextField="nombre" DataValueField="cod_activ" Enabled="False" OnSelectedIndexChanged="dlActividad_SelectedIndexChanged"></asp:DropDownList>
+                        </div>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
@@ -253,7 +261,9 @@
 
             <asp:UpdatePanel ID="UpdatePanel14" runat="server">
                 <ContentTemplate>
-                    <asp:TextBox ID="txtActividad" runat="server" Visible="False"></asp:TextBox>
+                    <div class="form-group">
+                        <asp:TextBox ID="txtActividad" runat="server" Visible="False"></asp:TextBox>
+                    </div>
                 </ContentTemplate>
             </asp:UpdatePanel>
 
@@ -261,9 +271,11 @@
 
             <asp:UpdatePanel ID="UpdatePanel24" runat="server">
                 <ContentTemplate>
-                    <label>Organización Atendida</label>
+                    <div class="form-group">
+                        <label>Organización Atendida</label>
 
-                    <asp:CheckBox ID="chbTodasOrg" runat="server" Text="Todas" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodasOrg_CheckedChanged" />
+                        <asp:CheckBox ID="chbTodasOrg" CssClass="selector__select" runat="server" Text="Todas" AutoPostBack="True" Enabled="False" OnCheckedChanged="chbTodasOrg_CheckedChanged" />
+                    </div>
                 </ContentTemplate>
             </asp:UpdatePanel>
 
@@ -283,23 +295,26 @@
                     <asp:TextBox ID="txtOrg" runat="server" Visible="False"></asp:TextBox>
                 </ContentTemplate>
             </asp:UpdatePanel>
-
-            <div>
+            <hr />
+            <div class="form-group">
                 <label for="dlRango">Fechas de Registro</label>
                 <asp:UpdatePanel ID="UpdatePanel27" runat="server">
                     <ContentTemplate>
-                        <div>
-                            <div>
-                                <label>Inicio</label>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="">Inicio</span>
                                 <asp:TextBox ID="txtInicio" runat="server" CssClass="form-control" onkeypress="return numeros(event);" MaxLength="10"></asp:TextBox>
                                 <asp:CalendarExtender ID="CalendarExtender2" runat="server" TargetControlID="txtInicio" Format="dd/MM/yyyy" DefaultView="Years"></asp:CalendarExtender>
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                 <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtInicio" ErrorMessage="Ingrese Año inicial" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>--%>
                                 <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Año inicio: Ingrese 7 dígitos" ValidationExpression="\d{7}" ControlToValidate="txtInicio" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RegularExpressionValidator>--%>
                             </div>
-                            <div>
-                                <label>Fin</label>
+                            <br />
+                            <div class="input-group">
+                                <span class="input-group-addon" id="">Fin</span>
                                 <asp:TextBox ID="txtFin" runat="server" CssClass="form-control" onkeypress="return numeros(event);" MaxLength="10"></asp:TextBox>
                                 <asp:CalendarExtender ID="CalendarExtender3" runat="server" TargetControlID="txtFin" Format="dd/MM/yyyy" DefaultView="Years"></asp:CalendarExtender>
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                 <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFin" ErrorMessage="Ingrese Año final" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>--%>
                                 <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Año fin: Ingrese 7 dígitos" ValidationExpression="\d{7}" ControlToValidate="txtFin" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RegularExpressionValidator>--%>
                             </div>

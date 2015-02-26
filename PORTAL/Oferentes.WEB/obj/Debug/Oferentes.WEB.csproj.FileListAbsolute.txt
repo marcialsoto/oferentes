@@ -34,18 +34,6 @@ C:\Users\HP\Desktop\PORTAL v 1\Oferentes.WEB\obj\Debug\RdlCompile.cache
 C:\Users\HP\Desktop\PORTAL v 1\Oferentes.WEB\obj\Debug\RdlCompile.compiled
 C:\Users\HP\Desktop\PORTAL v 1\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
 C:\Users\HP\Desktop\PORTAL v 1\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.dll.config
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.dll
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.pdb
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.BOL.dll
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.DAL.dll
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.BOL.pdb
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.DAL.pdb
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.csprojResolveAssemblyReference.cache
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\obj\Debug\RdlCompile.cache
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\obj\Debug\RdlCompile.compiled
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb
 C:\Users\HP\Desktop\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.dll.config
 C:\Users\HP\Desktop\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.dll
 C:\Users\HP\Desktop\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.pdb
@@ -166,3 +154,15 @@ D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\R
 D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\RdlCompile.compiled
 D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
 D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.dll.config
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.BOL.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.DAL.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.BOL.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\bin\Oferentes.DAL.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\obj\Debug\RdlCompile.cache
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\obj\Debug\RdlCompile.compiled
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb

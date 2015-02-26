@@ -339,49 +339,62 @@
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
-            <div class="form-group col-sm-3 col-xs-6">
+            <div class="form-group col-sm-6 col-xs-6">
                 <label for="dlRango">Experiencia</label>
                 <asp:UpdatePanel ID="UpdatePanel10" runat="server">
                     <ContentTemplate>
-                       <div class="form-inline row">
-                         <div class="form-group col-sm-6">
-                                <label>Inicio</label>
-                                <asp:TextBox ID="txtInicio" runat="server"  CssClass="form-control" onkeypress="return numeros(event);" MaxLength="7"></asp:TextBox>
-                                <asp:CalendarExtender ID="CalendarExtender2" runat="server" TargetControlID="txtInicio" Format="MM/yyyy" DefaultView="Years"></asp:CalendarExtender>
-                                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtInicio" ErrorMessage="Ingrese Año inicial" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>--%>
-                                <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Año inicio: Ingrese 7 dígitos" ValidationExpression="\d{7}" ControlToValidate="txtInicio" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RegularExpressionValidator>--%>
-                             </div>
+                        <div class="form-inline row">
                             <div class="form-group col-sm-6">
-                                <label>Fin</label>                       
-                                <asp:TextBox ID="txtFin" runat="server"  CssClass="form-control" onkeypress="return numeros(event);" MaxLength="7"></asp:TextBox>
-                                <asp:CalendarExtender ID="CalendarExtender3" runat="server" TargetControlID="txtFin" Format="MM/yyyy" DefaultView="Years"></asp:CalendarExtender>
-                                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFin" ErrorMessage="Ingrese Año final" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>--%>
-                                <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Año fin: Ingrese 7 dígitos" ValidationExpression="\d{7}" ControlToValidate="txtFin" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RegularExpressionValidator>--%>
+                                <div class=" input-group">
+                                    <span class="input-group-addon" id="">Inicio</span>
+                                    <asp:TextBox ID="txtInicio" runat="server" CssClass="form-control" onkeypress="return numeros(event);" MaxLength="7"></asp:TextBox>
+                                    <asp:CalendarExtender ID="CalendarExtender2" runat="server" TargetControlID="txtInicio" Format="MM/yyyy" DefaultView="Years"></asp:CalendarExtender>
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtInicio" ErrorMessage="Ingrese Año inicial" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>--%>
+                                    <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Año inicio: Ingrese 7 dígitos" ValidationExpression="\d{7}" ControlToValidate="txtInicio" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RegularExpressionValidator>--%>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <div class=" input-group">
+                                    <span class="input-group-addon" id="">Fin</span>
+                                    <asp:TextBox ID="txtFin" runat="server" CssClass="form-control" onkeypress="return numeros(event);" MaxLength="7"></asp:TextBox>
+                                    <asp:CalendarExtender ID="CalendarExtender3" runat="server" TargetControlID="txtFin" Format="MM/yyyy" DefaultView="Years"></asp:CalendarExtender>
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFin" ErrorMessage="Ingrese Año final" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RequiredFieldValidator>--%>
+                                    <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Año fin: Ingrese 7 dígitos" ValidationExpression="\d{7}" ControlToValidate="txtFin" ValidationGroup="ValidarExp" Display="Dynamic">*</asp:RegularExpressionValidator>--%>
+                                </div>
                             </div>
                         </div>
 
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
-            <div class="form-group col-sm-3 col-xs-6">
-                <label for="rbCertNo">Certificado</label>
-                <div class="radio-inline">
-                    <asp:UpdatePanel ID="UpdatePanel11" runat="server">
-                        <ContentTemplate>
+        </div>
+        <div class="row no-gutter">
+             <div class="col-sm-6 col-xs-6 form-group">
+            <label for="rbCertNo">Certificado</label>
+            <div class="">
+                <asp:UpdatePanel ID="UpdatePanel11" runat="server">
+                    <ContentTemplate>
+                        <div class="radio-inline">
                             <asp:RadioButton ID="rbCertNo" runat="server" Text="No" AutoPostBack="True" Checked="True" OnCheckedChanged="rbCertNo_CheckedChanged" />
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
 
-                    <asp:UpdatePanel ID="UpdatePanel41" runat="server">
-                        <ContentTemplate>
+                <asp:UpdatePanel ID="UpdatePanel41" runat="server">
+                    <ContentTemplate>
+                        <div class="radio-inline">
                             <asp:RadioButton ID="rbCertSi" runat="server" Text="Si" AutoPostBack="True" OnCheckedChanged="rbCertSi_CheckedChanged" />
-                            <asp:TextBox ID="txtCertif" runat="server" CssClass="form-control" Enabled="False">No cuenta con uno</asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvCertf" runat="server" ControlToValidate="txtCertif" ErrorMessage="Ingrese si cuenta con Certificado" ValidationGroup="ValidarExp">*</asp:RequiredFieldValidator>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-                </div>
+                        </div>
+                        <asp:TextBox ID="txtCertif" runat="server" CssClass="form-control" Enabled="False">No cuenta con uno</asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvCertf" runat="server" ControlToValidate="txtCertif" ErrorMessage="Ingrese si cuenta con Certificado" ValidationGroup="ValidarExp">*</asp:RequiredFieldValidator>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
 
+                </div>
             </div>
+
         </div>
         <div class="row no-gutter">
             <h4>¿Dónde Realizó la actividad?</h4>
@@ -529,8 +542,8 @@
         <ContentTemplate>
             <asp:GridView ID="gdvExp" CssClass="table" runat="server" OnRowDeleting="gdvExp_RowDeleting" AutoGenerateColumns="False" AllowSorting="True">
                 <Columns>
-                    <asp:CommandField ButtonType="Button" ControlStyle-CssClass="btn-link" ShowDeleteButton="True" DeleteText="Editar" >
-                    <ControlStyle CssClass="btn-link" />
+                    <asp:CommandField ButtonType="Button" ControlStyle-CssClass="btn-link" ShowDeleteButton="True" DeleteText="Editar">
+                        <ControlStyle CssClass="btn-link" />
                     </asp:CommandField>
                     <asp:BoundField DataField="num" HeaderText="Número" Visible="False" />
                     <asp:BoundField DataField="dni" HeaderText="DNI" Visible="False" />
@@ -563,7 +576,7 @@
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>
-              <div class="col-sm-3">
+        <div class="col-sm-3">
             <label>&nbsp;</label>
             <asp:UpdatePanel ID="UpdatePanel45" runat="server">
                 <ContentTemplate>
@@ -587,7 +600,7 @@
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>
-  
+
     </div>
 
 

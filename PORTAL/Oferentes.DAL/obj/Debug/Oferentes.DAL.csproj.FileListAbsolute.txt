@@ -12,11 +12,6 @@ C:\Users\HP\Desktop\PORTAL v 1\Oferentes.DAL\bin\Debug\Oferentes.DAL.dll
 C:\Users\HP\Desktop\PORTAL v 1\Oferentes.DAL\bin\Debug\Oferentes.DAL.pdb
 C:\Users\HP\Desktop\PORTAL v 1\Oferentes.DAL\obj\Debug\Oferentes.DAL.dll
 C:\Users\HP\Desktop\PORTAL v 1\Oferentes.DAL\obj\Debug\Oferentes.DAL.pdb
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\bin\Debug\Oferentes.DAL.dll
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\bin\Debug\Oferentes.DAL.pdb
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.csprojResolveAssemblyReference.cache
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.dll
-C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.pdb
 C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.DAL\bin\Debug\Oferentes.DAL.dll
 C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.DAL\bin\Debug\Oferentes.DAL.pdb
 C:\Users\HP\Desktop\oferentes-master\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.csprojResolveAssemblyReference.cache
@@ -27,3 +22,8 @@ D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes
 D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.DAL\obj\Debug\Oferentes.DAL.csprojResolveAssemblyReference.cache
 D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.DAL\obj\Debug\Oferentes.DAL.dll
 D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.DAL\obj\Debug\Oferentes.DAL.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\bin\Debug\Oferentes.DAL.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\bin\Debug\Oferentes.DAL.pdb
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.dll
+C:\xampp\htdocs\oferentes\PORTAL\Oferentes.DAL\obj\Debug\Oferentes.DAL.pdb
