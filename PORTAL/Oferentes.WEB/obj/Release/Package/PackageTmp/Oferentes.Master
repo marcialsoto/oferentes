@@ -14,7 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link runat="server" href="~/dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="Scripts/Bloqueo.js"></script>
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,18 +27,22 @@
 </head>
 <body>
     <form id="form1" runat="server">
+
         <header class="allHeader">
             <div class="superHeader section">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="col-sm-2">
                         <h1>
                             <asp:HyperLink NavigateUrl="~/Inicio.aspx" ID="HyperLink2" CssClass="logo" runat="server"><span>PSSA</span></asp:HyperLink></h1>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-7">
+                        <h1>Sistema de Oferentes</h1>
                     </div>
                 </div>
             </div>
         </header>
         <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
@@ -54,24 +58,43 @@
                         StaticMenuStyle-CssClass="main-nav nav navbar-nav" SkipLinkText="" StaticSelectedStyle-CssClass="active"
                         DynamicMenuStyle-CssClass="dropdown-menu" PathSeparator="|" OnMenuItemClick="mnPrincipal_MenuItemClick" RenderingMode="List">
                         <Items>
-                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Inicio" Value="Inicio"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/login.aspx" Text="Inicio" Value="Inicio"></asp:MenuItem>
                             <asp:MenuItem Text="Administrador" Value="Administrador">
                                 <asp:MenuItem Text="Registrar" Value="Registrar" NavigateUrl="~/Admin/Registrar.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="Mantenimiento" Value="Mantenimiento" NavigateUrl="~/Admin/Mantener.aspx"></asp:MenuItem>
                             </asp:MenuItem>
-                            <asp:MenuItem Text="Usuario" Value="Usuario">
-                                <asp:MenuItem Text="Reportes" Value="Reportes" NavigateUrl="~/Usuario/Consultar.aspx"></asp:MenuItem>
-                            </asp:MenuItem>
+
+                            <asp:MenuItem NavigateUrl="~/Usuario/Consultar.aspx" Text="Reportes" Value="Reportes"></asp:MenuItem>
+
+                              
+
                         </Items>
                     </asp:Menu>
+
+
+
+  
+<ul class="nav navbar-nav navbar-right">
+              
+
+<asp:LoginView ID="LoginView1" runat="server">
+<LoggedInTemplate>Bienvenido  <asp:LoginName ID="LoginName1" runat="server" /> <asp:LoginStatus ID="LoginStatus1" runat="server" /> </LoggedInTemplate>
+<AnonymousTemplate> <asp:LoginStatus ID="LoginStatus2" runat="server" />  </AnonymousTemplate>
+
+</asp:LoginView>
+
+            </ul>
+
                 </div>
                 <!-- /.nav-collapse -->
+
+ 
             </div>
             <!-- /.container -->
         </nav>
         <!-- /.navbar -->
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -80,8 +103,8 @@
             </div>
         </div>
 
-        <footer class="content-info section" role="contentinfo">
-            <div class="container-fluid">
+        <footer class="footer content-info section" role="contentinfo">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-4 col-xs-4">
                         <section class="widget text-3 widget_text footer-1">
@@ -137,7 +160,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-    <script src="dist/js/offcanvas.js"></script>
+    <script src="<%= ResolveUrl("dist/js/bootstrap.min.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("Scripts/Bloqueo.js")%>"></script>
+    <script src="<%= ResolveUrl("dist/js/offcanvas.js")%>"></script>
 </body>
 </html>

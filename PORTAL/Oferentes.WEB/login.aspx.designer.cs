@@ -13,12 +13,12 @@ namespace Oferentes.WEB {
     public partial class Formulario_web1 {
         
         /// <summary>
-        /// Control Login1.
+        /// Control LoginView1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Login Login1;
+        protected global::System.Web.UI.WebControls.LoginView LoginView1;
     }
 }

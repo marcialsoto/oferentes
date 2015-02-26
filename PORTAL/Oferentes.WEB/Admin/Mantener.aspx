@@ -550,7 +550,7 @@
     </asp:UpdatePanel>
     <br />
     <div class="row no-gutter">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <label>Estado</label>
             <asp:UpdatePanel ID="UpdatePanel35" runat="server">
                 <ContentTemplate>
@@ -563,7 +563,15 @@
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>
-        <div class="col-sm-4">
+              <div class="col-sm-3">
+            <label>&nbsp;</label>
+            <asp:UpdatePanel ID="UpdatePanel45" runat="server">
+                <ContentTemplate>
+                    <asp:Button ID="btnCV" runat="server" CssClass="btn btn-default" Text="Generar CV" OnClick="btnCV_Click" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        <div class="col-sm-3">
             <label>&nbsp;</label>
             <asp:UpdatePanel ID="UpdatePanel7" runat="server">
                 <ContentTemplate>
@@ -571,7 +579,7 @@
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <label>&nbsp;</label>
             <asp:UpdatePanel ID="UpdatePanel32" runat="server">
                 <ContentTemplate>
@@ -579,13 +587,7 @@
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>
-        <div class="col-sm-4">
-            <asp:UpdatePanel ID="UpdatePanel45" runat="server">
-                <ContentTemplate>
-                    <asp:Button ID="btnCV" runat="server" CssClass="btn btn-success" Text="CV" OnClick="btnCV_Click" />
-                </ContentTemplate>
-            </asp:UpdatePanel>
-        </div>
+  
     </div>
 
 

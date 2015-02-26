@@ -95,7 +95,8 @@ fieldset {
     border: 1px solid darken(@orange, 5%);
     margin-bottom: 30px;
     padding-bottom: 20px;
-    legend{
+
+    legend {
         font-size: 16px;
         background-color: darken(@orange, 5%);
         color: @white;
@@ -107,14 +108,16 @@ fieldset {
         border: 3px solid @white;
     }
 
-    h4{
+    h4 {
         color: darken(@orange, 5%);
         font-size: 14px;
         font-weight: bold;
         margin: 10px 15px 5px;
     }
+
     .form-group {
         margin-bottom: 5px;
+        position: relative;
 
         label {
             font-size: 12px;
@@ -128,6 +131,16 @@ fieldset {
             height: 30px;
             padding: 5px 10px;
             .inner-shadow(0, 1px, 1px, 0, 0.05);
+        }
+
+        .selector__select {
+            position: absolute;
+            top: -2px;
+            right: 15px;
+
+            label {
+                font-weight: normal;
+            }
         }
     }
 
@@ -281,25 +294,37 @@ fieldset {
  * --------------------------------------------------
  */
 
-    .navbar{
-        &.navbar-default{
-            ul{
-                &.main-nav{
-                    li{
-                        &.has-popup{
-                            &:after{
-                                position: absolute;
-                                top: 19px;
-                                right: 0;
-                                .font-awesome;
-                                content: '\f105';
-                            }
+.navbar-default .container {
+  position: relative;
+}
+
+.navbar {
+    &.navbar-default {
+        ul {
+            &.main-nav {
+                li {
+                    &.has-popup {
+                        &:after {
+                            position: absolute;
+                            top: 19px;
+                            right: 0;
+                            .font-awesome;
+                            content: '\f105';
                         }
                     }
                 }
             }
         }
+
+        ul {
+            &.auth {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
     }
+}
 
 
 html {
@@ -319,4 +344,10 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: auto;
+}
+
+#sidebar {
+    fieldset {
+        border: 0 none;
+    }
 }

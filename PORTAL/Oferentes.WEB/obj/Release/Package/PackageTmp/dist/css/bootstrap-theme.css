@@ -1413,9 +1413,6 @@ pre code {
 }
 .col-xs-12 {
   width: 100%;
-    top: 0px;
-    left: 0px;
-    height: 21px;
 }
 .col-xs-11 {
   width: 91.66666667%;
@@ -6469,6 +6466,14 @@ footer {
   margin: 0;
   padding: 0;
 }
+.allHeader .superHeader .col-sm-3.col-sm-offset-7 {
+  height: 135px;
+}
+.allHeader .superHeader .col-sm-3.col-sm-offset-7 h1 {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 135px;
+}
 /*
  * Util
  * --------------------------------------------------
@@ -7001,6 +7006,22 @@ fieldset[disabled] .btn-default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: '\f105';
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 260px;
+  padding-bottom: 50px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: auto;
 }
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome

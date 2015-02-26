@@ -441,6 +441,9 @@
     </Content>
     <Content Include=".editorconfig" />
     <Content Include=".travis.yml" />
+    <Content Include="Admin\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="bin\Oferentes.WEB.dll.config" />
     <Content Include="bower.json" />
     <Content Include="CNAME" />
@@ -585,6 +588,7 @@
     <Content Include="less\mixins\appMixins.less" />
     <Content Include="less\appVariables.less" />
     <None Include="Properties\PublishProfiles\oferentes.pubxml" />
+    <Content Include="Usuario\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\ActivporAnio.rdlc" />

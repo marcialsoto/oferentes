@@ -1021,6 +1021,24 @@ namespace Oferentes.WEB.Admin {
         protected global::System.Web.UI.WebControls.Button btnHabilitar;
         
         /// <summary>
+        /// Control UpdatePanel45.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel45;
+        
+        /// <summary>
+        /// Control btnCV.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCV;
+        
+        /// <summary>
         /// Control UpdatePanel7.
         /// </summary>
         /// <remarks>
@@ -1055,24 +1073,6 @@ namespace Oferentes.WEB.Admin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEliminar;
-        
-        /// <summary>
-        /// Control UpdatePanel45.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel45;
-        
-        /// <summary>
-        /// Control btnCV.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCV;
         
         /// <summary>
         /// Control vsValidarTalento.

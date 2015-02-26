@@ -14,7 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link runat="server" href="~/dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
 
-    
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,6 +27,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+
         <header class="allHeader">
             <div class="superHeader section">
                 <div class="container">
@@ -57,18 +58,40 @@
                         StaticMenuStyle-CssClass="main-nav nav navbar-nav" SkipLinkText="" StaticSelectedStyle-CssClass="active"
                         DynamicMenuStyle-CssClass="dropdown-menu" PathSeparator="|" OnMenuItemClick="mnPrincipal_MenuItemClick" RenderingMode="List">
                         <Items>
-                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Inicio" Value="Inicio"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/login.aspx" Text="Inicio" Value="Inicio"></asp:MenuItem>
                             <asp:MenuItem Text="Administrador" Value="Administrador">
                                 <asp:MenuItem Text="Registrar" Value="Registrar" NavigateUrl="~/Admin/Registrar.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="Mantenimiento" Value="Mantenimiento" NavigateUrl="~/Admin/Mantener.aspx"></asp:MenuItem>
                             </asp:MenuItem>
-                            <asp:MenuItem Text="Usuario" Value="Usuario">
-                                <asp:MenuItem Text="Reportes" Value="Reportes" NavigateUrl="~/Usuario/Consultar.aspx"></asp:MenuItem>
-                            </asp:MenuItem>
+
+                            <asp:MenuItem NavigateUrl="~/Usuario/Consultar.aspx" Text="Reportes" Value="Reportes"></asp:MenuItem>
+
+
+
                         </Items>
                     </asp:Menu>
+                    <ul class="nav navbar-nav navbar-right auth">
+
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <LoggedInTemplate>
+                                <li><%--Bienvenido, 
+                                <asp:LoginName ID="LoginName1" runat="server" />--%>
+                                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                                </li>
+                            </LoggedInTemplate>
+                            <AnonymousTemplate>
+                                <li>
+                                    <asp:LoginStatus ID="LoginStatus2" runat="server" />
+                                </li>
+                            </AnonymousTemplate>
+                        </asp:LoginView>
+
+                    </ul>
+
                 </div>
                 <!-- /.nav-collapse -->
+
+
             </div>
             <!-- /.container -->
         </nav>
@@ -121,16 +144,19 @@
                     </div>
                     <div class="col-sm-3 col-xs-3 col-sm-offset-1 col-xs-offset-1">
                         <section class="widget text-5 widget_text footer-3">
-                         
-                            <div class="textwidget"><a href="http://www.ifad.org/" target="_blank">
-                                <asp:Image ID="Image1" CssClass="img-responsive" runat="server" ImageUrl="~/dist/img/fida-logo.jpg" /></a></div>
+
+                            <div class="textwidget">
+                                <a href="http://www.ifad.org/" target="_blank">
+                                    <asp:Image ID="Image1" CssClass="img-responsive" runat="server" ImageUrl="~/dist/img/fida-logo.jpg" /></a>
+                            </div>
                         </section>
                     </div>
-                    
+
                 </div>
                 <div class="row copy">
                     <div class="col-sm-4 col-xs-4">
-                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Inicio.aspx">PSSA</asp:HyperLink> <i class="fa fa-copyright"></i>Derechos reservados.
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Inicio.aspx">PSSA</asp:HyperLink>
+                        <i class="fa fa-copyright"></i>Derechos reservados.
                     </div>
                 </div>
             </div>

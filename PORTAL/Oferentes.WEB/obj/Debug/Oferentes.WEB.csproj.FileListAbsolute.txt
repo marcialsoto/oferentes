@@ -154,3 +154,15 @@ D:\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes
 \\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\RdlCompile.compiled
 \\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
 \\pc-jsuarez\server\oferentes\Oferentes Agrorural\Oferentes Agrorural\PORTAL v 8\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.dll.config
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.dll
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.WEB.pdb
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.BOL.dll
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.DAL.dll
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.BOL.pdb
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\bin\Oferentes.DAL.pdb
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.csprojResolveAssemblyReference.cache
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\RdlCompile.cache
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\RdlCompile.compiled
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.dll
+D:\server\oferentes\25-02-2015\oferentes-master\PORTAL\Oferentes.WEB\obj\Debug\Oferentes.WEB.pdb

@@ -238,6 +238,15 @@ namespace Oferentes.WEB.Usuario {
         protected global::System.Web.UI.WebControls.TextBox txtDNI;
         
         /// <summary>
+        /// Control btnOk.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnOk;
+        
+        /// <summary>
         /// Control rfvDNI.
         /// </summary>
         /// <remarks>
@@ -254,15 +263,6 @@ namespace Oferentes.WEB.Usuario {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
-        
-        /// <summary>
-        /// Control btnOk.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOk;
         
         /// <summary>
         /// Control UpdatePanel7.
